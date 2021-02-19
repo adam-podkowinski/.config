@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/bodzio/tex'
+let g:netrw_dirhist_1='/home/bodzio/.config/fish'
+let g:netrw_dirhist_0='/home/bodzio/.config/fish/functions'
+let g:netrw_dirhist_9='/home/bodzio/.config/fish'
+let g:netrw_dirhist_8='/home/bodzio/.config/fish/conf.d'
+let g:netrw_dirhist_7='/home/bodzio/.config/fish'
+let g:netrw_dirhist_6='/home/bodzio/.local/share/applications'
+let g:netrw_dirhist_5='/home/bodzio/.config/polybar'
+let g:netrw_dirhist_4='/home/bodzio/.config/rofi'
+let g:netrw_dirhist_3='/home/bodzio/.config'

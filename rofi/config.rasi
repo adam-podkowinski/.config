@@ -1,0 +1,48 @@
+configuration {
+  modi: "window,drun,ssh,combi,calc";
+  combi-modi: "window,drun,ssh,calc";
+  font: "Fira Code 13";
+}
+* {
+  background-color: #293037;
+  border-color: #ff8800;
+  text-color: #eeeeee;
+  spacing: 0;
+  width: 700;
+  height: 675;
+}
+inputbar {
+  border: 2px 2px 2px 2px;
+  children: [prompt,entry];
+}
+
+prompt {
+  padding: 16px;
+  border: 0px 0px 0px 0px;
+}
+
+textbox {
+  background-color: #2e343f;
+  border: 2px 2px 2px;
+  border-color: #ff8800;
+  padding: 8px 16px;
+}
+
+entry {
+  padding: 16px;
+}
+
+listview {
+  cycle: false;
+  margin: 0 0 -2px 0;
+  scrollbar: false;
+}
+
+element {
+  border: 0 2px 2px 2px;
+  padding: 16px;
+}
+
+element selected {
+  background-color: #404146;
+}

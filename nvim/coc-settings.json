@@ -1,0 +1,37 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "vim",
+    "json",
+    "lua",
+    "html",
+    "js",
+    "css",
+    "sass",
+    "scss",
+    "htmldjango",
+    "dart",
+    "cpp",
+    "h",
+    "rust",
+    "javascript"
+  ],
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.keyMappings.global": {
+    "<cr>": [
+      "expandable?",
+      [
+        "expanded?",
+        "collapse",
+        "expand"
+      ],
+      "open"
+    ],
+    "v": "open:vsplit"
+  },
+  "clangd.semanticHighlighting": true,
+  "clangd.fallbackFlags": [
+    "-std=c++17"
+  ]
+}
