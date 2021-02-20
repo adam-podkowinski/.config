@@ -1,7 +1,7 @@
 configuration {
   modi: "window,drun,ssh,combi,calc";
   combi-modi: "window,drun,ssh,calc";
-  font: "Fira Code 13";
+  font: "FiraCode Nerd Font 13";
 }
 * {
   background-color: #293037;
