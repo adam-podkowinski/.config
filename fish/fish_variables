@@ -8,10 +8,14 @@ SETUVAR --export --path PATH:\x28dirname\x20/mnt/hdd/vulkan/1\x2e2\x2e162\x2e1/\
 SETUVAR --export --path VK_LAYER_PATH:\x28dirname\x20/mnt/hdd/vulkan/1\x2e2\x2e162\x2e1/\x7bBASH_SOURCE\x1e\x2d\x7d\x20\x29/x86_64/etc/vulkan/explicit_layer\x2ed
 SETUVAR --export VULKAN_SDK:\x28dirname\x20/mnt/hdd/vulkan/1\x2e2\x2e162\x2e1/\x7bBASH_SOURCE\x3a\x2d\x7d\x20\x29/x86_64
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_feh:feh\x20\x2dd\x2e
 SETUVAR _fish_abbr_fizyka:cd\x20\x7e/Documents/lekcje/fizyka
+SETUVAR _fish_abbr_flutterp:cd\x20\x7e/programming/flutter_projects
+SETUVAR _fish_abbr_launchpixel:flutter\x20emulators\x20\x2d\x2dlaunch\x20Pixel_3_API_30
 SETUVAR _fish_abbr_lekcje:cd\x20\x7e/Documents/lekcje
 SETUVAR _fish_abbr_matma:cd\x20\x7e/Documents/lekcje/matematyka
 SETUVAR _fish_abbr_svim:doas\x20nvim
+SETUVAR _fish_abbr_tpl:trans\x20\x3apl
 SETUVAR fish_color_autosuggestion:4e4e4e
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:00ffff
@@ -36,7 +40,7 @@ SETUVAR fish_color_status:red
 SETUVAR fish_color_user:00ff00
 SETUVAR fish_color_valid_path:normal
 SETUVAR fish_greeting:
-SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR --export fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

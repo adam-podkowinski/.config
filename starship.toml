@@ -1,5 +1,8 @@
 format = "$all"
-scan_timeout = 100
+scan_timeout = 1000
+
+[line_break]
+disabled = true
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"

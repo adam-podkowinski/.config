@@ -2,7 +2,10 @@
 call plug#begin('~/.vim/plugged')
 
 "Colorscheme
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'haishanh/night-owl.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 "Faster and prettier comments
 Plug 'preservim/nerdcommenter'
 "fuzzy find
@@ -53,7 +56,10 @@ Plug 'https://github.com/dag/vim-fish'
 call plug#end()
 
 filetype plugin indent on
-colorscheme material
+"colorscheme material
+"colorscheme nord
+"colorscheme night-owl
+colorscheme palenight
 "Sets
 set foldmethod=syntax
 set foldlevel=99
@@ -61,7 +67,7 @@ set softtabstop=2
 set so=2
 set autoindent
 set background=dark
-set cmdheight=2
+set cmdheight=1
 set encoding=UTF-8
 set expandtab
 set fileencoding=utf-8
@@ -105,7 +111,9 @@ let g:material_terminal_italics = 1
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let mapleader = ' '
-let g:airline_theme='material'
+let g:airline_theme='palenight'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_splits = 1
@@ -116,7 +124,7 @@ endif
 let g:rainbow_active = 1
 let g:rainbow_guifgs = ['#FFDF01', '#da70d6', '#87CEFA']
 let g:rooter_change_directory_for_non_project_files = 'current'
-let g:dart_format_on_save = 1
+let g:dart_format_on_save = 0
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
@@ -151,7 +159,7 @@ noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
 nnoremap <C-c> :BD!<CR>
-nmap ; <Plug>(easymotion-overwin-f2)
+nmap <Leader>; <Plug>(easymotion-overwin-f2)
 map <Leader> <Plug>(easymotion-prefix)
 imap <A-`> <Esc>
 

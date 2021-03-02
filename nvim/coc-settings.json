@@ -11,10 +11,9 @@
     "scss",
     "htmldjango",
     "dart",
-    "cpp",
-    "h",
     "rust",
-    "javascript"
+    "javascript",
+    "rust"
   ],
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,

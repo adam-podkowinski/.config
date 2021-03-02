@@ -14,6 +14,7 @@
      call append(8, "   private:")
      call append(9, "};")
      :execute 'write' header
+     :w
    "================== editing source file ========================
      let src    = a:ClassName.".cpp"
      :vsp %:h/.cpp
@@ -30,5 +31,8 @@
      call append(10,"//dtor ")
      call append(11,"}")
      :execute 'write' src
+     :w
+     :q
+     :q
 endfunction
 
