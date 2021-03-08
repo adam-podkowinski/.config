@@ -53,6 +53,8 @@ Plug 'tpope/vim-repeat'
 Plug 'honza/vim-snippets'
 "Fish
 Plug 'https://github.com/dag/vim-fish'
+"groff
+Plug 'L04DB4L4NC3R/texgroff.vim'
 call plug#end()
 
 filetype plugin indent on
@@ -161,11 +163,12 @@ noremap <silent> <C-Down> :resize -3<CR>
 nnoremap <C-c> :BD!<CR>
 nmap <Leader>; <Plug>(easymotion-overwin-f2)
 map <Leader> <Plug>(easymotion-prefix)
-imap <A-`> <Esc>
+imap ;; <Esc>
 
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e
 au! BufWritePost $MYVIMRC source %
+au BufNewFile,BufRead *.groff *.ms set filetype=groff
 
 "Functions
 inoremap <expr> <CR> InsertMapForEnter()
