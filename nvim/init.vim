@@ -114,12 +114,16 @@ let g:material_terminal_italics = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let mapleader = ' '
 let g:airline_theme='palenight'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#show_splits = 1
 let g:airline#extensions#tabline#show_buffers = 1
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
 if executable('rg')
   let g:rg_derive_root='true'
 endif
