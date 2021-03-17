@@ -1,6 +1,6 @@
 alias vim=nvim
 alias cal="cal -m"
-pfetch
+#pfetch
 
 set EDITOR /usr/bin/nvim
 set TERMINAL /usr/bin/alacritty

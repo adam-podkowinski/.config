@@ -11,4 +11,5 @@ xmodmap ~/.config/xmodmap
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/bin/nvim
 export CHROME_EXECUTABLE=/usr/bin/brave
+export PATH=$PATH:~/.emacs.d/
 exec dwm
