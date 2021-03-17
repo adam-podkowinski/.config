@@ -1,0 +1,14 @@
+#!/bin/bash
+xset r rate 200 27
+nitrogen --restore &
+slstatus &
+picom -b &
+/usr/lib/lxpolkit/lxpolkit &
+dunst &
+setxkbmap pl
+xmodmap ~/.config/xmodmap
+#setxkbmap -option caps:swapescape
+export _JAVA_AWT_WM_NONREPARENTING=1
+export EDITOR=/usr/bin/nvim
+export CHROME_EXECUTABLE=/usr/bin/brave
+exec dwm
