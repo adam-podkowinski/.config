@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'arcticicestudio/nord-vim'
 "Plug 'haishanh/night-owl.vim'
 Plug 'drewtempelmeyer/palenight.vim'
+"Startify
+Plug 'mhinz/vim-startify'
 "Faster and prettier comments
 Plug 'preservim/nerdcommenter'
 "fuzzy find
@@ -95,11 +97,13 @@ set splitbelow splitright
 set tabstop=2
 set timeoutlen=350
 set ttimeoutlen=0
-set updatetime=150
+set updatetime=200
 set wrap
 set tl=500
 set ic
 set conceallevel=0
+set shortmess+=c
+set signcolumn=yes
 if has('termguicolors')
     set termguicolors
 endif
@@ -144,7 +148,8 @@ let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
 "Remaps
-vnoremap <C-S-Insert> "+y
+vnoremap <C-S-y> "+y
+vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
 nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>

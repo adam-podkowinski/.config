@@ -2,10 +2,13 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <F2> <Plug>(coc-rename)
+nmap <Leader>R <Plug>(coc-rename)
 
 vmap <silent><leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent><leader>a  viw<Plug>(coc-codeaction-selected)
+nmap <Leader>qf <Plug>(coc-fix-current)
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
 
 inoremap <silent><expr> <c-space> coc#refresh()
 "CocExplore
@@ -13,6 +16,22 @@ verbose nnoremap <Leader>e :CocCommand explorer --preset floating<CR>
 verbose nnoremap <Leader><Leader> :execute 'CocCommand explorer ' getcwd()<CR>
 nnoremap <Leader>r :execute 'CocCommand flutter.dev.hotRestart'<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 let g:coc_explorer_global_presets = {
 \   '.vim': {
