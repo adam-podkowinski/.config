@@ -40,7 +40,7 @@ Plug 'frazrepo/vim-rainbow'
 "Close pairs
 Plug 'jiangmiao/auto-pairs'
 "C++ syntax
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 "C++ debugging
 "Plug 'vim-scripts/Conque-GDB'
 "Tex

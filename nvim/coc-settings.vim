@@ -14,6 +14,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 "CocExplore
 verbose nnoremap <Leader>e :CocCommand explorer --preset floating<CR>
 verbose nnoremap <Leader><Leader> :execute 'CocCommand explorer ' getcwd()<CR>
+verbose nnoremap <silent><Leader>f :Format<CR>
 nnoremap <Leader>r :execute 'CocCommand flutter.dev.hotRestart'<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
@@ -29,6 +30,9 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')

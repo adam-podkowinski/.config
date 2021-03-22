@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 xset r rate 200 27
 nitrogen --restore &
 slstatus &
@@ -7,9 +7,25 @@ picom -b &
 dunst &
 setxkbmap pl
 xmodmap ~/.config/xmodmap
-#setxkbmap -option caps:swapescape
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/bin/nvim
 export CHROME_EXECUTABLE=/usr/bin/brave
-export PATH=$PATH:~/.emacs.d/
+export ZDOTDIR=$HOME/.config/zsh
+export SHELL=/bin/zsh
+export CC="/usr/bin/clang"
+export CXX=/usr/bin/clang++
+export JAVA_OPTS=''
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export ANDROID_SDK_ROOT=~/Android/Sdk
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export PATH="$PATH:~/.emacs.d/"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
+export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools/"
+export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin/"
+export PATH="$PATH:$ANDROID_SDK_ROOT/tools/"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$PATH"
+export PATH="$PATH:$JAVA_HOME/bin"
+export PATH="$PATH:$HOME/.cargo/bin/"
+export PATH="$PATH:$HOME/scripts/"
+
 exec dwm

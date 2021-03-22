@@ -3,7 +3,6 @@ alias cal="cal -m"
 #pfetch
 
 set EDITOR /usr/bin/nvim
-set TERMINAL /usr/bin/alacritty
 set CC /usr/bin/clang
 set CXX /usr/bin/clang++
 set -Ux JAVA_OPTS ''

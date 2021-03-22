@@ -30,6 +30,17 @@
     "v": "open:vsplit"
   },
   "clangd.semanticHighlighting": true,
+  "initializationOptions": {
+    "index": {
+      "onChange": true
+    },
+    "highlight": {
+      "lsRanges": true
+    }
+  },
+  "clangd.arguments": [
+    "-fallback-style=google"
+  ],
   "clangd.fallbackFlags": [
     "-std=c++17"
   ]
