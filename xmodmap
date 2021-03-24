@@ -1,0 +1,4 @@
+remove Lock = Caps_Lock
+keysym Caps_Lock = KP_Left
+keysym KP_Left = Caps_Lock
+remove = Caps_Lock
