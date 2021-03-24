@@ -20,6 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 "Auto completion and IDE functions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Dart and flutter support
 Plug 'dart-lang/dart-vim-plugin'
 "Git
@@ -37,11 +38,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'frazrepo/vim-rainbow'
 "Close pairs
 Plug 'jiangmiao/auto-pairs'
-"C++ syntax
-Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Indent lines
-"Plug 'Yggdroot/indentLine'
-"Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 "C++ debugging
 "Plug 'vim-scripts/Conque-GDB'
 "Tex
@@ -54,17 +53,12 @@ Plug 'cespare/vim-toml'
 Plug 'tpope/vim-repeat'
 "snippets
 Plug 'honza/vim-snippets'
-"Fish
-Plug 'https://github.com/dag/vim-fish'
 "groff
 Plug 'L04DB4L4NC3R/texgroff.vim'
 call plug#end()
 
 
 filetype plugin indent on
-"colorscheme material
-"colorscheme nord
-"colorscheme night-owl
 colorscheme palenight
 "Sets
 set foldmethod=syntax
@@ -104,7 +98,7 @@ set wrap
 set tl=500
 set ic
 set conceallevel=0
-set shortmess+=c
+set shortmess+=aoOtI
 set signcolumn=yes
 if has('termguicolors')
     set termguicolors
@@ -113,7 +107,8 @@ endif
 packadd termdebug
 
 "Variables
-let g:indentLine_char = '|'
+let g:indentLine_char = '│'
+let g:indent_blankline_space_char = ' '
 let g:termdebug_wide=1
 let g:material_theme_style = 'ocean'
 let g:material_terminal_italics = 1
@@ -151,8 +146,8 @@ let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
 "Remaps
-vnoremap <C-S-y> "+y
-vnoremap <C-S-p> "+p
+verbose vnoremap <C-S-y> "+y
+verbose vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
 nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
@@ -212,6 +207,14 @@ highlight Comment cterm=italic gui=italic
 source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/fzf.vim
 source ~/.config/nvim/functions.vim
-lua require('gitsigns').setup()
 
-"Others
+"LUA
+lua <<EOF
+require('gitsigns').setup()
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+  },
+}
+EOF

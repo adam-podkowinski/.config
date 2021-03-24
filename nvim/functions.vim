@@ -1,7 +1,7 @@
  "C++ Class Generator
  function! Class(ClassName)
     "==================  editing header file =====================
-     let header = a:ClassName.".h"
+     let header = "./include/".a:ClassName.".h"
      :vsp %:h/.h
      call append(0,"#pragma once")
      call append(1,"")
