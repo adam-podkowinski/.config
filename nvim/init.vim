@@ -2,9 +2,6 @@
 call plug#begin('~/.vim/plugged')
 
 "Colorscheme
-"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-"Plug 'arcticicestudio/nord-vim'
-"Plug 'haishanh/night-owl.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 "Startify
 Plug 'mhinz/vim-startify'
@@ -27,7 +24,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dart-lang/dart-vim-plugin'
 "Git
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 "Undo tree
 Plug 'mbbill/undotree'
 "Close buffers with style :)
@@ -41,6 +39,9 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'jiangmiao/auto-pairs'
 "C++ syntax
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Indent lines
+"Plug 'Yggdroot/indentLine'
+"Plug 'lukas-reineke/indent-blankline.nvim'
 "C++ debugging
 "Plug 'vim-scripts/Conque-GDB'
 "Tex
@@ -59,6 +60,7 @@ Plug 'https://github.com/dag/vim-fish'
 Plug 'L04DB4L4NC3R/texgroff.vim'
 call plug#end()
 
+
 filetype plugin indent on
 "colorscheme material
 "colorscheme nord
@@ -73,7 +75,7 @@ set autoindent
 set background=dark
 set cmdheight=1
 set encoding=UTF-8
-set expandtab
+"set expandtab
 set fileencoding=utf-8
 set hidden
 set iskeyword+=-
@@ -111,6 +113,7 @@ endif
 packadd termdebug
 
 "Variables
+let g:indentLine_char = '|'
 let g:termdebug_wide=1
 let g:material_theme_style = 'ocean'
 let g:material_terminal_italics = 1
@@ -209,5 +212,6 @@ highlight Comment cterm=italic gui=italic
 source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/fzf.vim
 source ~/.config/nvim/functions.vim
+lua require('gitsigns').setup()
 
 "Others
