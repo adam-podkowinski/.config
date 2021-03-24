@@ -11,6 +11,7 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 inoremap <silent><expr> <c-space> coc#refresh()
+verbose nnoremap <Leader>s :CocCommand clangd.switchSourceHeader<CR>
 "CocExplore
 verbose nnoremap <Leader>e :CocCommand explorer --preset floating<CR>
 verbose nnoremap <Leader><Leader> :execute 'CocCommand explorer ' getcwd()<CR>

@@ -3,8 +3,6 @@ call plug#begin('~/.vim/plugged')
 
 "Colorscheme
 Plug 'drewtempelmeyer/palenight.vim'
-"Startify
-Plug 'mhinz/vim-startify'
 "Faster and prettier comments
 Plug 'preservim/nerdcommenter'
 "fuzzy find
@@ -57,7 +55,6 @@ Plug 'honza/vim-snippets'
 Plug 'L04DB4L4NC3R/texgroff.vim'
 call plug#end()
 
-
 filetype plugin indent on
 colorscheme palenight
 "Sets
@@ -69,7 +66,7 @@ set autoindent
 set background=dark
 set cmdheight=1
 set encoding=UTF-8
-"set expandtab
+set expandtab
 set fileencoding=utf-8
 set hidden
 set iskeyword+=-

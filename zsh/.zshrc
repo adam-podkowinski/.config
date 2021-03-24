@@ -8,7 +8,7 @@ precmd_functions+=( precmd_vcs_info  )
 setopt prompt_subst
 zstyle ':vcs_info:*' formats " on  %b"
 
-PS1="%B%F{cyan}%~%F{magenta}\$vcs_info_msg_0_ %F{green}➜ "
+PS1="%B%F{cyan}%~%F{magenta}\$vcs_info_msg_0_ %F{green}➜ %F{reset_color}"
 
 # History in cache directory:
 HISTSIZE=10000
