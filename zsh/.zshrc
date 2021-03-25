@@ -27,7 +27,6 @@ fi;
 _comp_options+=(globdots)   # Include hidden files.
 
 # vi mode
-bindkey -v
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
@@ -35,7 +34,6 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -67,6 +65,7 @@ bindkey '^e' edit-command-line
 
 source <(antibody init)
 
+antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zdharma/fast-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
-antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle softmoth/zsh-vim-mode

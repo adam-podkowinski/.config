@@ -167,7 +167,6 @@ noremap <silent> <C-Down> :resize -3<CR>
 nnoremap <C-c> :BD!<CR>
 nmap <Leader>; <Plug>(easymotion-overwin-f2)
 map <Leader> <Plug>(easymotion-prefix)
-imap <kLeft> <Esc>
 
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e
