@@ -164,9 +164,12 @@ noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up> :resize +3<CR>
 noremap <silent> <C-Down> :resize -3<CR>
 
+verbose inoremap <M-[>29 <Esc>
+verbose vnoremap <M-[>29 <Esc>
+verbose nnoremap <M-[>29 <Esc>
+
 nnoremap <C-c> :BD!<CR>
 nmap <Leader>; <Plug>(easymotion-overwin-f2)
-map <Leader> <Plug>(easymotion-prefix)
 
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e
