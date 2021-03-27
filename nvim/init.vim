@@ -95,7 +95,7 @@ set wrap
 set tl=500
 set ic
 set conceallevel=0
-set shortmess+=aoOtI
+set shortmess+=F
 set signcolumn=yes
 if has('termguicolors')
     set termguicolors

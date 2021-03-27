@@ -18,6 +18,8 @@ verbose nnoremap <Leader><Leader> :execute 'CocCommand explorer ' getcwd()<CR>
 verbose nnoremap <silent><Leader>f :Format<CR>
 nnoremap <Leader>r :execute 'CocCommand flutter.dev.hotRestart'<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+autocmd FileType coc-explorer :IndentLinesDisable
+
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
