@@ -167,6 +167,7 @@ noremap <silent> <C-Down> :resize -3<CR>
 verbose inoremap <M-[>29 <Esc>
 verbose vnoremap <M-[>29 <Esc>
 verbose nnoremap <M-[>29 <Esc>
+verbose tnoremap <M-[>29 <C-\><C-n>
 
 nnoremap <C-c> :BD!<CR>
 nmap <Leader>; <Plug>(easymotion-overwin-f2)
