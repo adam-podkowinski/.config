@@ -33,7 +33,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Colorful brackets
-Plug 'frazrepo/vim-rainbow'
+Plug 'luochen1990/rainbow'
 "Close pairs
 Plug 'jiangmiao/auto-pairs'
 "Indent lines
@@ -95,12 +95,12 @@ set wrap
 set tl=500
 set ic
 set conceallevel=0
-set shortmess+=F
+set shortmess+=aFA
 set signcolumn=yes
+set regexpengine=1
 if has('termguicolors')
     set termguicolors
 endif
-
 packadd termdebug
 
 "Variables
@@ -127,7 +127,10 @@ if executable('rg')
   let g:rg_derive_root='true'
 endif
 let g:rainbow_active = 1
-let g:rainbow_guifgs = ['#FFDF01', '#da70d6', '#87CEFA']
+"let g:rainbow_guifgs = ['#FFDF01', '#da70d6', '#87CEFA']
+let g:rainbow_conf = {
+      \'guifgs': ['#FFDF01', '#da70d6', '#87CEFA'],
+      \}
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:dart_format_on_save = 0
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -195,18 +198,15 @@ endfunction
 
 "Colors
 "Must be below colorscheme
-highlight Normal guibg=NONE ctermbg=NONE ctermfg=103 guifg=#8f93a2
+highlight Normal guibg=NONE ctermbg=NONE
 highlight SignColumn guibg=NONE ctermbg=NONE
 hi MatchParen guifg=White
 hi MatchParen guibg=NONE
-highlight link dartTypedef dartStatement
-highlight link dartClassDecl dartStatement
 highlight Comment cterm=italic gui=italic
 
 "Sources
 source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/fzf.vim
-source ~/.config/nvim/functions.vim
 
 "LUA
 lua <<EOF
