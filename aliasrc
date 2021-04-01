@@ -40,16 +40,7 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	p="sudo pacman" \
-	xi="sudo xbps-install" \
-	xr="sudo xbps-remove -R" \
-	xq="xbps-query" \
   z="zathura" \
   lekcje="cd $HOME/Documents/lekcje" \
   flutterp="cd $HOME/programming/flutter_projects" \
-  launchpixel="flutter emulators --launch Pixel_3_API_30"
-
-alias \
-	magit="nvim -c MagitOnly" \
-	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" \
-	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
-
+  launchemu="flutter emulators --launch flutter_emulator"
