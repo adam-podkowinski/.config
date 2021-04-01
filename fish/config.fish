@@ -25,6 +25,4 @@ set PATH $PATH $JAVA_HOME/bin
 set PATH $PATH $HOME/.cargo/bin/
 set PATH $PATH $HOME/scripts/
 
-starship init fish | source
-
 fish_vi_key_bindings
