@@ -15,7 +15,7 @@ verbose nnoremap <Leader>s :CocCommand clangd.switchSourceHeader<CR>
 "CocExplore
 verbose nnoremap <Leader>e :CocCommand explorer --preset floating<CR>
 verbose nnoremap <Leader><Leader> :execute 'CocCommand explorer ' getcwd()<CR>
-verbose nnoremap <silent><Leader>f :Format<CR>
+verbose nnoremap <silent><Leader>F :Format<CR>
 nnoremap <Leader>r :execute 'CocCommand flutter.dev.hotRestart'<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 autocmd FileType coc-explorer :IndentLinesDisable

@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 "Colorscheme
 Plug 'drewtempelmeyer/palenight.vim'
+"Animations
+Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
 Plug 'preservim/nerdcommenter'
 "fuzzy find
