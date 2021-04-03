@@ -45,7 +45,7 @@ gls.left[1] = {
                 r = colors.cyan,
                 rm = colors.cyan,
                 ['r?'] = colors.cyan,
-                ['!'] = colorsblue,
+                ['!'] = colors.blue,
                 t = colors.blue
             }
             vim.api.nvim_command('hi GalaxyViMode guifg=' .. mode_color[vim.fn.mode()])
@@ -174,13 +174,14 @@ gls.right[11] = {
     }
 }
 
-gls.short_line_left[1] = {
-    BufferType = {
-        provider = 'FileTypeName',
-        separator = ' ',
-        separator_highlight = {'NONE', colors.bg},
-        highlight = {colors.grey, colors.bg}
+gls.short_line_left[0] = {
+    FileIcon = {
+        provider = 'FileIcon',
     }
+}
+
+gls.short_line_left[1] = {
+    FileName = {provider = 'FileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.bg}}
 }
 
 require('gitsigns').setup()
