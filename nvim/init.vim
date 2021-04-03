@@ -33,8 +33,8 @@ Plug 'mbbill/undotree'
 "Close buffers with style :)
 Plug 'qpkorr/vim-bufkill'
 "Nice status line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'kyazdani42/nvim-web-devicons' " lua
 "Colorful brackets
 Plug 'luochen1990/rainbow'
 "Close pairs
@@ -115,16 +115,6 @@ let g:material_terminal_italics = 1
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let mapleader = ' '
-let g:airline_theme='palenight'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#show_splits = 1
-let g:airline#extensions#tabline#show_buffers = 1
-
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
 
 if executable('rg')
   let g:rg_derive_root='true'
@@ -208,14 +198,4 @@ highlight Comment cterm=italic gui=italic
 "Sources
 source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/fzf.vim
-
-"LUA
-lua <<EOF
-require('gitsigns').setup()
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-  },
-}
-EOF
+luafile ~/.config/nvim/luafile.lua
