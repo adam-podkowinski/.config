@@ -34,6 +34,8 @@ Plug 'mbbill/undotree'
 Plug 'qpkorr/vim-bufkill'
 "Nice status line
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'akinsho/nvim-bufferline.lua'
+"Icons
 Plug 'kyazdani42/nvim-web-devicons' " lua
 "Colorful brackets
 Plug 'luochen1990/rainbow'
@@ -143,8 +145,7 @@ verbose vnoremap <C-S-y> "+y
 verbose vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
 nnoremap <silent> <TAB> :bnext<CR>
-nnoremap <silent> <S-TAB> :bprevious<CR>
-
+nnoremap <silent> <S-TAB> :bprev<CR>
 nnoremap <c-u> viwU<Esc>
 nnoremap <Leader><c-u> viwu<Esc>
 

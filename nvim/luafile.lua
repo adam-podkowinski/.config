@@ -80,6 +80,16 @@ gls.left[3] = {
 }
 
 gls.left[4] = {
+    FileIcon = {
+        provider = 'FileIcon',
+    }
+}
+
+gls.left[5] = {
+    FileName = {provider = 'FileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.bg}}
+}
+
+gls.left[6] = {
     DiffAdd = {
         provider = 'DiffAdd',
         condition = condition.hide_in_width,
@@ -87,7 +97,7 @@ gls.left[4] = {
         highlight = {colors.green, colors.bg}
     }
 }
-gls.left[5] = {
+gls.left[7] = {
     DiffModified = {
         provider = 'DiffModified',
         condition = condition.hide_in_width,
@@ -95,7 +105,7 @@ gls.left[5] = {
         highlight = {colors.blue, colors.bg}
     }
 }
-gls.left[6] = {
+gls.left[8] = {
     DiffRemove = {
         provider = 'DiffRemove',
         condition = condition.hide_in_width,
@@ -127,18 +137,6 @@ gls.right[6] = {
 gls.right[7] = {
     PerCent = {
         provider = 'LinePercent',
-        separator = ' ',
-        separator_highlight = {'NONE', colors.bg},
-        highlight = {colors.grey, colors.bg}
-    }
-}
-
-gls.right[8] = {
-    Tabstop = {
-        provider = function()
-            return "Spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. " "
-        end,
-        condition = condition.hide_in_width,
         separator = ' ',
         separator_highlight = {'NONE', colors.bg},
         highlight = {colors.grey, colors.bg}
@@ -185,12 +183,6 @@ gls.short_line_left[1] = {
     }
 }
 
-gls.short_line_left[2] = {
-    SFileName = {provider = 'SFileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.bg}}
-}
-
-gls.short_line_right[1] = {BufferIcon = {provider = 'BufferIcon', highlight = {colors.grey, colors.bg}}}
-
 require('gitsigns').setup()
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -198,3 +190,4 @@ require'nvim-treesitter.configs'.setup {
     enable = true,              -- false will disable the whole extension
   },
 }
+require'bufferline'.setup{}
