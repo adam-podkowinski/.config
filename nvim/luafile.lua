@@ -75,7 +75,7 @@ gls.left[3] = {
         condition = condition.check_git_workspace,
         separator = ' ',
         separator_highlight = {'NONE', colors.bg},
-        highlight = {colors.grey, colors.bg}
+        highlight = {colors.orange, colors.bg}
     }
 }
 
@@ -174,15 +174,32 @@ gls.right[11] = {
     }
 }
 
-gls.short_line_left[0] = {
-    FileIcon = {
-        provider = 'FileIcon',
-    }
+gls.short_line_left[1] = {
+  BufferType = {
+    provider = 'FileTypeName',
+    separator = ' ',
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.blue,colors.bg,'bold'}
+  }
 }
 
-gls.short_line_left[1] = {
-    FileName = {provider = 'FileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.bg}}
+gls.short_line_left[2] = {
+  SFileName = {
+    provider =  'SFileName',
+    condition = condition.buffer_not_empty,
+    highlight = {colors.fg,colors.bg,'bold'}
+  }
 }
+
+gls.short_line_right[1] = {
+  BufferIcon = {
+    provider= 'FileIcon',
+    highlight = {colors.fg,colors.bg}
+  }
+}
+--gls.short_line_left[1] = {
+--    FileName = {provider = 'FileName', condition = condition.buffer_not_empty, highlight = {colors.grey, colors.grey}}
+--}
 
 require('gitsigns').setup()
 require'nvim-treesitter.configs'.setup {
