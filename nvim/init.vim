@@ -9,7 +9,10 @@ Plug 'psliwka/vim-smoothie'
 Plug 'preservim/nerdcommenter'
 "fuzzy find
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'airblade/vim-rooter'
 "Motion
 Plug 'unblevable/quick-scope'
@@ -144,8 +147,8 @@ let g:cpp_concepts_highlight = 1
 verbose vnoremap <C-S-y> "+y
 verbose vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
-nnoremap <silent> <TAB> :bnext<CR>
-nnoremap <silent> <S-TAB> :bprev<CR>
+nnoremap <silent> <TAB> :BufferLineCycleNext<CR>
+nnoremap <silent> <S-TAB> :BufferLineCyclePrev<CR>
 nnoremap <c-u> viwU<Esc>
 nnoremap <Leader><c-u> viwu<Esc>
 
