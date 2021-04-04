@@ -8,7 +8,6 @@ Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
 Plug 'preservim/nerdcommenter'
 "fuzzy find
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -22,7 +21,7 @@ Plug 'tpope/vim-surround'
 "File manager
 Plug 'kyazdani42/nvim-tree.lua'
 "Auto completion and IDE functions
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Dart and flutter support
 Plug 'dart-lang/dart-vim-plugin'
@@ -47,8 +46,6 @@ Plug 'jiangmiao/auto-pairs'
 "Indent lines
 Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
-"C++ debugging
-"Plug 'vim-scripts/Conque-GDB'
 "Tex
 Plug 'lervag/vimtex'
 "Colorizer
@@ -103,9 +100,10 @@ set wrap
 set tl=500
 set ic
 set conceallevel=0
-set shortmess+=aFA
+set shortmess+=aFAc
 set signcolumn=yes
 set regexpengine=1
+set completeopt=menuone,noinsert,noselect
 if has('termguicolors')
     set termguicolors
 endif
@@ -191,6 +189,10 @@ function! InsertMapForEnter()
     endif
 endfunction
 
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>":
+      \ search('\%#[]>)}''"`]', 'n') ? '<Right>' : '<Tab>'
+
 "Colors
 "Must be below colorscheme
 highlight Normal guibg=NONE ctermbg=NONE
@@ -200,6 +202,7 @@ hi MatchParen guibg=NONE
 highlight Comment cterm=italic gui=italic
 
 "Sources
+source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/telescope.vim
 luafile ~/.config/nvim/luafile.lua
 source ~/.config/nvim/luatree.vim
