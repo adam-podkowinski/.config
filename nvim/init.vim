@@ -147,8 +147,8 @@ let g:cpp_concepts_highlight = 1
 verbose vnoremap <C-S-y> "+y
 verbose vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
-nnoremap <silent> <TAB> :bnext<CR>
-nnoremap <silent> <S-TAB> :bprev<CR>
+nnoremap <silent> <TAB> :BufferLineCycleNext<CR>
+nnoremap <silent> <S-TAB> :BufferLineCyclePrev<CR>
 nnoremap <c-u> viwU<Esc>
 nnoremap <Leader><c-u> viwu<Esc>
 
@@ -200,7 +200,6 @@ hi MatchParen guibg=NONE
 highlight Comment cterm=italic gui=italic
 
 "Sources
-"source ~/.config/nvim/coc-settings.vim
-source ~/.config/nvim/fzf.vim
+source ~/.config/nvim/telescope.vim
 luafile ~/.config/nvim/luafile.lua
 source ~/.config/nvim/luatree.vim
