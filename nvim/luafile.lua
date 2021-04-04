@@ -20,7 +20,7 @@ local colors = {
 }
 local condition = require('galaxyline.condition')
 local gls = gl.section
-gl.short_line_list = {'coc-explorer', 'NvimTree', 'vista', 'dbui', 'packer'}
+gl.short_line_list = {'NvimTree', 'vista', 'dbui', 'packer'}
 
 gls.left[1] = {
   ViMode = {

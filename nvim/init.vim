@@ -20,9 +20,9 @@ Plug 'easymotion/vim-easymotion'
 "Faster surround with quotes or brackets
 Plug 'tpope/vim-surround'
 "File manager
-Plug 'preservim/nerdtree'
+Plug 'kyazdani42/nvim-tree.lua'
 "Auto completion and IDE functions
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Dart and flutter support
 Plug 'dart-lang/dart-vim-plugin'
@@ -147,8 +147,8 @@ let g:cpp_concepts_highlight = 1
 verbose vnoremap <C-S-y> "+y
 verbose vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
-nnoremap <silent> <TAB> :BufferLineCycleNext<CR>
-nnoremap <silent> <S-TAB> :BufferLineCyclePrev<CR>
+nnoremap <silent> <TAB> :bnext<CR>
+nnoremap <silent> <S-TAB> :bprev<CR>
 nnoremap <c-u> viwU<Esc>
 nnoremap <Leader><c-u> viwu<Esc>
 
@@ -200,6 +200,7 @@ hi MatchParen guibg=NONE
 highlight Comment cterm=italic gui=italic
 
 "Sources
-source ~/.config/nvim/coc-settings.vim
+"source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/fzf.vim
 luafile ~/.config/nvim/luafile.lua
+source ~/.config/nvim/luatree.vim
