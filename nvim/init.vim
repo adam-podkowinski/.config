@@ -100,10 +100,9 @@ set wrap
 set tl=500
 set ic
 set conceallevel=0
-set shortmess+=aFAc
+set shortmess=c
 set signcolumn=yes
 set regexpengine=1
-set completeopt=menuone,noinsert,noselect
 if has('termguicolors')
     set termguicolors
 endif
