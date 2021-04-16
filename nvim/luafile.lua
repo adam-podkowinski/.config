@@ -196,7 +196,11 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-require'bufferline'.setup{}
+require'bufferline'.setup{
+  options = {
+    always_show_bufferline = false
+  }
+}
 
 local actions = require('telescope.actions')
 require('telescope').setup {

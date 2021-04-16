@@ -100,7 +100,7 @@ set wrap
 set tl=500
 set ic
 set conceallevel=0
-set shortmess=c
+set shortmess+=c
 set signcolumn=yes
 set regexpengine=1
 if has('termguicolors')
