@@ -15,20 +15,6 @@
     "javascript",
     "rust"
   ],
-  "explorer.width": 30,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.keyMappings.global": {
-    "<cr>": [
-      "expandable?",
-      [
-        "expanded?",
-        "collapse",
-        "expand"
-      ],
-      "open"
-    ],
-    "v": "open:vsplit"
-  },
   "clangd.semanticHighlighting": true,
   "initializationOptions": {
     "index": {
@@ -40,8 +26,5 @@
   },
   "clangd.arguments": [
     "-fallback-style=google"
-  ],
-  "clangd.fallbackFlags": [
-    "-std=c++17"
   ]
 }
