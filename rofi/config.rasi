@@ -5,7 +5,7 @@ configuration {
 }
 * {
   background-color: #293037;
-  border-color: #ff8800;
+  border-color: #2f78f5;
   text-color: #eeeeee;
   spacing: 0;
   width: 700;
@@ -24,7 +24,7 @@ prompt {
 textbox {
   background-color: #2e343f;
   border: 2px 2px 2px;
-  border-color: #ff8800;
+  border-color: #2f78f5;
   padding: 8px 16px;
 }
 
