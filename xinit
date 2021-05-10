@@ -2,7 +2,6 @@
 xset r rate 200 27
 nitrogen --restore &
 slstatus &
-picom -b &
 /usr/lib/lxpolkit/lxpolkit &
 dunst &
 setxkbmap pl
