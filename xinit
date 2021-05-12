@@ -17,7 +17,6 @@ export JAVA_OPTS=''
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export ANDROID_SDK_ROOT=~/Android/Sdk
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export PATH="$PATH:~/.emacs.d/"
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
 export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools/"
 export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin/"
