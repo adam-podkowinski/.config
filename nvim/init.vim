@@ -126,6 +126,17 @@ let g:rainbow_active = 1
 let g:rainbow_conf = {
       \'guifgs': ['#FFDF01', '#da70d6', '#87CEFA'],
       \}
+
+let g:Hexokinase_optInPatterns = [
+\     'full_hex',
+\     'triple_hex',
+\     'rgb',
+\     'rgba',
+\     'hsl',
+\     'hsla',
+\     'colour_names'
+\ ]
+
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:dart_format_on_save = 0
 let g:EasyMotion_do_mapping = 0 " Disable default mappings

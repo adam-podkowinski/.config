@@ -27,5 +27,7 @@ export PATH="$PATH:$HOME/.cargo/bin/"
 export PATH="$PATH:$HOME/scripts/"
 export PATH="$PATH:$HOME/.local/bin"
 export QT_QPA_PLATFORMTHEME=gtk2
+export TERMINAL="/usr/local/bin/st"
+export TERM="/usr/local/bin/st"
 
 exec dwm
