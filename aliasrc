@@ -42,5 +42,5 @@ alias \
 	p="sudo pacman" \
   z="zathura" \
   lekcje="cd $HOME/Documents/lekcje" \
-  flutterp="cd $HOME/programming/flutter_projects" \
+  flutterp="cd $HOME/code/flutter_projects" \
   launchemu="flutter emulators --launch flutter_emulator"
