@@ -7,6 +7,7 @@ dunst &
 setxkbmap pl
 xmodmap ~/.config/xmodmap
 picom -b
+xinput --set-prop 13 'libinput Accel Profile Enabled' 0 1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/bin/nvim
 export CHROME_EXECUTABLE=/usr/bin/brave
@@ -27,6 +28,7 @@ export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:$HOME/.cargo/bin/"
 export PATH="$PATH:$HOME/scripts/"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.emacs.d/bin"
 export QT_QPA_PLATFORMTHEME=gtk2
 export TERMINAL="/usr/local/bin/st"
 export TERM="/usr/local/bin/st"
