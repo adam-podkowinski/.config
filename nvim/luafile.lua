@@ -1,4 +1,5 @@
 local gl = require('galaxyline')
+local fileinfo = require('galaxyline.provider_fileinfo')
 -- get my theme in galaxyline repo
 local colors = {
   yellow = '#DCDCAA',
@@ -101,6 +102,19 @@ gls.left[6] = {
     condition = condition.hide_in_width,
     icon = '  ',
     highlight = {colors.red, colors.bg}
+  }
+}
+local buffer_not_empty = function()
+  if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
+    return true
+  end
+  return false
+end
+gls.left[7] = {
+  FileName = {
+    provider = {'FileName','FileSize'},
+    condition = buffer_not_empty,
+    highlight = {colors.grey,colors.bg}
   }
 }
 

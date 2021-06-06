@@ -13,6 +13,8 @@
     "dart",
     "rust",
     "javascript",
+    "kotlin",
+    "java",
     "rust"
   ],
   "clangd.semanticHighlighting": true,
