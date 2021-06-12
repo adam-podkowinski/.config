@@ -1,32 +1,32 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-    "python",
-    "vim",
-    "json",
-    "lua",
-    "html",
-    "js",
-    "css",
-    "sass",
-    "scss",
-    "htmldjango",
-    "dart",
-    "rust",
-    "javascript",
-    "kotlin",
-    "java",
-    "rust"
-  ],
-  "clangd.semanticHighlighting": true,
-  "initializationOptions": {
-    "index": {
-      "onChange": true
+    "coc.preferences.formatOnSaveFiletypes": [
+        "python",
+        "vim",
+        "json",
+        "lua",
+        "html",
+        "js",
+        "css",
+        "sass",
+        "scss",
+        "htmldjango",
+        "dart",
+        "rust",
+        "javascript",
+        "kotlin",
+        "java",
+        "rust"
+    ],
+    "clangd.semanticHighlighting": true,
+    "initializationOptions": {
+        "index": {
+            "onChange": true
+        },
+        "highlight": {
+            "lsRanges": true
+        }
     },
-    "highlight": {
-      "lsRanges": true
-    }
-  },
-  "clangd.arguments": [
-    "-fallback-style=google"
-  ]
+    "clangd.arguments": [
+        "-fallback-style=google"
+    ]
 }

@@ -37,9 +37,9 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'akinsho/nvim-bufferline.lua'
 "Icons
-Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'kyazdani42/nvim-web-devicons'
 "Colorful brackets
-Plug 'luochen1990/rainbow'
+Plug 'p00f/nvim-ts-rainbow'
 "Close pairs
 Plug 'jiangmiao/auto-pairs'
 "Indent lines
@@ -64,7 +64,7 @@ colorscheme palenight
 "Sets
 set foldmethod=syntax
 set foldlevel=99
-set softtabstop=2
+set softtabstop=4
 set so=2
 set autoindent
 set background=dark
@@ -86,12 +86,12 @@ set relativenumber
 set number
 set pumheight=10
 set ruler
-set shiftwidth=2
+set shiftwidth=4
 set showtabline=2
 set smartindent
 set smarttab
 set splitbelow splitright
-set tabstop=2
+set tabstop=4
 set timeoutlen=350
 set ttimeoutlen=0
 set updatetime=200
@@ -120,11 +120,6 @@ let mapleader = ' '
 if executable('rg')
   let g:rg_derive_root='true'
 endif
-let g:rainbow_active = 1
-"let g:rainbow_guifgs = ['#FFDF01', '#da70d6', '#87CEFA']
-let g:rainbow_conf = {
-      \'guifgs': ['#FFDF01', '#da70d6', '#87CEFA'],
-      \}
 
 let g:Hexokinase_optInPatterns = [
 \     'full_hex',

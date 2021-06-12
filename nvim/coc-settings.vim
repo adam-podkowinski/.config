@@ -42,4 +42,8 @@ endfunction
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 autocmd Filetype dart nnoremap <F9> :CocCommand flutter.run<CR>
+autocmd Filetype * set softtabstop=4 shiftwidth=4 tabstop=4
+autocmd Filetype dart set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd Filetype cpp set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd Filetype c set softtabstop=2 shiftwidth=2 tabstop=2
 autocmd Filetype rust nnoremap <F9> :CocCommand rust-analyzer.run<CR>
