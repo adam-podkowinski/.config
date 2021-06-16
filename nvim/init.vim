@@ -151,6 +151,8 @@ verbose vnoremap <C-S-p> "+p
 nnoremap <Leader>z :noh<CR>
 nnoremap <silent> <TAB> :BufferLineCycleNext<CR>
 nnoremap <silent> <S-TAB> :BufferLineCyclePrev<CR>
+nnoremap <leader>/ :call NERDComment('', 'toggle')<CR>
+vnoremap <leader>/ :call NERDComment('', 'toggle')<CR>
 nnoremap <c-u> viwU<Esc>
 nnoremap <Leader><c-u> viwu<Esc>
 

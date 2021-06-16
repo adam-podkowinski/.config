@@ -214,7 +214,9 @@ require'nvim-treesitter.configs'.setup {
         colors = {
             "#ffdf01",
             "#da70d6",
-            "#87cefa"
+            "#87cefa",
+            "#37bf3e",
+            "#1489e1"
         },
     }
 }
