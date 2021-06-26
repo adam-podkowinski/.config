@@ -7,7 +7,7 @@ dunst &
 setxkbmap pl
 xmodmap ~/.config/xmodmap
 picom -b
-xinput --set-prop 13 'libinput Accel Profile Enabled' 0 1
+xinput --set-prop 'pointer:COMPANY USB Device' 'libinput Accel Profile Enabled' 0 1
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/local/bin/nvim
