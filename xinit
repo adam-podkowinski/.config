@@ -1,13 +1,4 @@
-#!/bin/sh
-xset r rate 200 27
-nitrogen --restore &
-slstatus &
-/usr/lib/lxpolkit/lxpolkit &
-dunst &
-setxkbmap pl
-xmodmap ~/.config/xmodmap
-picom -b
-xinput --set-prop 'pointer:COMPANY USB Device' 'libinput Accel Profile Enabled' 0 1
+#!/bin/bash
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/local/bin/nvim
@@ -21,6 +12,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export ANDROID_SDK_ROOT=~/Android/Sdk
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator"
+export PATH="$PATH:$HOME/software/flutter/flutter/bin"
 export PATH="$PATH:$ANDROID_SDK_ROOT/platform-tools/"
 export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin/"
 export PATH="$PATH:$ANDROID_SDK_ROOT/tools/"
@@ -39,4 +31,21 @@ export TERMINAL="/usr/local/bin/st"
 export TERM="/usr/local/bin/st"
 export NNN_FIFO="/tmp/nnn.fifo"
 
-exec dwm
+wm="$1"
+case $wm in
+	dwm)
+	xset r rate 200 27
+	nitrogen --restore &
+	slstatus &
+	/usr/lib/polkit-kde-authentication-agent-1 &
+	dunst &
+	setxkbmap pl
+	xmodmap ~/.config/xmodmap
+	picom -b
+	xinput --set-prop 'pointer:COMPANY USB Device' 'libinput Accel Profile Enabled' 0 1
+	exec dwm
+	;;
+*)
+	exec $wm
+	;;
+esac

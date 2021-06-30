@@ -132,10 +132,9 @@ load-module module-role-cork
 ### loading modules and rerouting streams.
 load-module module-filter-heuristics
 load-module module-filter-apply
-load-module module-echo-cancel source_name=MIC_ECHO_CANCEL source_properties=device.description=MicrophoneNoEcho
+
+load-module module-jack-sink
 
 ### Make some devices default
 #set-default-sink output
 #set-default-source input
-
-set-default-source MIC_ECHO_CANCEL

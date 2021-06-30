@@ -40,7 +40,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -67,19 +67,19 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     # family: "Fira Code"
     # family: "Source Code Pro"
     # style: Retina
 
   # The bold font face
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "FiraCode Nerd Font"
     # family: "Fira Code"
     # family: "Source Code Pro"
     # style: "Medium Italic"
