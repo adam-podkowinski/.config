@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/local/bin/nvim
@@ -26,7 +26,6 @@ export PATH="$PATH:$HOME/bodzio/code/emsdk"
 export PATH="$PATH:$HOME/bodzio/code/emsdk/node/14.15.5_64bit/bin"
 export PATH="$PATH:$HOME/bodzio/code/emsdk/upstream/emscripten"
 export PATH="$PATH:$HOME/.pub-cache/bin"
-export QT_QPA_PLATFORMTHEME=gtk2
 export TERMINAL="/usr/local/bin/st"
 export TERM="/usr/local/bin/st"
 export NNN_FIFO="/tmp/nnn.fifo"
@@ -41,6 +40,7 @@ case $wm in
 	dunst &
 	setxkbmap pl
 	xmodmap ~/.config/xmodmap
+    export QT_QPA_PLATFORMTHEME=gtk2
 	picom -b
 	xinput --set-prop 'pointer:COMPANY USB Device' 'libinput Accel Profile Enabled' 0 1
 	exec dwm
