@@ -34,7 +34,7 @@ export NNN_FIFO="/tmp/nnn.fifo"
 wm="$1"
 case $wm in
 	dwm)
-	xset r rate 200 27
+	xset r rate 199 30
 	nitrogen --restore &
 	slstatus &
 	/usr/lib/polkit-kde-authentication-agent-1 &
