@@ -145,6 +145,12 @@ let g:cpp_posix_standard = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 
+"Neovide
+let g:neovide_transparency=0.95
+let g:neovide_cursor_animation_length=0.1
+let g:neovide_cursor_trail_length=0.0
+set guifont=FiraCode\ Nerd\ Font:h14
+
 "Remaps
 verbose vnoremap <C-S-y> "+y
 verbose vnoremap <C-S-p> "+p
