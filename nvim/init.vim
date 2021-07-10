@@ -43,7 +43,6 @@ Plug 'p00f/nvim-ts-rainbow'
 "Close pairs
 Plug 'jiangmiao/auto-pairs'
 "Indent lines
-Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
 "Tex
 Plug 'lervag/vimtex'
