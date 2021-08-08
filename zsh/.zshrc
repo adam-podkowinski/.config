@@ -71,3 +71,5 @@ antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zdharma/fast-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
 antibody bundle softmoth/zsh-vim-mode
+
+echo "To shutdown computer type: doas shutdown now"
