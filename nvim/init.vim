@@ -2,7 +2,8 @@
 call plug#begin('~/.vim/plugged')
 
 "Colorscheme
-Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'drewtempelmeyer/palenight.vim'
+Plug 'Pocco81/Catppuccino.nvim'
 "Animations
 Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
@@ -59,7 +60,7 @@ Plug 'L04DB4L4NC3R/texgroff.vim'
 call plug#end()
 
 filetype plugin indent on
-colorscheme palenight
+"colorscheme palenight
 "Sets
 set foldmethod=syntax
 set foldlevel=99

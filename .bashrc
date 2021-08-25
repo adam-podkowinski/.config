@@ -1,4 +1,12 @@
-#!/bin/sh
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# alias ls='ls --color=auto'
+# PS1='[\u@\h \W]\$ '
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export EDITOR=/usr/local/bin/nvim
@@ -29,23 +37,3 @@ export PATH="$PATH:$HOME/.pub-cache/bin"
 export TERMINAL="/usr/local/bin/st"
 export TERM="/usr/local/bin/st"
 export NNN_FIFO="/tmp/nnn.fifo"
-
-wm="$1"
-case $wm in
-	dwm)
-	xset r rate 199 30
-	nitrogen --restore &
-	slstatus &
-	/usr/lib/polkit-kde-authentication-agent-1 &
-	dunst &
-	setxkbmap pl
-	xmodmap ~/.config/xmodmap
-    #export QT_QPA_PLATFORMTHEME=gtk2
-	picom -b
-	xinput --set-prop 'pointer:COMPANY USB Device' 'libinput Accel Profile Enabled' 0 1
-	exec dwm
-	;;
-*)
-	exec $wm
-	;;
-esac

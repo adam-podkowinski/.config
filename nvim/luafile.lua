@@ -204,13 +204,13 @@ gls.short_line_right[1] = {
 
 require('gitsigns').setup()
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     highlight = {
         enable = true,              -- false will disable the whole extension
     },
     rainbow = {
         enable = true,
-        extended_mode = false,
+        extended_mode = true,
         colors = {
             "#ffdf01",
             "#da70d6",
@@ -262,3 +262,49 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('fzy_native')
+
+local catppuccino = require("catppuccino")
+
+-- configure it
+catppuccino.setup(
+    {
+		colorscheme = "catppuccino",
+		transparency = true,
+        styles = {
+			comments = "NONE",
+			functions = "NONE",
+			keywords = "NONE",
+			strings = "NONE",
+			variables = "NONE",
+		},
+		integrations = {
+			treesitter = true,
+			native_lsp = {
+				enabled = true,
+				styles = {
+					errors = "italic",
+					hints = "italic",
+					warnings = "italic",
+					information = "italic"
+				}
+			},
+			lsp_trouble = true,
+			lsp_saga = true,
+			gitgutter = false,
+			telescope = true,
+			nvimtree = false,
+			which_key = true,
+			indent_blankline = true,
+			dashboard = true,
+			neogit = true,
+			vim_sneak = true,
+			fern = true,
+			barbar = true,
+			bufferline = true,
+			markdown = true,
+		}
+	}
+)
+
+-- load it
+catppuccino.load()
