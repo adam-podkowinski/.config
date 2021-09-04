@@ -268,15 +268,15 @@ local catppuccino = require("catppuccino")
 -- configure it
 catppuccino.setup(
     {
-		colorscheme = "catppuccino",
-		transparency = true,
+		colorscheme = "neon_latte",
+		transparency = false,
         styles = {
-			comments = "NONE",
-			functions = "NONE",
-			keywords = "NONE",
-			strings = "NONE",
-			variables = "NONE",
-		},
+            comments = "NONE",
+            functions = "NONE",
+            keywords = "NONE",
+            strings = "NONE",
+            variables = "NONE",
+        },
 		integrations = {
 			treesitter = true,
 			native_lsp = {
@@ -292,10 +292,13 @@ catppuccino.setup(
 			lsp_saga = true,
 			gitgutter = false,
 			telescope = true,
-			nvimtree = false,
 			which_key = true,
 			indent_blankline = true,
 			dashboard = true,
+            nvimtree = {
+                enabled = true,
+                show_root = true,
+            },
 			neogit = true,
 			vim_sneak = true,
 			fern = true,

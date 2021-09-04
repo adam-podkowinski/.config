@@ -2,7 +2,6 @@
 call plug#begin('~/.vim/plugged')
 
 "Colorscheme
-"Plug 'drewtempelmeyer/palenight.vim'
 Plug 'Pocco81/Catppuccino.nvim'
 "Animations
 Plug 'psliwka/vim-smoothie'
@@ -60,7 +59,6 @@ Plug 'L04DB4L4NC3R/texgroff.vim'
 call plug#end()
 
 filetype plugin indent on
-"colorscheme palenight
 "Sets
 set foldmethod=syntax
 set foldlevel=99
@@ -204,14 +202,6 @@ endfunction
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>":
       \ search('\%#[]>)}''"`]', 'n') ? '<Right>' : '<Tab>'
-
-"Colors
-"Must be below colorscheme
-highlight Normal guibg=NONE ctermbg=NONE
-highlight SignColumn guibg=NONE ctermbg=NONE
-hi MatchParen guifg=White
-hi MatchParen guibg=NONE
-highlight Comment cterm=italic gui=italic
 
 "Sources
 source ~/.config/nvim/coc-settings.vim
