@@ -2,7 +2,8 @@
 call plug#begin('~/.vim/plugged')
 
 "Colorscheme
-Plug 'Pocco81/Catppuccino.nvim'
+"Plug 'Pocco81/Catppuccino.nvim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "Animations
 Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
@@ -62,7 +63,7 @@ filetype plugin indent on
 "Sets
 set foldmethod=syntax
 set foldlevel=99
-set softtabstop=4
+set softtabstop=2
 set so=2
 set autoindent
 set background=dark
@@ -84,12 +85,12 @@ set relativenumber
 set number
 set pumheight=10
 set ruler
-set shiftwidth=4
+set shiftwidth=2
 set showtabline=2
 set smartindent
 set smarttab
 set splitbelow splitright
-set tabstop=4
+set tabstop=2
 set timeoutlen=350
 set ttimeoutlen=0
 set updatetime=200
@@ -202,6 +203,14 @@ endfunction
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>":
       \ search('\%#[]>)}''"`]', 'n') ? '<Right>' : '<Tab>'
+
+colorscheme material
+
+highlight Normal guibg=NONE ctermbg=NONE
+highlight SignColumn guibg=NONE ctermbg=NONE
+hi MatchParen guifg=White
+hi MatchParen guibg=NONE
+highlight Comment cterm=italic gui=italic
 
 "Sources
 source ~/.config/nvim/coc-settings.vim

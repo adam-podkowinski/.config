@@ -8,7 +8,7 @@ precmd_functions+=( precmd_vcs_info  )
 setopt prompt_subst
 zstyle ':vcs_info:*' formats " on  %b"
 
-PS1="%B%F{cyan}%c%F{magenta}\$vcs_info_msg_0_ %F{green}➜ %F{reset_color}%b"
+PS1="🚀 %B%F{cyan}%c%F{magenta}\$vcs_info_msg_0_ %F{green}➜ %F{reset_color}%b"
 
 # History in cache directory:
 HISTSIZE=10000
@@ -71,5 +71,3 @@ antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zdharma/fast-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
 antibody bundle softmoth/zsh-vim-mode
-
-echo "To shutdown computer type: doas shutdown now"

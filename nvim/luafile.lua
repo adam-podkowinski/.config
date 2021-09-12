@@ -263,51 +263,54 @@ require('telescope').setup {
 
 require('telescope').load_extension('fzy_native')
 
-local catppuccino = require("catppuccino")
+--local catppuccino = require("catppuccino")
 
 -- configure it
-catppuccino.setup(
-    {
-		colorscheme = "neon_latte",
-		transparency = false,
-        styles = {
-            comments = "NONE",
-            functions = "NONE",
-            keywords = "NONE",
-            strings = "NONE",
-            variables = "NONE",
-        },
-		integrations = {
-			treesitter = true,
-			native_lsp = {
-				enabled = true,
-				styles = {
-					errors = "italic",
-					hints = "italic",
-					warnings = "italic",
-					information = "italic"
-				}
-			},
-			lsp_trouble = true,
-			lsp_saga = true,
-			gitgutter = false,
-			telescope = true,
-			which_key = true,
-			indent_blankline = true,
-			dashboard = true,
-            nvimtree = {
-                enabled = true,
-                show_root = true,
-            },
-			neogit = true,
-			vim_sneak = true,
-			fern = true,
-			barbar = true,
-			bufferline = true,
-			markdown = true,
-		}
-	}
-)
+--catppuccino.setup(
+    --{
+		--colorscheme = "neon_latte",
+		--transparency = false,
+        --styles = {
+            --comments = "NONE",
+            --functions = "NONE",
+            --keywords = "NONE",
+            --strings = "NONE",
+            --variables = "NONE",
+        --},
+		--integrations = {
+			--treesitter = true,
+			--native_lsp = {
+				--enabled = true,
+				--styles = {
+					--errors = "italic",
+					--hints = "italic",
+					--warnings = "italic",
+					--information = "italic"
+				--}
+			--},
+			--lsp_trouble = true,
+			--lsp_saga = true,
+			--gitgutter = false,
+			--telescope = true,
+			--which_key = true,
+            --indent_blankline = {
+                --enabled = true,
+                --colored_indent_levels = true,
+            --},
+			--dashboard = true,
+            --nvimtree = {
+                --enabled = true,
+                --show_root = true,
+            --},
+			--neogit = true,
+			--vim_sneak = true,
+			--fern = true,
+			--barbar = true,
+			--bufferline = true,
+			--markdown = true,
+		--}
+	--}
+--)
 
 -- load it
-catppuccino.load()
+--catppuccino.load()
