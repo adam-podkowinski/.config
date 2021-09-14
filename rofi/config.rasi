@@ -4,45 +4,49 @@ configuration {
   font: "FiraCode Nerd Font 13";
 }
 * {
-  background-color: #293037;
   border-color: #2f78f5;
   text-color: #eeeeee;
   spacing: 0;
   width: 700;
   height: 675;
 }
-inputbar {
-  border: 2px 2px 2px 2px;
-  children: [prompt,entry];
-}
+/*inputbar {*/
+  /*border: 2px 2px 2px 2px;*/
+  /*children: [prompt,entry];*/
+  /*background-color: #404146;*/
+/*}*/
 
-prompt {
-  padding: 16px;
-  border: 0px 0px 0px 0px;
-}
+/*prompt {*/
+  /*padding: 16px;*/
+  /*border: 0px 0px 0px 0px;*/
+  /*background-color: #404146;*/
+/*}*/
 
-textbox {
-  background-color: #2e343f;
-  border: 2px 2px 2px;
-  border-color: #2f78f5;
-  padding: 8px 16px;
-}
+/*textbox {*/
+  /*background-color: #2e343f;*/
+  /*border: 2px 2px 2px;*/
+  /*border-color: #2f78f5;*/
+  /*padding: 8px 16px;*/
+/*}*/
 
-entry {
-  padding: 16px;
-}
+/*entry {*/
+  /*padding: 16px;*/
+  /*background-color: #404146;*/
+/*}*/
 
-listview {
-  cycle: false;
-  margin: 0 0 -2px 0;
-  scrollbar: false;
-}
+/*listview {*/
+  /*cycle: false;*/
+  /*margin: 0 0 -2px 0;*/
+  /*scrollbar: false;*/
+  /*background-color: #404146;*/
+/*}*/
 
-element {
-  border: 0 2px 2px 2px;
-  padding: 16px;
-}
+/*element {*/
+  /*border: 0 2px 2px 2px;*/
+  /*padding: 16px;*/
+  /*background-color: #404146;*/
+/*}*/
 
-element selected {
-  background-color: #404146;
-}
+/*element selected {*/
+  /*background-color: #404146;*/
+/*}*/
