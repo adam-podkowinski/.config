@@ -43,4 +43,5 @@ alias \
   z="zathura" \
   lekcje="cd $HOME/Documents/lekcje" \
   flutterp="cd $HOME/code/flutter_projects" \
+  kys="doas shutdown now" \
   launchemu="flutter emulators --launch Pixel_3a_API_30"
