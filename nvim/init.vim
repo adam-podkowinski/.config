@@ -7,7 +7,7 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "Animations
 Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
-Plug 'preservim/nerdcommenter'
+Plug 'b3nj5m1n/kommentary'
 "fuzzy find
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -151,13 +151,11 @@ let g:neovide_cursor_trail_length=0.0
 set guifont=FiraCode\ Nerd\ Font:h14
 
 "Remaps
-verbose vnoremap <C-S-y> "+y
-verbose vnoremap <C-S-p> "+p
+verbose vnoremap <Leader>c "+y
+verbose vnoremap <Leader>v "+p
 nnoremap <Leader>z :noh<CR>
 nnoremap <silent> <TAB> :BufferLineCycleNext<CR>
 nnoremap <silent> <S-TAB> :BufferLineCyclePrev<CR>
-nnoremap <leader>/ :call NERDComment('', 'toggle')<CR>
-vnoremap <leader>/ :call NERDComment('', 'toggle')<CR>
 nnoremap <c-u> viwU<Esc>
 nnoremap <Leader><c-u> viwu<Esc>
 
@@ -216,4 +214,4 @@ highlight Comment cterm=italic gui=italic
 source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/telescope.vim
 luafile ~/.config/nvim/luafile.lua
-source ~/.config/nvim/luatree.vim
+source ~/.config/nvim/nvimtree.vim
