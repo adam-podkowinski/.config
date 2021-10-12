@@ -3,7 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+#[[ $- != *i* ]] && return
 
 # alias ls='ls --color=auto'
 # PS1='[\u@\h \W]\$ '
@@ -34,6 +34,7 @@ export PATH="$PATH:$HOME/bodzio/code/emsdk"
 export PATH="$PATH:$HOME/bodzio/code/emsdk/node/14.15.5_64bit/bin"
 export PATH="$PATH:$HOME/bodzio/code/emsdk/upstream/emscripten"
 export PATH="$PATH:$HOME/.pub-cache/bin"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export TERMINAL="/usr/local/bin/st"
 export TERM="/usr/local/bin/st"
 export NNN_FIFO="/tmp/nnn.fifo"
