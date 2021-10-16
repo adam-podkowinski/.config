@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">7</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">de4c7c8f-4f01-4730-bf63-19f7973f0439</dc:identifier>
+        <dc:title>Ostatnie życzenie</dc:title>
+        <dc:creator opf:file-as="Andrzej Sapkowski" opf:role="aut">Andrzej Sapkowski</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.29.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+        <dc:publisher>superNowa</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9788375780819</dc:identifier>
+        <dc:language>pol</dc:language>
+        <meta name="calibre:author_link_map" content="{&quot;Andrzej Sapkowski&quot;: &quot;&quot;}"/>
+        <meta name="calibre:series" content="Wiedźmin"/>
+        <meta name="calibre:series_index" content="0"/>
+        <meta name="calibre:timestamp" content="2021-10-16T13:56:23.926740+00:00"/>
+        <meta name="calibre:title_sort" content="Ostatnie życzenie"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>

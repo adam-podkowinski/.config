@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">6</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">2aab21bc-d1cd-4b09-8a7b-3a12713518a4</dc:identifier>
+        <dc:title>The Mask Falling</dc:title>
+        <dc:creator opf:file-as="Shannon, Samantha" opf:role="aut">Samantha Shannon</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.29.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2020-10-28T00:00:00+00:00</dc:date>
+        <dc:description>&lt;b&gt;From the &lt;i&gt;New York Times&lt;/i&gt; bestselling author of &lt;i&gt;The Bone Season&lt;/i&gt; and &lt;i&gt;The Priory of the Orange Tree&lt;/i&gt;, the stunning fourth novel set in the world of Scion.&lt;br/&gt; &lt;br/&gt; &lt;/b&gt;Dreamwalker Paige Mahoney has eluded death again. Snatched from the jaws of captivity and consigned to a safe house in the Scion Citadel of Paris, she finds herself caught between those factions that seek Scion's downfall and those who would kill to protect the Rephaim's puppet empire.&lt;br/&gt; The mysterious Domino Program has plans for Paige, but she has ambitions of her own in this new citadel. With Arcturus Mesarthim-her former enemy-at her side, she embarks on an adventure that will lead her from the catacombs of Paris to the glittering hallways of Versailles. Her risks promise high reward: the Parisian underworld could yield the means to escalate her rebellion to outright war.&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;As Scion widens its bounds and the free world trembles in its shadow, Paige must fight her own...</dc:description>
+        <dc:publisher>Bloomsbury Publishing</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9781408865590</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta name="calibre:author_link_map" content="{&quot;Samantha Shannon&quot;: &quot;&quot;}"/>
+        <meta name="calibre:timestamp" content="2021-10-16T13:56:23.870492+00:00"/>
+        <meta name="calibre:title_sort" content="Mask Falling, The"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>
