@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">20</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">aed0ca5f-03f9-45d2-bbda-9961ebb23025</dc:identifier>
+        <dc:title>Mitologia (1924)</dc:title>
+        <dc:creator opf:file-as="Jan, Parandowski" opf:role="aut">Parandowski Jan</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.29.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>1924-01-10T15:36:18+00:00</dc:date>
+        <dc:description>&lt;div&gt;"Mitologia. Wierzenia i podania Greków i Rzymian", najbardziej znana 
+książka Jana Parandowskiego, zyskała kilkanaście wydań i od dawna 
+pozostaje w kanonie lektur polskiej inteligencji. "Hellenizm, który jest
+ przede wszystkim zasadą światła, najpotężniej oddziaływał na tych, co 
+przeszli doń ze świata nieco ciemnego, gdzie przeważają posępne 
+pierwiastki" – zauważył niegdyś Parandowski. Warto pamiętać, że 
+"Mitologię", po raz pierwszy wydaną w roku 1924, czytywano zachłannie w 
+kraju o posępnej historii najnowszej, który przez ostatnie półwiecze nie
+ bywał na ogół krajem „ani moralnego, ani intelektualnego rozradowania”.
+ Wybór i propagowanie „zasady światła” było tutaj obroną 
+śródziemnomorskiej tradycji humanistycznej przed zalewem barbarzyństwa i
+ kulturą parweniuszy.
+&lt;br&gt;&lt;br&gt;"Mitologia" należy do dzieł, z których – jak pisał Autor o pracach 
+swego mistrza, wybitnego znawcy świata antycznego, Tadeusza 
+Zielińskiego, „nie tylko można się czegoś nauczyć, ale można się też 
+przy nich czymś stać”. Czas nie naruszył autorytetu, jaki się w tej 
+książce objawił, a że Parandowskiego pociągała starożytność dionizyjska –
+ żywiołowa i zmysłowa, nawet niecierpliwi czytelnicy "Mitologii" 
+przekonują się raz po raz, że dawka nieśmiertelności nie musi być dawką 
+nudy. 
+&lt;br&gt;&lt;br&gt;[Wydawnictwo Puls (Londyn), 1992]&lt;/div&gt;</dc:description>
+        <dc:identifier opf:scheme="MOBI-ASIN">b690b227-3f0c-43ab-bd4e-4999e21cf9f1</dc:identifier>
+        <dc:language>pol</dc:language>
+        <dc:subject>popularnonaukowa</dc:subject>
+        <dc:subject>religia</dc:subject>
+        <meta name="calibre:author_link_map" content="{&quot;Parandowski Jan&quot;: &quot;&quot;}"/>
+        <meta name="calibre:timestamp" content="2021-10-21T18:16:29.670871+00:00"/>
+        <meta name="calibre:title_sort" content="Mitologia (1924)"/>
+        <meta name="calibre:annotation" content="{&quot;format&quot;: &quot;MOBI&quot;, &quot;user_type&quot;: &quot;local&quot;, &quot;user&quot;: &quot;viewer&quot;, &quot;annotation&quot;: {&quot;end_cfi&quot;: &quot;/2/4/2086/1:78&quot;, &quot;highlighted_text&quot;: &quot;i&quot;, &quot;spine_index&quot;: 1, &quot;spine_name&quot;: &quot;index.html&quot;, &quot;start_cfi&quot;: &quot;/2/4/2086/1:77&quot;, &quot;style&quot;: {&quot;kind&quot;: &quot;color&quot;, &quot;type&quot;: &quot;builtin&quot;, &quot;which&quot;: &quot;yellow&quot;}, &quot;timestamp&quot;: &quot;2021-10-21T18:17:53.152Z&quot;, &quot;type&quot;: &quot;highlight&quot;, &quot;uuid&quot;: &quot;gZCLyyP2V2Hff6FaJyY8FQ&quot;}}"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>

@@ -262,5 +262,4 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('fzy_native')
-require('kommentary.config').use_extended_mappings()
 require('nvim-tree').setup();

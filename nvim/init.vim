@@ -7,7 +7,7 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 "Animations
 Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
-Plug 'b3nj5m1n/kommentary'
+Plug 'tpope/vim-commentary'
 "fuzzy find
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -151,8 +151,8 @@ let g:neovide_cursor_trail_length=0.0
 set guifont=FiraCode\ Nerd\ Font:h14
 
 "Remaps
-verbose vnoremap <Leader>c "+y
-verbose vnoremap <Leader>v "+p
+vmap <Leader>c "+y
+nmap <Leader>v "+p
 nnoremap <Leader>z :noh<CR>
 nnoremap <silent> <TAB> :BufferLineCycleNext<CR>
 nnoremap <silent> <S-TAB> :BufferLineCyclePrev<CR>

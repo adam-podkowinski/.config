@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">21</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">852c83f5-d71c-4584-8ac6-2f43e17a009c</dc:identifier>
+        <dc:title>Mitologia</dc:title>
+        <dc:creator opf:file-as="Parandowski, Jan" opf:role="aut">Jan Parandowski</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.29.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>0101-01-01T00:00:00+00:00</dc:date>
+        <dc:description>&lt;p&gt;Ta najbardziej znana książka Jana Parandowskiego zyskała kilkanaście wydań i od dawna pozostaje w kanonie lektur polskiej inteligencji. Mitologia należy do dzieł, z których, jak pisał Autor o pracach swego mistrza, wybitnego znawcy świata antycznego, Tadeusza Zielińskiego, "nie tylko można się czegoś nauczyć, ale można się też przy nich czymś stać". Czas nie naruszył autorytetu, jaki się w tej książce objawia, aże Parandowskiego pociągała starożytność dionizyjska - żywiołowa i zmysłowa, nawet niecierpliwi czytelnicy Mitologii przekonują się raz po raz, że dawka nieśmiertelności nie musi być dawką nudy.&lt;/p&gt;</dc:description>
+        <dc:publisher>Puls</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">0907587852</dc:identifier>
+        <dc:language>pol</dc:language>
+        <dc:subject>Literatura popularnonaukowa</dc:subject>
+        <dc:subject>Mitologia</dc:subject>
+        <dc:subject>(4)</dc:subject>
+        <meta name="calibre:author_link_map" content="{&quot;Jan Parandowski&quot;: &quot;&quot;}"/>
+        <meta name="calibre:rating" content="6"/>
+        <meta name="calibre:timestamp" content="2021-10-21T18:17:48.901422+00:00"/>
+        <meta name="calibre:title_sort" content="Mitologia"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>
