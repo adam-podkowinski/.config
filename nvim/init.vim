@@ -57,6 +57,8 @@ Plug 'tpope/vim-repeat'
 Plug 'honza/vim-snippets'
 "groff
 Plug 'L04DB4L4NC3R/texgroff.vim'
+"PHP
+Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 filetype plugin indent on
@@ -88,6 +90,7 @@ set ruler
 set shiftwidth=2
 set showtabline=2
 set smartindent
+set cindent
 set smarttab
 set splitbelow splitright
 set tabstop=2
@@ -105,6 +108,9 @@ if has('termguicolors')
     set termguicolors
 endif
 packadd termdebug
+
+autocmd filetype * set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd filetype php set shiftwidth=4 tabstop=4 softtabstop=4
 
 "Variables
 let g:indentLine_char = '│'

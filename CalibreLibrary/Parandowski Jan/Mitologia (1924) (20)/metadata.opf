@@ -5,7 +5,7 @@
         <dc:identifier opf:scheme="uuid" id="uuid_id">aed0ca5f-03f9-45d2-bbda-9961ebb23025</dc:identifier>
         <dc:title>Mitologia (1924)</dc:title>
         <dc:creator opf:file-as="Jan, Parandowski" opf:role="aut">Parandowski Jan</dc:creator>
-        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.29.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.32.0) [https://calibre-ebook.com]</dc:contributor>
         <dc:date>1924-01-10T15:36:18+00:00</dc:date>
         <dc:description>&lt;div&gt;"Mitologia. Wierzenia i podania Greków i Rzymian", najbardziej znana 
 książka Jana Parandowskiego, zyskała kilkanaście wydań i od dawna 
@@ -33,7 +33,7 @@ nudy.
         <dc:subject>popularnonaukowa</dc:subject>
         <dc:subject>religia</dc:subject>
         <meta name="calibre:author_link_map" content="{&quot;Parandowski Jan&quot;: &quot;&quot;}"/>
-        <meta name="calibre:timestamp" content="2021-10-21T18:16:29.670871+00:00"/>
+        <meta name="calibre:timestamp" content="2021-10-21T18:16:29+00:00"/>
         <meta name="calibre:title_sort" content="Mitologia (1924)"/>
         <meta name="calibre:annotation" content="{&quot;format&quot;: &quot;MOBI&quot;, &quot;user_type&quot;: &quot;local&quot;, &quot;user&quot;: &quot;viewer&quot;, &quot;annotation&quot;: {&quot;end_cfi&quot;: &quot;/2/4/2086/1:78&quot;, &quot;highlighted_text&quot;: &quot;i&quot;, &quot;spine_index&quot;: 1, &quot;spine_name&quot;: &quot;index.html&quot;, &quot;start_cfi&quot;: &quot;/2/4/2086/1:77&quot;, &quot;style&quot;: {&quot;kind&quot;: &quot;color&quot;, &quot;type&quot;: &quot;builtin&quot;, &quot;which&quot;: &quot;yellow&quot;}, &quot;timestamp&quot;: &quot;2021-10-21T18:17:53.152Z&quot;, &quot;type&quot;: &quot;highlight&quot;, &quot;uuid&quot;: &quot;gZCLyyP2V2Hff6FaJyY8FQ&quot;}}"/>
     </metadata>

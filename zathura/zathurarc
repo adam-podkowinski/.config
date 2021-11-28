@@ -56,3 +56,4 @@ set recolor-darkcolor           "#f8f8f2" # Foreground
 #
 set adjust-open width
 set show-scrollbars true
+set guioptions svh
