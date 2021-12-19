@@ -1,13 +1,13 @@
 /** Basic config file **/
 
 configuration {
-	font:							"FiraCode Nerd Font 12";
+	font:							"Cascadia Code 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"Applications";
     drun-display-format:            "{name}";
     disable-history:                false;
-	sidebar-mode: 					false;
+	sidebar-mode: 					true;
   modi: "window,drun,ssh,combi,calc";
   combi-modi: "window,drun,ssh,calc";
 }
@@ -17,7 +17,7 @@ configuration {
   bg:  #000000ff;
   se:  #101010ff;
   fg:  #FFFFFFff;
-  ac:  #6C77BBff;
+  ac:  #afb1e1;
 }
 
 window {
