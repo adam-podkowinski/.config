@@ -68,6 +68,6 @@ VIM_MODE_VICMD_KEY='<M-[>29'
 source <(antibody init)
 
 antibody bundle zsh-users/zsh-autosuggestions
-antibody bundle zdharma/fast-syntax-highlighting
+antibody bundle zdharma-continuum/fast-syntax-highlighting
 antibody bundle zsh-users/zsh-completions
 antibody bundle softmoth/zsh-vim-mode
