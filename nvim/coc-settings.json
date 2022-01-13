@@ -15,7 +15,8 @@
     "javascript",
     "kotlin",
     "java",
-    "rust"
+    "rust",
+    "typescript"
   ],
   "clangd.semanticHighlighting": true,
   "javascript.suggestionActions.enabled": false,
