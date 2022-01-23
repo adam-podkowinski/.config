@@ -651,6 +651,7 @@ _comps=(
 'killall' '_killall'
 'killall5' '_killall'
 'kioclient' '_kfmclient'
+'kitty' '_kitty'
 'knock' '_knock'
 'konqueror' '_webbrowser'
 'kpartx' '_kpartx'
@@ -1623,7 +1624,7 @@ bindkey '^[~' _bash_complete-word
 autoload -Uz _alacritty _autorandr _bat _bw _bwrap \
             _calibre _cargo _code _code-oss _curl \
             _docker _downgrade _fd _gh _heroku \
-            _kdeconnect _libinput _loginctl _meson _mkinitcpio \
+            _kitty _libinput _loginctl _meson _mkinitcpio \
             _mpv _ninja _pacman _paru _pass \
             _pulseaudio _qpdf _rg _rustup _the_silver_searcher \
             _youtube-dl _zathura _cdr _all_labels _all_matches \
