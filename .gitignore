@@ -26,3 +26,5 @@
 !nginx.conf.copy
 !picom
 !mpv
+!eslint-plugin.js
+!eslint-plugin-provider.js
