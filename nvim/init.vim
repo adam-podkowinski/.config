@@ -3,7 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 "Colorscheme
 "Plug 'Pocco81/Catppuccino.nvim'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'arcticicestudio/nord-vim'
 "Animations
 Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
@@ -59,10 +60,13 @@ Plug 'honza/vim-snippets'
 Plug 'L04DB4L4NC3R/texgroff.vim'
 "PHP
 Plug 'StanAngeloff/php.vim'
+"Copilot
+Plug 'github/copilot.vim'
 call plug#end()
 
 filetype plugin indent on
 "Sets
+set cursorline
 set foldmethod=syntax
 set foldlevel=99
 set softtabstop=2
@@ -209,10 +213,12 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>":
       \ search('\%#[]>)}''"`,]', 'n') ? '<Right>' : '<Tab>'
 
-colorscheme material
+"colorscheme material
+colorscheme nord
 
 highlight Normal guibg=NONE ctermbg=NONE
 highlight SignColumn guibg=NONE ctermbg=NONE
+highlight CursorLine guibg=#151a2b
 hi MatchParen guifg=White
 hi MatchParen guibg=NONE
 highlight Comment cterm=italic gui=italic
