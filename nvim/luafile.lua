@@ -235,7 +235,7 @@ require('telescope').setup {
     defaults = {
         vimgrep_arguments = {
             'rg',
-            '--color=never',
+            '--hidden',
             '--no-heading',
             '--with-filename',
             '--line-number',
@@ -243,7 +243,7 @@ require('telescope').setup {
             '--smart-case'
         },
         file_sorter = require('telescope.sorters').get_fzy_sorter,
-        prompt_prefix = ' > ',
+        prompt_prefix = ' 🔍 ',
         color_devicons = true,
 
         file_previewer   = require('telescope.previewers').vim_buffer_cat.new,
@@ -266,3 +266,4 @@ require('telescope').setup {
 
 require('telescope').load_extension('fzy_native')
 require('nvim-tree').setup();
+require('rest-nvim').setup();

@@ -22,5 +22,5 @@
 "command! -bang -nargs=? -complete=dir Files
 "    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']}, <bang>0)
 
-nnoremap <leader>f <cmd>Telescope find_files<cr>
+nnoremap <leader>f <cmd>Telescope find_files hidden=true<cr>
 nnoremap <leader>g <cmd>Telescope live_grep<cr>

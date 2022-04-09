@@ -62,6 +62,8 @@ Plug 'L04DB4L4NC3R/texgroff.vim'
 Plug 'StanAngeloff/php.vim'
 "Copilot
 Plug 'github/copilot.vim'
+"Rest
+Plug 'NTBBloodbath/rest.nvim'
 call plug#end()
 
 filetype plugin indent on
@@ -187,6 +189,8 @@ verbose tnoremap <M-[>29 <C-\><C-n>
 
 nnoremap <C-c> :BD!<CR>
 nmap <Leader>; <Plug>(easymotion-overwin-f2)
+
+nmap <Leader>r <Plug>RestNvim
 
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e

@@ -14,7 +14,6 @@ inoremap <silent><expr> <c-space> coc#refresh()
 verbose nnoremap <Leader>s :CocCommand clangd.switchSourceHeader<CR>
 verbose nnoremap <Leader>l :CocList symbols<CR>
 verbose nnoremap <silent><Leader>F :Format<CR>
-nnoremap <Leader>r :execute 'CocCommand flutter.dev.hotRestart'<CR>
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
