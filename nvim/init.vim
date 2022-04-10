@@ -3,10 +3,8 @@ call plug#begin('~/.vim/plugged')
 
 "Colorscheme
 "Plug 'Pocco81/Catppuccino.nvim'
-"Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'arcticicestudio/nord-vim'
-"Animations
-Plug 'psliwka/vim-smoothie'
 "Faster and prettier comments
 Plug 'tpope/vim-commentary'
 "fuzzy find
@@ -33,7 +31,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-rhubarb'
-"Close buffers with style :)
+"Close buffers with style
 Plug 'qpkorr/vim-bufkill'
 "Nice status line
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
@@ -115,10 +113,6 @@ if has('termguicolors')
 endif
 packadd termdebug
 
-autocmd filetype * set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd filetype php set shiftwidth=4 tabstop=4 softtabstop=4
-autocmd filetype rust set shiftwidth=4 tabstop=4 softtabstop=4
-
 "Variables
 let g:indentLine_char = '│'
 let g:indent_blankline_space_char = ' '
@@ -196,6 +190,9 @@ nmap <Leader>r <Plug>RestNvim
 autocmd BufWritePre * :%s/\s\+$//e
 au! BufWritePost $MYVIMRC source %
 au BufNewFile,BufRead *.groff *.ms set filetype=groff
+autocmd filetype * set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd filetype php set shiftwidth=4 tabstop=4 softtabstop=4
+autocmd filetype rust set shiftwidth=4 tabstop=4 softtabstop=4
 
 "Functions
 inoremap <expr> <CR> InsertMapForEnter()

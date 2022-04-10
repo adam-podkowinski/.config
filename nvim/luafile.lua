@@ -267,3 +267,6 @@ require('telescope').setup {
 require('telescope').load_extension('fzy_native')
 require('nvim-tree').setup();
 require('rest-nvim').setup();
+require('indent_blankline').setup {
+  show_current_context = true,
+}
