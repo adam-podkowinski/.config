@@ -204,7 +204,7 @@ gls.short_line_right[1] = {
 
 require('gitsigns').setup()
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     highlight = {
         enable = true,              -- false will disable the whole extension
     },
@@ -265,7 +265,9 @@ require('telescope').setup {
 }
 
 require('telescope').load_extension('fzy_native')
-require('nvim-tree').setup();
+require('nvim-tree').setup({
+  indent_markers = true,
+});
 require('rest-nvim').setup();
 require('indent_blankline').setup {
   show_current_context = true,
