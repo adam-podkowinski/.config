@@ -37,3 +37,4 @@ let g:nvim_tree_icons = {
     \ }
 
 verbose nnoremap <Leader><Leader> :NvimTreeToggle<CR>
+nnoremap <C-\> :NvimTreeFindFile<CR>
