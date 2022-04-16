@@ -2,9 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 "Colorscheme
-"Plug 'Pocco81/Catppuccino.nvim'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'arcticicestudio/nord-vim'
+Plug 'marko-cerovac/material.nvim'
 "Faster and prettier comments
 Plug 'tpope/vim-commentary'
 "fuzzy find
@@ -34,7 +32,7 @@ Plug 'tpope/vim-rhubarb'
 "Close buffers with style
 Plug 'qpkorr/vim-bufkill'
 "Nice status line
-Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/nvim-bufferline.lua'
 "Icons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -79,7 +77,6 @@ set expandtab
 set fileencoding=utf-8
 set hidden
 set iskeyword+=-
-set laststatus=2
 set mouse=a
 set nobackup
 set lazyredraw
@@ -117,8 +114,7 @@ packadd termdebug
 let g:indentLine_char = '│'
 let g:indent_blankline_space_char = ' '
 let g:termdebug_wide=1
-let g:material_theme_style = 'ocean'
-let g:material_terminal_italics = 1
+let g:material_style='deep ocean'
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let mapleader = ' '
@@ -127,35 +123,11 @@ if executable('rg')
   let g:rg_derive_root='true'
 endif
 
-let g:Hexokinase_optInPatterns = [
-\     'full_hex',
-\     'triple_hex',
-\     'rgb',
-\     'rgba',
-\     'hsl',
-\     'hsla',
-\     'colour_names'
-\ ]
-
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:dart_format_on_save = 0
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 " Turn on case-insensitive feature
 let g:EasyMotion_smartcase = 1
-"CPP
-" c++ syntax highlighting
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-let g:cpp_experimental_template_highlight = 1
-let g:cpp_concepts_highlight = 1
-
-"Neovide
-let g:neovide_transparency=0.95
-let g:neovide_cursor_animation_length=0.1
-let g:neovide_cursor_trail_length=0.0
-set guifont=FiraCode\ Nerd\ Font:h14
 
 "Remaps
 vmap <Leader>c "+y
@@ -214,18 +186,11 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>":
       \ search('\%#[]>)}''"`,]', 'n') ? '<Right>' : '<Tab>'
 
-"colorscheme material
-colorscheme nord
-
-highlight Normal guibg=NONE ctermbg=NONE
-highlight SignColumn guibg=NONE ctermbg=NONE
-highlight CursorLine guibg=#151a2b
-hi MatchParen guifg=White
-hi MatchParen guibg=NONE
-highlight Comment cterm=italic gui=italic
-
 "Sources
 source ~/.config/nvim/coc-settings.vim
 source ~/.config/nvim/telescope.vim
 luafile ~/.config/nvim/luafile.lua
 source ~/.config/nvim/nvimtree.vim
+luafile ~/.config/nvim/material.lua
+
+colorscheme material

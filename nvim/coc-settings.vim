@@ -3,6 +3,8 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <Leader>R <Plug>(coc-rename)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 vmap <silent><leader>a  <Plug>(coc-codeaction-selected)
 nmap <silent><leader>a  viw<Plug>(coc-codeaction-selected)
