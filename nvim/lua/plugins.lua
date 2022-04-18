@@ -59,6 +59,4 @@ use 'StanAngeloff/php.vim'
 use 'github/copilot.vim'
 --Rest
 use 'NTBBloodbath/rest.nvim'
---Tab out
-use 'abecodes/tabout.nvim'
 end)
