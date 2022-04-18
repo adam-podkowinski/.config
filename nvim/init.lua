@@ -88,7 +88,7 @@ vim.opt.ic = true
 vim.opt.conceallevel = 0
 vim.opt.shortmess = vim.opt.shortmess + "c"
 vim.opt.signcolumn = "yes"
-vim.opt.regexpengine = 1
+vim.opt.regexpengine = 0
 
 -- Vim Scripts
 vim.cmd([[
