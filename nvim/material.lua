@@ -15,5 +15,6 @@ require('material').setup({
 
   custom_highlights = {
     CursorLine = {bg = '#151a2b'},
+    TSProperty = {fg = '#c4cfe4'},
   } -- Overwrite highlights with your own
 })
