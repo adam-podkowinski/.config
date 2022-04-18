@@ -1,11 +1,4 @@
--- Plugin configs
-require('plugins')
-require('plugin-configs/treesitter-config')
-require('plugin-configs/bufferline-config')
-require('plugin-configs/material-config')
-require('plugin-configs/lualine-config')
-require('plugin-configs/telescope-config')
-require('plugin-configs/other-config')
+-- TODO: show errors on bufferline from lsp
 
 -- Variables
 vim.g.mapleader = ' '
@@ -17,6 +10,18 @@ vim.g.rooter_change_directory_for_non_project_files = 'current'
 vim.g.dart_format_on_save = 0
 vim.g.EasyMotion_do_mapping = 0
 vim.g.EasyMotion_smartcase = 1
+
+-- Plugin configs
+require('plugins')
+require('plugin-configs/treesitter-config')
+require('plugin-configs/bufferline-config')
+require('plugin-configs/material-config')
+require('plugin-configs/lualine-config')
+require('plugin-configs/telescope-config')
+require('plugin-configs/flutter-tools-config')
+require('plugin-configs/lsp-config')
+require('plugin-configs/lspsaga-config')
+require('plugin-configs/other-config')
 
 -- Keymaps
 vim.keymap.set('n', '<leader>f',  '<cmd>Telescope find_files hidden=true<cr>', {noremap = true})
@@ -32,7 +37,6 @@ vim.keymap.set('n', '<c-u>', 'viwU<Esc>',{noremap = true})
 vim.keymap.set('n','<Leader><c-u>',' viwu<Esc>',{noremap = true})
 vim.keymap.set('n','<C-h>',' <C-w>h',{noremap = true})
 vim.keymap.set('n','<C-l>',' <C-w>l',{noremap = true})
-vim.keymap.set('n','<C-k>',' <C-w>k',{noremap = true})
 vim.keymap.set('n','<C-j>',' <C-w>j',{noremap = true})
 vim.keymap.set('n','<C-Left>', '<cmd>vertical resize +3<CR>',{noremap = true})
 vim.keymap.set('n','<C-Right>', '<cmd>vertical resize -3<CR>',{noremap = true})
@@ -90,7 +94,6 @@ vim.opt.regexpengine=1
 vim.cmd [[
 filetype plugin indent on
 
-source ~/.config/nvim/coc-settings.vim
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e
 au BufNewFile,BufRead *.groff *.ms set filetype=groff

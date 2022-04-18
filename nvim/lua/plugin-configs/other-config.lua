@@ -12,3 +12,8 @@ require('indent_blankline').setup {
   show_current_context = true,
   space_char_blankline = ' ',
 }
+
+require("nvim-lsp-installer").on_server_ready(function(server)
+    local opts = {}
+    server:setup(opts)
+end)
