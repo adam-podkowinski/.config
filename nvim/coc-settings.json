@@ -28,5 +28,6 @@
       "lsRanges": true
     }
   },
-  "clangd.arguments": ["-fallback-style=google"]
+  "clangd.arguments": ["-fallback-style=google"],
+  "Lua.diagnostics.globals": ["vim"]
 }

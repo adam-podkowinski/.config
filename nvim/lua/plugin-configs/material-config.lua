@@ -18,3 +18,7 @@ require('material').setup({
     TSProperty = {fg = '#c4cfe4'},
   } -- Overwrite highlights with your own
 })
+
+vim.cmd[[
+colorscheme material
+]]
