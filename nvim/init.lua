@@ -1,104 +1,17 @@
--- Vim Scripts
-vim.cmd [[
-"Plug section
-call plug#begin('~/.vim/plugged')
-
-"Colorscheme
-Plug 'marko-cerovac/material.nvim'
-"Faster and prettier comments
-Plug 'tpope/vim-commentary'
-"fuzzy find
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'airblade/vim-rooter'
-"Motion
-Plug 'unblevable/quick-scope'
-Plug 'easymotion/vim-easymotion'
-"Faster surround with quotes or brackets
-Plug 'tpope/vim-surround'
-"File manager
-Plug 'kyazdani42/nvim-tree.lua'
-"Auto completion and IDE functions
-Plug 'neoclide/coc.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'udalov/kotlin-vim'
-"Dart and flutter support
-Plug 'dart-lang/dart-vim-plugin'
-"Git
-Plug 'tpope/vim-fugitive'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'tpope/vim-rhubarb'
-"Close buffers with style
-Plug 'qpkorr/vim-bufkill'
-"Nice status line
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'akinsho/nvim-bufferline.lua'
-"Icons
-Plug 'kyazdani42/nvim-web-devicons'
-"Colorful brackets
-Plug 'p00f/nvim-ts-rainbow'
-"Close pairs
-Plug 'jiangmiao/auto-pairs'
-"Indent lines
-Plug 'lukas-reineke/indent-blankline.nvim'
-"Tex
-Plug 'lervag/vimtex'
-"Colorizer
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-"Toml
-Plug 'cespare/vim-toml'
-"Better dot (.) command
-Plug 'tpope/vim-repeat'
-"snippets
-Plug 'honza/vim-snippets'
-"groff
-Plug 'L04DB4L4NC3R/texgroff.vim'
-"PHP
-Plug 'StanAngeloff/php.vim'
-"Copilot
-Plug 'github/copilot.vim'
-"Rest
-Plug 'NTBBloodbath/rest.nvim'
-"Tab out
-Plug 'abecodes/tabout.nvim'
-call plug#end()
-
-filetype plugin indent on
-
-source ~/.config/nvim/coc-settings.vim
-"Commands
-autocmd BufWritePre * :%s/\s\+$//e
-au! BufWritePost $MYVIMRC source %
-au BufNewFile,BufRead *.groff *.ms set filetype=groff
-autocmd filetype * set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd filetype php set shiftwidth=4 tabstop=4 softtabstop=4
-autocmd filetype rust set shiftwidth=4 tabstop=4 softtabstop=4
-
-"Functions
-inoremap <expr> <CR> InsertMapForEnter()
-function! InsertMapForEnter()
-    if pumvisible()
-        return "\<C-y>"
-    elseif strcharpart(getline('.'),getpos('.')[2]-1,1) == '}'
-        return "\<CR>\<Esc>O"
-    elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '</'
-        return "\<CR>\<Esc>O"
-    elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '),'
-        return "\<CR>\<Esc>O"
-    else
-        return "\<CR>"
-    endif
-endfunction
-]]
+-- Plugin configs
+require('plugins')
+require('plugin-configs/treesitter-config')
+require('plugin-configs/bufferline-config')
+require('plugin-configs/material-config')
+require('plugin-configs/lualine-config')
+require('plugin-configs/telescope-config')
+require('plugin-configs/tabout-config')
+require('plugin-configs/other-config')
 
 -- Variables
 vim.g.mapleader = ' '
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_width_allow_resize = 1
-vim.g.material_style = "deep ocean"
 vim.g.qs_highlight_on_keys = {'f', 'F', 't', 'T'}
 vim.g.rg_derive_root='true'
 vim.g.rooter_change_directory_for_non_project_files = 'current'
@@ -172,11 +85,31 @@ vim.opt.shortmess = vim.opt.shortmess + 'c'
 vim.opt.signcolumn= 'yes'
 vim.opt.regexpengine=1
 
--- Plugin configs
-require('plugin-configs/treesitter-config')
-require('plugin-configs/bufferline-config')
-require('plugin-configs/lualine-config')
-require('plugin-configs/material-config')
-require('plugin-configs/telescope-config')
-require('plugin-configs/tabout-config')
-require('plugin-configs/other-config')
+-- Vim Scripts
+vim.cmd [[
+filetype plugin indent on
+
+source ~/.config/nvim/coc-settings.vim
+"Commands
+autocmd BufWritePre * :%s/\s\+$//e
+au BufNewFile,BufRead *.groff *.ms set filetype=groff
+autocmd filetype * set shiftwidth=2 tabstop=2 softtabstop=2
+autocmd filetype php set shiftwidth=4 tabstop=4 softtabstop=4
+autocmd filetype rust set shiftwidth=4 tabstop=4 softtabstop=4
+
+"Functions
+inoremap <expr> <CR> InsertMapForEnter()
+function! InsertMapForEnter()
+    if pumvisible()
+        return "\<C-y>"
+    elseif strcharpart(getline('.'),getpos('.')[2]-1,1) == '}'
+        return "\<CR>\<Esc>O"
+    elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '</'
+        return "\<CR>\<Esc>O"
+    elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '),'
+        return "\<CR>\<Esc>O"
+    else
+        return "\<CR>"
+    endif
+endfunction
+]]

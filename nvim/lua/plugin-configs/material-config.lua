@@ -1,3 +1,4 @@
+vim.g.material_style = "deep ocean"
 require('material').setup({
 	italics = {
 		comments = true, -- Enable italic comments
