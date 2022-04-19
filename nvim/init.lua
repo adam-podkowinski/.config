@@ -117,8 +117,4 @@ function! InsertMapForEnter()
         return "\<CR>"
     endif
 endfunction
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>":
-      \ search('\%#[]>)}''"`,]', 'n') ? '<Right>' : '<Tab>'
 ]])
