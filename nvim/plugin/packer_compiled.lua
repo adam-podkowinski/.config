@@ -74,15 +74,25 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
-  ["copilot.vim"] = {
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["dart-vim-plugin"] = {
+  ["cmp-cmdline"] = {
     loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/dart-vim-plugin",
-    url = "https://github.com/dart-lang/dart-vim-plugin"
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
@@ -104,6 +114,16 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/kotlin-vim",
     url = "https://github.com/udalov/kotlin-vim"
   },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
@@ -124,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
     url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -133,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-lspfuzzy"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-lspfuzzy",
-    url = "https://github.com/ojroques/nvim-lspfuzzy"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -249,11 +269,6 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-rooter",
     url = "https://github.com/airblade/vim-rooter"
   },
-  ["vim-snippets"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-snippets",
-    url = "https://github.com/honza/vim-snippets"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -263,6 +278,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-toml",
     url = "https://github.com/cespare/vim-toml"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "https://github.com/hrsh7th/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
+    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   },
   vimtex = {
     loaded = true,

@@ -9,8 +9,6 @@ return require("packer").startup(function(use)
   use("nvim-lua/popup.nvim")
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-fzy-native.nvim")
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
   use("airblade/vim-rooter")
   -- Motion
   use("unblevable/quick-scope")
@@ -20,12 +18,12 @@ return require("packer").startup(function(use)
   -- File manager
   use("kyazdani42/nvim-tree.lua")
   -- LSP
+  use("nvim-lua/plenary.nvim")
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("neovim/nvim-lspconfig")
   use("williamboman/nvim-lsp-installer")
   use("tami5/lspsaga.nvim")
   use("RishabhRD/popfix")
-  use("ojroques/nvim-lspfuzzy")
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
   use 'hrsh7th/cmp-nvim-lsp'
@@ -33,19 +31,18 @@ return require("packer").startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
+  use 'Neevash/awesome-flutter-snippets'
   -- Languages
   use({ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" })
   use("udalov/kotlin-vim")
-  use("dart-lang/dart-vim-plugin")
   use("StanAngeloff/php.vim")
   use("cespare/vim-toml")
   use("L04DB4L4NC3R/texgroff.vim")
   use("lervag/vimtex")
   -- Git
   use("tpope/vim-fugitive")
-  use("nvim-lua/plenary.nvim")
   use("lewis6991/gitsigns.nvim")
   use("tpope/vim-rhubarb")
   -- Close buffers with style

@@ -1,5 +1,3 @@
--- TODO: show errors on bufferline from lsp
-
 -- Variables
 vim.g.mapleader = " "
 vim.g.nvim_tree_git_hl = 1
@@ -18,10 +16,11 @@ require("plugin-configs/bufferline-config")
 require("plugin-configs/material-config")
 require("plugin-configs/lualine-config")
 require("plugin-configs/telescope-config")
-require("plugin-configs/flutter-tools-config")
 require("plugin-configs/lsp-config")
 require("plugin-configs/lspsaga-config")
 require("plugin-configs/cmp-config")
+require("plugin-configs/nvim-lsp-installer-config")
+require("plugin-configs/flutter-tools-config")
 require("plugin-configs/other-config")
 
 -- Keymaps
@@ -90,6 +89,7 @@ vim.opt.conceallevel = 0
 vim.opt.shortmess = vim.opt.shortmess + "c"
 vim.opt.signcolumn = "yes"
 vim.opt.regexpengine = 0
+vim.opt.completeopt="menu,menuone,noselect"
 
 -- Vim Scripts
 vim.cmd([[
