@@ -23,9 +23,10 @@ return require("packer").startup(function(use)
   use("neovim/nvim-lspconfig")
   use("williamboman/nvim-lsp-installer")
   use("tami5/lspsaga.nvim")
-  use("RishabhRD/popfix")
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
+  -- use {'ms-jpq/coq_nvim', branch = 'coq'}
+  -- use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -35,7 +36,7 @@ return require("packer").startup(function(use)
   use 'hrsh7th/vim-vsnip'
   use 'Neevash/awesome-flutter-snippets'
   -- Languages
-  use({ "akinsho/flutter-tools.nvim", requires = "nvim-lua/plenary.nvim" })
+  use("akinsho/flutter-tools.nvim")
   use("udalov/kotlin-vim")
   use("StanAngeloff/php.vim")
   use("cespare/vim-toml")

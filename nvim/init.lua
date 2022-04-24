@@ -11,6 +11,7 @@ vim.g.EasyMotion_smartcase = 1
 
 -- Plugin configs
 require("plugins")
+--require("plugin-configs/coq-config")
 require("plugin-configs/treesitter-config")
 require("plugin-configs/bufferline-config")
 require("plugin-configs/material-config")
@@ -88,8 +89,6 @@ vim.opt.ic = true
 vim.opt.conceallevel = 0
 vim.opt.shortmess = vim.opt.shortmess + "c"
 vim.opt.signcolumn = "yes"
-vim.opt.regexpengine = 0
-vim.opt.completeopt="menu,menuone,noselect"
 
 -- Vim Scripts
 vim.cmd([[

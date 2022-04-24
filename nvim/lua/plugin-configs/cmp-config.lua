@@ -1,29 +1,3 @@
---local lspkind_comparator = function(conf)
---  local lsp_types = require('cmp.types').lsp
---  return function(entry1, entry2)
---    if entry1.source.name ~= 'nvim_lsp' then
---      if entry2.source.name == 'nvim_lsp' then
---        return false
---      else
---        return nil
---      end
---    end
---    local kind1 = lsp_types.CompletionItemKind[entry1:get_kind()]
---    local kind2 = lsp_types.CompletionItemKind[entry2:get_kind()]
---
---    local priority1 = conf.kind_priority[kind1] or 0
---    local priority2 = conf.kind_priority[kind2] or 0
---    if priority1 == priority2 then
---      return nil
---    end
---    return priority2 < priority1
---  end
---end
---
---local label_comparator = function(entry1, entry2)
---  return entry1.completion_item.label < entry2.completion_item.label
---end
-
 local feedkey = function(key, mode)
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
@@ -63,23 +37,13 @@ cmp.setup({
     end,
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-    { name = 'buffer' },
-    { name = 'cmdline' },
-    { name = 'path' }
+    { name = 'nvim_lsp', max_item_count = 5 },
+    { name = 'vsnip', max_item_count = 5 },
+    { name = 'buffer', max_item_count = 5 },
+    { name = 'cmdline', max_item_count = 5 },
+    { name = 'path', max_item_count = 5 }
   }),
   formatting = {
     format = require('lspkind').cmp_format({ mode = 'symbol_text' })
   },
-  --  sorting = {
-  --    comparators = {
-  --      lspkind_comparator({
-  --        kind_priority = {
-  --          Snippet = -1,
-  --        },
-  --      }),
-  --      label_comparator,
-  --    },
-  --  },
 })

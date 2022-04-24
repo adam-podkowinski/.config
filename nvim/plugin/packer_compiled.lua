@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["awesome-flutter-snippets"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/awesome-flutter-snippets",
+    url = "https://github.com/Neevash/awesome-flutter-snippets"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
@@ -194,11 +204,6 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  popfix = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/popfix",
-    url = "https://github.com/RishabhRD/popfix"
-  },
   ["popup.nvim"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/popup.nvim",
@@ -283,11 +288,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["vim-vsnip-integ"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ",
-    url = "https://github.com/hrsh7th/vim-vsnip-integ"
   },
   vimtex = {
     loaded = true,
