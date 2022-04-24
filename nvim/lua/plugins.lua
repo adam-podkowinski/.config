@@ -60,7 +60,7 @@ return require("packer").startup(function(use)
   -- Indent lines
   use("lukas-reineke/indent-blankline.nvim")
   -- Colorizer
-  use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
+  --use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
   -- Better dot (.) command
   use("tpope/vim-repeat")
   -- Copilot

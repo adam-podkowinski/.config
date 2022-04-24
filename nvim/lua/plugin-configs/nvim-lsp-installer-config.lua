@@ -3,7 +3,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local enhance_server_opts = {
   ["emmet_ls"] = function(opts)
-    opts.filetypes= {
+    opts.filetypes = {
       "html", "css", "javascript"
     }
   end,
@@ -11,8 +11,8 @@ local enhance_server_opts = {
 
 require("nvim-lsp-installer").on_server_ready(function(server)
   local opts =
- -- require('coq').lsp_ensure_capabilities(
-    {
+  -- require('coq').lsp_ensure_capabilities(
+  {
     capabilities = capabilities,
     color = {
       enabled = true,
