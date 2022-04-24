@@ -25,8 +25,6 @@ return require("packer").startup(function(use)
   use("tami5/lspsaga.nvim")
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
-  -- use {'ms-jpq/coq_nvim', branch = 'coq'}
-  -- use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -60,11 +58,11 @@ return require("packer").startup(function(use)
   -- Indent lines
   use("lukas-reineke/indent-blankline.nvim")
   -- Colorizer
-  --use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
+  use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
   -- Better dot (.) command
   use("tpope/vim-repeat")
   -- Copilot
-  --use("github/copilot.vim")
+  use("github/copilot.vim")
   -- Rest
   use("NTBBloodbath/rest.nvim")
 end)

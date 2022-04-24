@@ -37,13 +37,24 @@ cmp.setup({
     end,
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp', max_item_count = 5 },
-    { name = 'vsnip', max_item_count = 5 },
-    { name = 'buffer', max_item_count = 5 },
-    { name = 'cmdline', max_item_count = 5 },
-    { name = 'path', max_item_count = 5 }
+    { name = 'nvim_lsp' },
+    { name = 'vsnip' },
+    { name = 'buffer' },
+    { name = 'cmdline' },
+    { name = 'path' }
   }),
+  sorting = {
+    comparators = {
+      cmp.config.compare.score,
+      cmp.config.compare.offset,
+      cmp.config.compare.exact,
+      cmp.config.compare.kind,
+      cmp.config.compare.sort_text,
+      cmp.config.compare.length,
+      cmp.config.compare.order,
+    }
+  },
   formatting = {
-    format = require('lspkind').cmp_format({ mode = 'symbol_text' })
+    format = require('lspkind').cmp_format({ mode = 'symbol' })
   },
 })

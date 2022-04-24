@@ -11,7 +11,6 @@ vim.g.EasyMotion_smartcase = 1
 
 -- Plugin configs
 require("plugins")
---require("plugin-configs/coq-config")
 require("plugin-configs/treesitter-config")
 require("plugin-configs/bufferline-config")
 require("plugin-configs/material-config")
