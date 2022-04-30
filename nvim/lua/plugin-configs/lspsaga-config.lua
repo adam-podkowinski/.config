@@ -8,3 +8,8 @@ vim.api.nvim_set_keymap("n", "<C-k>", ":Lspsaga signature_help<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>R", ":Lspsaga rename<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>a", ":Lspsaga code_action<CR>", opts)
 vim.api.nvim_set_keymap("v", "<leader>a", ":<C-u>Lspsaga range_code_action<CR>", opts)
+
+vim.cmd[[
+autocmd CursorHold * Lspsaga show_line_diagnostics
+autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()
+]]

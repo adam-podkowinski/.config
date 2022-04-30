@@ -67,32 +67,25 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: "FiraCode Nerd Font"
-    style: Retina
-    # family: "Fira Code"
-    # family: "Source Code Pro"
-    # style: Retina
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Medium
 
-  # The bold font face
   bold:
-    family: "FiraCode Nerd Font"
-    # family: "Source Code Pro"
+    family: "JetBrainsMono Nerd Font Mono"
+    style: Bold
 
-  # The italic font face
   italic:
-    family: "FiraCode Nerd Font"
-    # family: "Fira Code"
-    # family: "Source Code Pro"
-    # style: "Medium Italic"
+    family: "JetBrainsMono Nerd Font Mono"
+    style: "Medium Italic"
 
   # Point size of the font
-  size: 10
+  size: 11
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0
-    y: 4
+    y: 5
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to

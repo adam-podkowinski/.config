@@ -45,6 +45,10 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-c>", " :BD!<CR>", { noremap = true })
 vim.keymap.set("n", "<Leader>;", "<Plug>(easymotion-overwin-f2)", { noremap = true })
 vim.keymap.set("n", "<Leader>r", "<Plug>RestNvim", { noremap = true })
+vim.keymap.set("i", "<M-[>29", "<Esc>")
+vim.keymap.set("v", "<M-[>29", "<Esc>")
+vim.keymap.set("n", "<M-[>29", "<Esc>")
+vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
 
 -- Sets
 vim.opt.termguicolors = true
@@ -81,7 +85,7 @@ vim.opt.splitright = true
 vim.opt.tabstop = 2
 vim.opt.timeoutlen = 350
 vim.opt.ttimeoutlen = 0
-vim.opt.updatetime = 200
+vim.opt.updatetime = 300
 vim.opt.wrap = true
 vim.opt.tl = 500
 vim.opt.ic = true

@@ -38,6 +38,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'copilot' },
     { name = 'vsnip' },
     { name = 'buffer' },
     { name = 'cmdline' },
@@ -55,6 +56,6 @@ cmp.setup({
     }
   },
   formatting = {
-    format = require('lspkind').cmp_format({ mode = 'symbol' })
+    format = require('lspkind').cmp_format({ mode = 'symbol_text' })
   },
 })
