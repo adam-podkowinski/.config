@@ -3,7 +3,6 @@ require("material").setup({
   italics = {
     comments = true,
     keywords = true,
-    functions = true,
   },
 
   disable = {
