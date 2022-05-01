@@ -11,5 +11,4 @@ vim.api.nvim_set_keymap("v", "<leader>a", ":<C-u>Lspsaga range_code_action<CR>",
 
 vim.cmd[[
 autocmd CursorHold * Lspsaga show_line_diagnostics
-autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()
 ]]
