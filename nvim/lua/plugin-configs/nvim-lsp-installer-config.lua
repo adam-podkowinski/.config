@@ -4,7 +4,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local enhance_server_opts = {
   ["emmet_ls"] = function(opts)
     opts.filetypes = {
-      "html", "css", "scss", "javascriptreact", 'typescriptreact', 'javascript'
+      "html", "css", "scss", "javascriptreact", 'typescriptreact',
     }
   end,
 }
