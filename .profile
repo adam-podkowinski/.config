@@ -29,4 +29,4 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 export TERMINAL="st"
 export TERM="st"
 export NNN_FIFO="/tmp/nnn.fifo"
-source /usr/share/nvm/init-nvm.sh
+export QT_QPA_PLATFORMTHEME=gtk2
