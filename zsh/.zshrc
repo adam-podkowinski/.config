@@ -63,7 +63,7 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-VIM_MODE_VICMD_KEY='<M-[>29'
+#VIM_MODE_VICMD_KEY='<M-[>29'
 
 source <(antibody init)
 
