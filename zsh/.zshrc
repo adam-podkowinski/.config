@@ -63,11 +63,9 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-#VIM_MODE_VICMD_KEY='<M-[>29'
-
 source <(antibody init)
 
+antibody bundle zsh-users/zsh-completions
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zdharma-continuum/fast-syntax-highlighting
-antibody bundle zsh-users/zsh-completions
 antibody bundle softmoth/zsh-vim-mode

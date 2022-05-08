@@ -56,6 +56,6 @@ cmp.setup({
     }
   },
   formatting = {
-    format = require('lspkind').cmp_format({ mode = 'symbol_text' })
+    format = require('lspkind').cmp_format({ mode = 'symbol_text' }),
   },
 })
