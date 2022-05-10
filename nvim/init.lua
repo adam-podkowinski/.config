@@ -20,7 +20,6 @@ require("plugin-configs/telescope-config")
 require("plugin-configs/lsp-config")
 require("plugin-configs/lspsaga-config")
 require("plugin-configs/cmp-config")
-require("plugin-configs/nvim-lsp-installer-config")
 require("plugin-configs/flutter-tools-config")
 require("plugin-configs/other-config")
 
