@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
+  ["cmp-copilot"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-copilot",
+    url = "https://github.com/hrsh7th/cmp-copilot"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -108,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["flutter-riverpod-snippets"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/flutter-riverpod-snippets",
+    url = "https://github.com/RobertBrunhage/flutter-riverpod-snippets"
   },
   ["flutter-tools.nvim"] = {
     loaded = true,
@@ -148,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["material.nvim"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/material.nvim",
-    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
