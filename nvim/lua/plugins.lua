@@ -20,6 +20,11 @@ return require("packer").startup(function(use)
   -- LSP
   use("nvim-lua/plenary.nvim")
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use { 'nvim-orgmode/orgmode',
+    config = function()
+      require('orgmode').setup {}
+    end
+  }
   use("neovim/nvim-lspconfig")
   use("williamboman/nvim-lsp-installer")
   use("tami5/lspsaga.nvim")
