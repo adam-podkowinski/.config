@@ -2,6 +2,7 @@ require("gitsigns").setup()
 require("telescope").load_extension("fzy_native")
 require("nvim-tree").setup({
   renderer = {
+    highlight_git = true,
     indent_markers = {
       enable = true,
     },

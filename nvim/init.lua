@@ -1,6 +1,5 @@
 -- Variables
 vim.g.mapleader = " "
-vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_width_allow_resize = 1
 vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
 vim.g.rg_derive_root = "true"
@@ -53,7 +52,7 @@ vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
 -- Sets
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt.foldmethod = "syntax"
+vim.opt.foldmethod = "expr"
 vim.opt.foldlevel = 99
 vim.opt.softtabstop = 2
 vim.opt.so = 2
@@ -121,4 +120,5 @@ function! InsertMapForEnter()
 endfunction
 
 highlight Normal guibg=#101421
+set foldexpr=nvim_treesitter#foldexpr()
 ]])

@@ -30,3 +30,5 @@ export TERMINAL="st"
 export TERM="st"
 export NNN_FIFO="/tmp/nnn.fifo"
 export QT_QPA_PLATFORMTHEME=gtk2
+export XDG_CONFIG_HOME="$HOME/.config"
+setxkbmap -option caps:swapescape

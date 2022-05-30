@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   ["nvim-bufferline.lua"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
@@ -293,6 +298,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-toml",
     url = "https://github.com/cespare/vim-toml"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   },
   ["vim-vsnip"] = {
     loaded = true,

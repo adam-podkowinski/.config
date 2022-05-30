@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
   -- Motion
   use("unblevable/quick-scope")
   use("easymotion/vim-easymotion")
+  use { "mg979/vim-visual-multi", branch = 'master' }
   -- Faster surround with quotes or brackets
   use("tpope/vim-surround")
   -- File manager
@@ -20,11 +21,6 @@ return require("packer").startup(function(use)
   -- LSP
   use("nvim-lua/plenary.nvim")
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use { 'nvim-orgmode/orgmode',
-    config = function()
-      require('orgmode').setup {}
-    end
-  }
   use("neovim/nvim-lspconfig")
   use("williamboman/nvim-lsp-installer")
   use("tami5/lspsaga.nvim")
