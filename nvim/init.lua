@@ -52,6 +52,7 @@ vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
 -- Sets
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
+vim.opt.fillchars='eob: '
 vim.opt.foldmethod = "expr"
 vim.opt.foldlevel = 99
 vim.opt.softtabstop = 2
