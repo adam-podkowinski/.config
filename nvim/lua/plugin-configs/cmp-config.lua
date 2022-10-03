@@ -19,13 +19,11 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ["<Tab>"] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif vim.api.nvim_eval(vim.api.nvim_exec("echo search('\\%#[]>)}''\"`,]', 'n')", true)) > 0 then
+    ["<Tab>"] = function(_)
+      if vim.api.nvim_eval(vim.api.nvim_exec("echo search('\\%#[]>)}''\"`,]', 'n')", true)) > 0 then
         feedkey("<Right>", "")
       else
-        fallback()
+        vim.cmd [[execute "normal \<plug>(emmet-expand-abbr)"]]
       end
     end,
     ["<S-Tab>"] = function(fallback)
@@ -38,9 +36,9 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'nvim_lsp_signature_help' },
     { name = 'vsnip' },
     { name = 'buffer' },
-    { name = 'cmdline' },
     { name = 'path' }
   }),
   sorting = {

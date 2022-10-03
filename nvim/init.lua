@@ -121,5 +121,5 @@ function! InsertMapForEnter()
 endfunction
 
 highlight Normal guibg=#101421
-set foldexpr=nvim_treesitter#foldexpr()
+""set foldexpr=nvim_treesitter#foldexpr()
 ]])

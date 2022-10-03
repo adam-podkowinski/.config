@@ -1,4 +1,5 @@
-local servers = { 'bashls', 'clangd', 'cssls', 'emmet_ls', 'eslint', 'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls', 'vuels', 'yamlls' }
+local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
+  'eslint', 'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls', 'vuels', 'yamlls' }
 
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
@@ -38,7 +39,7 @@ for _, lsp in pairs(servers) do
   local filetypes = nil
   if lsp == 'emmet_ls' then
     filetypes = {
-      "html", "css", "scss", "javascriptreact", 'typescriptreact',
+      "html", "javascriptreact", 'typescriptreact', 'javascript', 'typescript',
     }
   end
   require('lspconfig')[lsp].setup {

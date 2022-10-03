@@ -31,10 +31,11 @@ return require("packer").startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-vsnip'
   use 'Neevash/awesome-flutter-snippets'
   use 'RobertBrunhage/flutter-riverpod-snippets'
+  use 'mattn/emmet-vim'
   -- Languages
   use("akinsho/flutter-tools.nvim")
   use("udalov/kotlin-vim")
