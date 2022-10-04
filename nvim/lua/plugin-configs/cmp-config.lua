@@ -9,6 +9,9 @@ cmp.setup({
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
+  completion = {
+    completeopt = 'menu,menuone,noinsert'
+  },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
@@ -19,11 +22,11 @@ cmp.setup({
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ["<Tab>"] = function(_)
+    ["<Tab>"] = function(fallback)
       if vim.api.nvim_eval(vim.api.nvim_exec("echo search('\\%#[]>)}''\"`,]', 'n')", true)) > 0 then
         feedkey("<Right>", "")
       else
-        vim.cmd [[execute "normal \<plug>(emmet-expand-abbr)"]]
+        fallback();
       end
     end,
     ["<S-Tab>"] = function(fallback)
@@ -36,23 +39,27 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'nvim_lsp_signature_help' },
     { name = 'vsnip' },
-    { name = 'buffer' },
-    { name = 'path' }
+    -- { name = 'buffer' },
+    -- { name = 'path' }
   }),
-  sorting = {
-    comparators = {
-      cmp.config.compare.score,
-      cmp.config.compare.offset,
-      cmp.config.compare.exact,
-      cmp.config.compare.kind,
-      cmp.config.compare.sort_text,
-      cmp.config.compare.length,
-      cmp.config.compare.order,
-    }
-  },
+  -- sorting = {
+  --   comparators = {
+  --     cmp.config.compare.score,
+  --     cmp.config.compare.offset,
+  --     cmp.config.compare.exact,
+  --     cmp.config.compare.kind,
+  --     cmp.config.compare.sort_text,
+  --     cmp.config.compare.length,
+  --     cmp.config.compare.order,
+  --   }
+  -- },
   formatting = {
     format = require('lspkind').cmp_format({ mode = 'symbol_text' }),
   },
 })
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+cmp.event:on(
+  'confirm_done',
+  cmp_autopairs.on_confirm_done()
+)

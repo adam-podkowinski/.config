@@ -48,11 +48,12 @@ vim.keymap.set("i", "<M-[>29", "<Esc>")
 vim.keymap.set("v", "<M-[>29", "<Esc>")
 vim.keymap.set("n", "<M-[>29", "<Esc>")
 vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
+--vim.keymap.set('i', "<TAB>", 'emmet#expandAbbrIntelligent("<tab>")', { buffer = true, expr = true })
 
 -- Sets
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
-vim.opt.fillchars='eob: '
+vim.opt.fillchars = 'eob: '
 vim.opt.foldmethod = "expr"
 vim.opt.foldlevel = 99
 vim.opt.softtabstop = 2
@@ -122,4 +123,5 @@ endfunction
 
 highlight Normal guibg=#101421
 ""set foldexpr=nvim_treesitter#foldexpr()
+imap <buffer> <expr> <TAB> emmet#expandAbbrIntelligent("\<TAB>")
 ]])

@@ -1,5 +1,5 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
-  'eslint', 'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls', 'vuels', 'yamlls' }
+  'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls', 'vuels', 'yamlls' }
 
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
@@ -25,7 +25,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   virtual_text = false,
 })
-
 local signs = { Error = "❌", Warn = "⚠️", Hint = "💡", Info = "💡" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
