@@ -122,6 +122,13 @@ function! InsertMapForEnter()
 endfunction
 
 highlight Normal guibg=#101421
-""set foldexpr=nvim_treesitter#foldexpr()
-imap <buffer> <expr> <TAB> emmet#expandAbbrIntelligent("\<TAB>")
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<Tab>"
+    else
+      return "\<ESC>:call emmet#expandAbbr(0, '')\<CR>i"
+    endif
+endfunction
+inoremap <silent> <expr> <Tab> InsertTabWrapper()
 ]])

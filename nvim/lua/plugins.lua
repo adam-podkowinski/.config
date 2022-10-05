@@ -21,12 +21,12 @@ return require("packer").startup(function(use)
   -- LSP
   use("nvim-lua/plenary.nvim")
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
---  use("neovim/nvim-lspconfig")
---  use("williamboman/nvim-lsp-installer")
---  use("tami5/lspsaga.nvim")
---  use("ray-x/lsp_signature.nvim")
---  use("onsails/lspkind.nvim")
---  use 'hrsh7th/cmp-nvim-lsp'
+  use("neovim/nvim-lspconfig")
+  use("williamboman/nvim-lsp-installer")
+  use("tami5/lspsaga.nvim")
+  use("ray-x/lsp_signature.nvim")
+  use("onsails/lspkind.nvim")
+  use 'hrsh7th/cmp-nvim-lsp'
   use {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
