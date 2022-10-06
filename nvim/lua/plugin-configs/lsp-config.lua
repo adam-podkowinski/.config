@@ -1,8 +1,9 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
-  'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls', 'vuels', 'yamlls' }
+  'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua',
+  'vimls', 'vuels', 'yamlls', 'jsonls' }
 
 require('nvim-lsp-installer').setup {
-  ensure_installed = servers,
+  --ensure_installed = servers,
   automatic_installation = true,
 }
 
@@ -50,3 +51,11 @@ for _, lsp in pairs(servers) do
     filetypes = filetypes,
   }
 end
+
+require('lspconfig')['tsserver'].setup({
+  capabilities = capabilities,
+  color = {
+    enabled = true,
+    background = true,
+  },
+})

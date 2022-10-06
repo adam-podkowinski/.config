@@ -3,6 +3,8 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   -- Colorscheme
   use("marko-cerovac/material.nvim")
+  --  use 'RishabhRD/popfix'
+  --  use 'RishabhRD/nvim-lsputils'
   -- Faster and prettier comments
   use("tpope/vim-commentary")
   -- fuzzy find
@@ -26,15 +28,17 @@ return require("packer").startup(function(use)
   use("tami5/lspsaga.nvim")
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
-  use 'hrsh7th/cmp-nvim-lsp'
   use {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
   }
+  -- use { 'ms-jpq/coq_nvim', branch = 'coq' }
+  -- use { 'ms-jpq/coq.thirdparty', branch = '3p' }
+  use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
- -- use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/cmp-vsnip'
   use 'Neevash/awesome-flutter-snippets'

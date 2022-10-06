@@ -8,6 +8,17 @@ vim.g.dart_format_on_save = 0
 vim.g.EasyMotion_do_mapping = 0
 vim.g.EasyMotion_smartcase = 1
 vim.g.Hexokinase_ftDisabled = { 'dart' }
+-- vim.g.coq_settings = {
+--   auto_start = 'shut-up',
+--   keymap = {
+--     pre_select = true
+--   },
+--   display = {
+--     pum = {
+--       fast_close = false
+--     }
+--   }
+-- }
 
 -- Plugin configs
 require("plugins")
@@ -16,9 +27,9 @@ require("plugin-configs/bufferline-config")
 require("plugin-configs/material-config")
 require("plugin-configs/lualine-config")
 require("plugin-configs/telescope-config")
+require("plugin-configs/cmp-config")
 require("plugin-configs/lsp-config")
 require("plugin-configs/lspsaga-config")
-require("plugin-configs/cmp-config")
 require("plugin-configs/flutter-tools-config")
 require("plugin-configs/other-config")
 
@@ -48,7 +59,6 @@ vim.keymap.set("i", "<M-[>29", "<Esc>")
 vim.keymap.set("v", "<M-[>29", "<Esc>")
 vim.keymap.set("n", "<M-[>29", "<Esc>")
 vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
---vim.keymap.set('i', "<TAB>", 'emmet#expandAbbrIntelligent("<tab>")', { buffer = true, expr = true })
 
 -- Sets
 vim.opt.termguicolors = true
@@ -132,3 +142,11 @@ function! InsertTabWrapper()
 endfunction
 inoremap <silent> <expr> <Tab> InsertTabWrapper()
 ]])
+--vim.lsp.handlers['textDocument/codeAction'] = require'lsputil.codeAction'.code_action_handler
+--vim.lsp.handlers['textDocument/references'] = require'lsputil.locations'.references_handler
+--vim.lsp.handlers['textDocument/definition'] = require'lsputil.locations'.definition_handler
+--vim.lsp.handlers['textDocument/declaration'] = require'lsputil.locations'.declaration_handler
+--vim.lsp.handlers['textDocument/typeDefinition'] = require'lsputil.locations'.typeDefinition_handler
+--vim.lsp.handlers['textDocument/implementation'] = require'lsputil.locations'.implementation_handler
+--vim.lsp.handlers['textDocument/documentSymbol'] = require'lsputil.symbols'.document_handler
+--vim.lsp.handlers['workspace/symbol'] = require'lsputil.symbols'.workspace_handler
