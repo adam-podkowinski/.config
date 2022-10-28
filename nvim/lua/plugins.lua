@@ -2,7 +2,8 @@ return require("packer").startup(function(use)
   -- Packer
   use("wbthomason/packer.nvim")
   -- Colorscheme
-  use("marko-cerovac/material.nvim")
+  use('folke/tokyonight.nvim')
+  -- use("marko-cerovac/material.nvim")
   --  use 'RishabhRD/popfix'
   --  use 'RishabhRD/nvim-lsputils'
   -- Faster and prettier comments

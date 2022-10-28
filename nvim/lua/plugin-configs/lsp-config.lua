@@ -1,9 +1,9 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
-  'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua',
+  'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'texlab',
   'vimls', 'vuels', 'yamlls', 'jsonls' }
 
 require('nvim-lsp-installer').setup {
-  --ensure_installed = servers,
+  ensure_installed = servers,
   automatic_installation = true,
 }
 
@@ -33,29 +33,14 @@ for type, icon in pairs(signs) do
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in pairs(servers) do
-  local filetypes = nil
-  if lsp == 'emmet_ls' then
-    filetypes = {
-      "html", "javascriptreact", 'typescriptreact', 'javascript', 'typescript',
-    }
-  end
   require('lspconfig')[lsp].setup {
     capabilities = capabilities,
     color = {
       enabled = true,
       background = true,
     },
-    filetypes = filetypes,
   }
 end
-
-require('lspconfig')['tsserver'].setup({
-  capabilities = capabilities,
-  color = {
-    enabled = true,
-    background = true,
-  },
-})

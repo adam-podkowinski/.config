@@ -26,6 +26,7 @@ cmp.setup({
       if vim.api.nvim_eval(vim.api.nvim_exec("echo search('\\%#[]>)}''\"`,]', 'n')", true)) > 0 then
         feedkey("<Right>", "")
       else
+ --       cmp.select_next_item()
         fallback();
       end
     end,
@@ -44,12 +45,13 @@ cmp.setup({
     -- { name = 'path' }
   }),
   sorting = {
+    priority_weight = 2,
     comparators = {
       cmp.config.compare.score,
+      cmp.config.compare.sort_text,
       cmp.config.compare.offset,
       cmp.config.compare.exact,
       cmp.config.compare.kind,
-      cmp.config.compare.sort_text,
       cmp.config.compare.length,
       cmp.config.compare.order,
     }

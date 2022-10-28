@@ -8,30 +8,19 @@ vim.g.dart_format_on_save = 0
 vim.g.EasyMotion_do_mapping = 0
 vim.g.EasyMotion_smartcase = 1
 vim.g.Hexokinase_ftDisabled = { 'dart' }
--- vim.g.coq_settings = {
---   auto_start = 'shut-up',
---   keymap = {
---     pre_select = true
---   },
---   display = {
---     pum = {
---       fast_close = false
---     }
---   }
--- }
 
 -- Plugin configs
 require("plugins")
 require("plugin-configs/treesitter-config")
 require("plugin-configs/bufferline-config")
-require("plugin-configs/material-config")
 require("plugin-configs/lualine-config")
 require("plugin-configs/telescope-config")
 require("plugin-configs/cmp-config")
 require("plugin-configs/lsp-config")
 require("plugin-configs/lspsaga-config")
 require("plugin-configs/flutter-tools-config")
-require("plugin-configs/other-config")
+require('plugin-configs/other-config')
+require('plugin-configs/tokyonight-config')
 
 -- Keymaps
 vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", { noremap = true })
@@ -65,6 +54,7 @@ vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.fillchars = 'eob: '
 vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
 vim.opt.softtabstop = 2
 vim.opt.so = 2
@@ -131,7 +121,6 @@ function! InsertMapForEnter()
     endif
 endfunction
 
-highlight Normal guibg=#101421
 function! InsertTabWrapper()
     let col = col('.') - 1
     if !col || getline('.')[col - 1] !~ '\k'
@@ -140,13 +129,5 @@ function! InsertTabWrapper()
       return "\<ESC>:call emmet#expandAbbr(0, '')\<CR>i"
     endif
 endfunction
-inoremap <silent> <expr> <Tab> InsertTabWrapper()
+autocmd FileType javascript,html,javascriptreact,typescriptreact,css,scss,sass,vue inoremap <silent> <expr> <Tab> InsertTabWrapper()
 ]])
---vim.lsp.handlers['textDocument/codeAction'] = require'lsputil.codeAction'.code_action_handler
---vim.lsp.handlers['textDocument/references'] = require'lsputil.locations'.references_handler
---vim.lsp.handlers['textDocument/definition'] = require'lsputil.locations'.definition_handler
---vim.lsp.handlers['textDocument/declaration'] = require'lsputil.locations'.declaration_handler
---vim.lsp.handlers['textDocument/typeDefinition'] = require'lsputil.locations'.typeDefinition_handler
---vim.lsp.handlers['textDocument/implementation'] = require'lsputil.locations'.implementation_handler
---vim.lsp.handlers['textDocument/documentSymbol'] = require'lsputil.symbols'.document_handler
---vim.lsp.handlers['workspace/symbol'] = require'lsputil.symbols'.workspace_handler
