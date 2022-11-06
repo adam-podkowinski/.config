@@ -1,6 +1,6 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
   'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'texlab',
-  'vimls', 'vuels', 'yamlls', 'jsonls' }
+  'vimls', 'vuels', 'yamlls', 'jsonls', 'cmake' }
 
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
@@ -36,8 +36,17 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in pairs(servers) do
+  OnAtt = function(_, _)
+
+  end
+  if lsp == 'jsonls' or lsp == 'tsserver' then
+    OnAtt = function(client, _)
+      client.server_capabilities.documentFormattingProvider = false
+    end
+  end
   require('lspconfig')[lsp].setup {
     capabilities = capabilities,
+    on_attach = OnAtt,
     color = {
       enabled = true,
       background = true,

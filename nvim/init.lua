@@ -21,6 +21,7 @@ require("plugin-configs/lspsaga-config")
 require("plugin-configs/flutter-tools-config")
 require('plugin-configs/other-config')
 require('plugin-configs/tokyonight-config')
+require('plugin-configs/null-ls-config')
 
 -- Keymaps
 vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", { noremap = true })
