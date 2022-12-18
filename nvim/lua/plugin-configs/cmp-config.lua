@@ -4,13 +4,16 @@ end
 
 local cmp = require 'cmp'
 cmp.setup({
+  performance = {
+    debounce = 150,
+  },
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
   completion = {
-    completeopt = 'menu,menuone,noinsert'
+    completeopt = 'menu,menuone,noinsert',
   },
   window = {
     completion = cmp.config.window.bordered(),
@@ -26,7 +29,7 @@ cmp.setup({
       if vim.api.nvim_eval(vim.api.nvim_exec("echo search('\\%#[]>)}''\"`,]', 'n')", true)) > 0 then
         feedkey("<Right>", "")
       else
- --       cmp.select_next_item()
+        --       cmp.select_next_item()
         fallback();
       end
     end,
@@ -39,7 +42,7 @@ cmp.setup({
     end,
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
+    { name = 'nvim_lsp', keyword_length = 2, group_index = 1, max_item_count = 15 },
     { name = 'vsnip' },
     -- { name = 'buffer' },
     -- { name = 'path' }

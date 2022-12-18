@@ -5,7 +5,7 @@
         <dc:identifier opf:scheme="uuid" id="uuid_id">c577c9fd-c098-468e-95bf-aef438936e56</dc:identifier>
         <dc:title>A Court of Silver Flames</dc:title>
         <dc:creator opf:file-as="Maas, Sarah J." opf:role="aut">Sarah J. Maas</dc:creator>
-        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.34.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.9.0) [https://calibre-ebook.com]</dc:contributor>
         <dc:date>0101-01-01T00:00:00+00:00</dc:date>
         <dc:publisher>Bloomsbury Publishing Inc</dc:publisher>
         <dc:language>eng</dc:language>

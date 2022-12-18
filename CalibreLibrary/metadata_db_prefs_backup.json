@@ -35,7 +35,7 @@
       "size": 105,
       "tags": 66,
       "timestamp": 93,
-      "title": 131
+      "title": 369
     },
     "hidden_columns": [
       "last_modified",
@@ -44,6 +44,10 @@
     "languages_injected": true,
     "last_modified_injected": true,
     "sort_history": [
+      [
+        "authors",
+        true
+      ],
       [
         "timestamp",
         false
@@ -82,16 +86,28 @@
   },
   "gui_view_history": [
     [
+      21,
+      "Mitologia"
+    ],
+    [
+      22,
+      "George R. R. Martin's a Game of Thrones 4-Book Bundle"
+    ],
+    [
+      23,
+      "A Game of Thrones"
+    ],
+    [
+      4,
+      "A Court of Silver Flames"
+    ],
+    [
       9,
       "Wie\u017ca Jask\u00f3\u0142ki"
     ],
     [
       20,
       "Mitologia (1924)"
-    ],
-    [
-      21,
-      "Mitologia"
     ],
     [
       2,
@@ -266,6 +282,24 @@
         "identifiers",
         "identifier",
         "isbn"
+      ],
+      "table": null
+    },
+    "in_tag_browser": {
+      "column": null,
+      "datatype": "text",
+      "display": {},
+      "is_category": false,
+      "is_csp": false,
+      "is_custom": false,
+      "is_editable": true,
+      "is_multiple": {},
+      "kind": "field",
+      "label": "in_tag_browser",
+      "name": null,
+      "rec_index": 25,
+      "search_terms": [
+        "in_tag_browser"
       ],
       "table": null
     },
@@ -615,5 +649,16 @@
       ],
       "table": null
     }
-  }
+  },
+  "tag_browser_category_order": [
+    "authors",
+    "languages",
+    "series",
+    "formats",
+    "publisher",
+    "rating",
+    "news",
+    "tags",
+    "identifiers"
+  ]
 }

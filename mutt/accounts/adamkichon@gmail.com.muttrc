@@ -1,0 +1,22 @@
+# vim: filetype=neomuttrc
+# muttrc file for account adamkichon@gmail.com
+set realname = "adamkichon"
+set from = "adamkichon@gmail.com"
+set sendmail = "msmtp -a adamkichon@gmail.com"
+alias me adamkichon <adamkichon@gmail.com>
+set folder = "/home/bodzio/.local/share/mail/adamkichon@gmail.com"
+set header_cache = /home/bodzio/.cache/mutt-wizard/adamkichon@gmail.com/headers
+set message_cachedir = /home/bodzio/.cache/mutt-wizard/adamkichon@gmail.com/bodies
+set mbox_type = Maildir
+set hostname = "gmail.com"
+source /usr/local/share/mutt-wizard/switch.muttrc
+set spoolfile = +INBOX
+set postponed = +Drafts
+set trash = +Trash
+set record = +Sent
+
+macro index o "<shell-escape>mw -y adamkichon@gmail.com<enter>" "run mbsync to sync adamkichon@gmail.com"
+macro index \eg "<enter-command>unset wait_key<enter><shell-escape>gpg --list-secret-keys; printf 'Enter email ID of user to publish: '; read eID; printf 'Enter fingerprint of GPG key to publish: '; read eFGPT; /usr/local/libexec/gpg-wks-client --create \$eFGPT \$eID | msmtp --read-envelope-from --read-recipients -a adamkichon@gmail.com<enter>"  "publish GPG key to WKS provider"
+macro index \eh "<pipe-message>/usr/local/libexec/gpg-wks-client --receive | msmtp --read-envelope-from --read-recipients -a adamkichon@gmail.com<enter>" "confirm GPG publication"
+
+mailboxes "=INBOX" "=Mailspring/Snoozed" "=Unwanted" "=[Gmail]/Kosz" "=[Gmail]/Oznaczone gwiazdk&AQU-" "=[Gmail]/Spam" "=[Gmail]/Wa&AXw-ne" "=[Gmail]/Wersje robocze" "=[Gmail]/Wszystkie" "=[Gmail]/Wys&AUI-ane"

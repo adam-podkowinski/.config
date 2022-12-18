@@ -77,6 +77,7 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.pumheight = 10
 vim.opt.ruler = true
+vim.opt.linebreak = true
 vim.opt.shiftwidth = 2
 vim.opt.showtabline = 2
 vim.opt.smartindent = true
