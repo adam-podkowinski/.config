@@ -29,7 +29,6 @@ cmp.setup({
       if vim.api.nvim_eval(vim.api.nvim_exec("echo search('\\%#[]>)}''\"`,]', 'n')", true)) > 0 then
         feedkey("<Right>", "")
       else
-        --       cmp.select_next_item()
         fallback();
       end
     end,
@@ -42,13 +41,12 @@ cmp.setup({
     end,
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp', keyword_length = 2, group_index = 1, max_item_count = 15 },
+    { name = 'nvim_lsp' },
     { name = 'vsnip' },
     -- { name = 'buffer' },
     -- { name = 'path' }
   }),
   sorting = {
-    priority_weight = 2,
     comparators = {
       cmp.config.compare.score,
       cmp.config.compare.sort_text,

@@ -52,7 +52,6 @@ vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
 
 -- Sets
 vim.opt.termguicolors = true
-vim.opt.cursorline = true
 vim.opt.fillchars = 'eob: '
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -60,8 +59,10 @@ vim.opt.foldlevel = 99
 vim.opt.softtabstop = 2
 vim.opt.so = 2
 vim.opt.autoindent = true
+vim.opt.cursorline = true
 vim.opt.background = "dark"
 vim.opt.cmdheight = 1
+vim.opt.tw = 88
 vim.opt.encoding = "UTF-8"
 vim.opt.expandtab = true
 vim.opt.fileencoding = "utf-8"

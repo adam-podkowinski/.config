@@ -9,9 +9,9 @@ return require("packer").startup(function(use)
   use("nvim-lua/popup.nvim")
   use("nvim-telescope/telescope.nvim")
   use("nvim-telescope/telescope-fzy-native.nvim")
-  use{"ahmedkhalf/project.nvim", config = function()
-    require('project_nvim').setup{}
-  end}
+  use { "ahmedkhalf/project.nvim", config = function()
+    require('project_nvim').setup {}
+  end }
   -- Motion
   use("unblevable/quick-scope")
   use("easymotion/vim-easymotion")
@@ -69,6 +69,12 @@ return require("packer").startup(function(use)
   use("lukas-reineke/indent-blankline.nvim")
   -- Colorizer
   use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
+  use {
+    "themaxmarchuk/tailwindcss-colors.nvim",
+    config = function()
+      require("tailwindcss-colors").setup()
+    end
+  }
   -- Better dot (.) command
   use("tpope/vim-repeat")
   -- Rest

@@ -43,8 +43,8 @@ for _, lsp in pairs(servers) do
     end
   end
   if lsp == 'tailwindcss' then
-    OnAtt = function(client, _)
-      client.server_capabilities.completionProvider = false
+    OnAtt = function(client, bufnr)
+      require("tailwindcss-colors").buf_attach(bufnr)
     end
   end
   require('lspconfig')[lsp].setup {
