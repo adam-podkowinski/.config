@@ -1,6 +1,6 @@
 require("lualine").setup({
 	options = {
-		-- theme = 'tokyonight',
+		theme = 'onedarkpro',
  		component_separators = { left = "", right = "" },
  		section_separators = { left = "", right = "" },
  		globalstatus = true,

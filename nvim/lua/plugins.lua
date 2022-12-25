@@ -2,7 +2,8 @@ return require("packer").startup(function(use)
   -- Packer
   use("wbthomason/packer.nvim")
   -- Colorscheme
-  use('folke/tokyonight.nvim')
+  -- use('folke/tokyonight.nvim')
+  use "olimorris/onedarkpro.nvim"
   -- Faster and prettier comments
   use("tpope/vim-commentary")
   -- fuzzy find

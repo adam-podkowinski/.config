@@ -1,6 +1,6 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
   'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'texlab',
-  'vimls', 'vuels', 'yamlls', 'jsonls', 'cmake', 'tailwindcss' }
+  'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss' }
 
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
@@ -35,6 +35,18 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+require('lspconfig')['volar'].setup {
+  capabilities = capabilities,
+  on_attach = function (client)
+      client.server_capabilities.documentFormattingProvider = false
+  end,
+  init_options = {
+    typescript = {
+      tsdk = '/usr/lib/node_modules/typescript/lib',
+    }
+  }
+}
+
 for _, lsp in pairs(servers) do
   OnAtt = function() end
   if lsp == 'jsonls' or lsp == 'tsserver' then
@@ -44,6 +56,7 @@ for _, lsp in pairs(servers) do
   end
   if lsp == 'tailwindcss' then
     OnAtt = function(client, bufnr)
+      client.server_capabilities.completionProvider = false
       require("tailwindcss-colors").buf_attach(bufnr)
     end
   end

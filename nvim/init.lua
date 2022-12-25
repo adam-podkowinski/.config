@@ -20,7 +20,7 @@ require("plugin-configs/lsp-config")
 require("plugin-configs/lspsaga-config")
 require("plugin-configs/flutter-tools-config")
 require('plugin-configs/other-config')
-require('plugin-configs/tokyonight-config')
+require('plugin-configs/onedark-config')
 require('plugin-configs/null-ls-config')
 
 -- Keymaps
@@ -59,7 +59,6 @@ vim.opt.foldlevel = 99
 vim.opt.softtabstop = 2
 vim.opt.so = 2
 vim.opt.autoindent = true
-vim.opt.cursorline = true
 vim.opt.background = "dark"
 vim.opt.cmdheight = 1
 vim.opt.tw = 88

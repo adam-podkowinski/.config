@@ -155,16 +155,6 @@ window.opacity: 0.9
 
 # Key bindings
 #
-# Key bindings are specified as a list of objects. Each binding will specify a
-# key and modifiers required to trigger it, terminal modes where the binding is
-# applicable, and what should be done when the key binding fires. It can either
-# send a byte sequence to the running application (`chars`), execute a
-# predefined action (`action`) or fork and execute a specified Control plus
-# arguments (`Control`).
-#
-# Bindings are always filled by default, but will be replaced when a new binding
-# with the same triggers is defined. To unset a default binding, it can be
-# mapped to the `None` action.
 #
 # Example:
 #   `- { key: V, mods: Control|Shift, action: Paste }`
@@ -180,14 +170,6 @@ window.opacity: 0.9
 #   - `F1` -> `F12`
 #   - `Key1` -> `Key0`
 #
-#   A full list with available key codes can be found here:
-#   https://docs.rs/glutin/*/glutin/enum.VirtualKeyCode.html#variants
-#
-#   Instead of using the name of the keys, the `key` field also supports using
-#   the scancode of the desired key. Scancodes have to be specified as a
-#   decimal number.
-#   This Control will allow you to display the hex scancodes for certain keys:
-#     `showkey --scancodes`
 #
 # Values for `mods`:
 #   - Control
@@ -200,14 +182,6 @@ window.opacity: 0.9
 #   Multiple `mods` can be combined using `|` like this: `mods: Control|Shift`.
 #   Whitespace and capitalization is relevant and must match the example.
 #
-# Values for `chars`:
-#   The `chars` field writes the specified string to the terminal. This makes
-#   it possible to pass escape sequences.
-#   To find escape codes for bindings like `PageUp` ("\x1b[5~"), you can run
-#   the Control `showkey -a` outside of tmux.
-#   Note that applications use terminfo to map escape sequences back to
-#   keys. It is therefore required to update the terminfo when
-#   changing an escape sequence.
 #
 # Values for `action`:
 #   - Paste
@@ -250,7 +224,7 @@ key_bindings:
   - { key: V, mods: Control|Shift, action: Paste }
   - { key: C, mods: Control|Shift, action: Copy }
   - { key: Q, mods: Control, action: Quit }
-  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: Return, mods: Alt, action: SpawnNewInstance }
 
   - { key: J, mods: Alt, action: ScrollLineDown }
   - { key: J, mods: Alt|Shift, action: ScrollHalfPageDown }
