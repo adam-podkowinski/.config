@@ -5,7 +5,7 @@ end
 local cmp = require 'cmp'
 cmp.setup({
   performance = {
-    debounce = 150,
+    throttle = 50,
   },
   snippet = {
     expand = function(args)
@@ -58,7 +58,7 @@ cmp.setup({
     }
   },
   formatting = {
-    format = require('lspkind').cmp_format({ mode = 'symbol_text' }),
+    format = require('lspkind').cmp_format({ mode = 'symbol' }),
   },
 })
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')

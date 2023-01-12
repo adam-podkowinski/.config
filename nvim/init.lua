@@ -1,3 +1,4 @@
+require('impatient')
 -- Variables
 vim.g.mapleader = " "
 vim.g.nvim_tree_width_allow_resize = 1
@@ -7,7 +8,6 @@ vim.g.rooter_change_directory_for_non_project_files = "current"
 vim.g.dart_format_on_save = 0
 vim.g.EasyMotion_do_mapping = 0
 vim.g.EasyMotion_smartcase = 1
-vim.g.Hexokinase_ftDisabled = { 'dart' }
 
 -- Plugin configs
 require("plugins")

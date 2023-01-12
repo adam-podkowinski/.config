@@ -1,4 +1,6 @@
 return require("packer").startup(function(use)
+  -- Speed up neovim startup
+  use 'lewis6991/impatient.nvim'
   -- Packer
   use("wbthomason/packer.nvim")
   -- Colorscheme
@@ -24,8 +26,9 @@ return require("packer").startup(function(use)
   -- LSP
   use("nvim-lua/plenary.nvim")
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
   use("neovim/nvim-lspconfig")
-  use("williamboman/nvim-lsp-installer")
   use("tami5/lspsaga.nvim")
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
@@ -69,13 +72,7 @@ return require("packer").startup(function(use)
   -- Indent lines
   use("lukas-reineke/indent-blankline.nvim")
   -- Colorizer
-  use({ "rrethy/vim-hexokinase", run = "make hexokinase" })
-  use {
-    "themaxmarchuk/tailwindcss-colors.nvim",
-    config = function()
-      require("tailwindcss-colors").setup()
-    end
-  }
+  use 'NvChad/nvim-colorizer.lua'
   -- Better dot (.) command
   use("tpope/vim-repeat")
   -- Rest

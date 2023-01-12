@@ -1,10 +1,10 @@
-local color = require("onedarkpro.lib.color")
+local helpers = require("onedarkpro.helpers")
 local onedarkpro = require("onedarkpro")
 
 onedarkpro.setup({
   colors = {
-    onedark = {
-      bg = color.darken(onedarkpro.get_colors("onedark").bg, 0.8)
+    onedark_vivid = {
+      bg = helpers.darken(helpers.get_colors("onedark_vivid").bg, 0.7)
     }
   },
   highlights = {},
@@ -15,7 +15,7 @@ onedarkpro.setup({
     italic = true,
     underline = true,
     undercurl = true,
-    cursorline = true,
+    cursorline = false,
     transparency = false,
     terminal_colors = true,
     highlight_inactive_windows = false,
@@ -23,5 +23,5 @@ onedarkpro.setup({
 })
 
 vim.cmd([[
-colorscheme onedark
+colorscheme onedark_vivid
 ]])

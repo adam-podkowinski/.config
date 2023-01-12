@@ -23,3 +23,8 @@ require("indent_blankline").setup({
 require('lsp_signature').setup {
   floating_window = false
 }
+require 'colorizer'.setup {
+  user_default_options = {
+    tailwind = true,
+  }
+}
