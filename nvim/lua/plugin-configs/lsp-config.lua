@@ -8,12 +8,12 @@ require("mason-lspconfig").setup {
 }
 
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-vim.api.nvim_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>F", "<cmd>lua vim.lsp.buf.format { async = true }<CR>", opts)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
+vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, opts)
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
@@ -25,20 +25,26 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lspconfig')['volar'].setup {
   capabilities = capabilities,
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+  init_options = {
+    typescript = {
+      tsdk = "/usr/lib/node_modules/typescript/lib"
+    }
+  },
+  settings = {
+    ["volar"] = {
+      vueserver = {
+        noProjectReferences = true,
+      },
+    },
+  },
   on_attach = function(client)
     client.server_capabilities.documentFormattingProvider = false
   end,
-  -- init_options = {
-  --   typescript = {
-  --     tsdk = '/usr/lib/node_modules/typescript/lib',
-  --   }
-  -- }
 }
 
 for _, lsp in pairs(servers) do

@@ -6,6 +6,7 @@ local cmp = require 'cmp'
 cmp.setup({
   performance = {
     throttle = 50,
+    fetching_timeout = 50,
   },
   snippet = {
     expand = function(args)

@@ -20,7 +20,6 @@ require("plugin-configs/lsp-config")
 require("plugin-configs/lspsaga-config")
 require("plugin-configs/flutter-tools-config")
 require('plugin-configs/other-config')
-require('plugin-configs/onedark-config')
 require('plugin-configs/null-ls-config')
 
 -- Keymaps
@@ -132,4 +131,6 @@ function! InsertTabWrapper()
     endif
 endfunction
 autocmd FileType javascript,html,javascriptreact,typescriptreact,css,scss,sass,vue inoremap <silent> <expr> <Tab> InsertTabWrapper()
+
+colorscheme tokyonight-moon
 ]])
