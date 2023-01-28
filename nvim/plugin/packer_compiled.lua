@@ -79,30 +79,15 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
-  ["awesome-flutter-snippets"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/awesome-flutter-snippets",
-    url = "https://github.com/Neevash/awesome-flutter-snippets"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
   },
   ["cmp-vsnip"] = {
     loaded = true,
@@ -114,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
-  ["flutter-riverpod-snippets"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/flutter-riverpod-snippets",
-    url = "https://github.com/RobertBrunhage/flutter-riverpod-snippets"
-  },
   ["flutter-tools.nvim"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
@@ -129,15 +109,15 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["kotlin-vim"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/kotlin-vim",
-    url = "https://github.com/udalov/kotlin-vim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -158,6 +138,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -180,10 +170,10 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-lsp-installer"] = {
+  ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
+    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/NvChad/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -215,11 +205,6 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["php.vim"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/php.vim",
-    url = "https://github.com/StanAngeloff/php.vim"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -240,19 +225,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/quick-scope",
     url = "https://github.com/unblevable/quick-scope"
-  },
-  ["rest.nvim"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/rest.nvim",
-    url = "https://github.com/NTBBloodbath/rest.nvim"
-  },
-  ["tailwindcss-colors.nvim"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\23tailwindcss-colors\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/opt/tailwindcss-colors.nvim",
-    url = "https://github.com/themaxmarchuk/tailwindcss-colors.nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
@@ -294,20 +266,10 @@ _G.packer_plugins = {
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-hexokinase"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-hexokinase",
-    url = "https://github.com/rrethy/vim-hexokinase"
-  },
   ["vim-repeat"] = {
     loaded = true,
     path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
-  },
-  ["vim-rhubarb"] = {
-    loaded = true,
-    path = "/home/bodzio/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
-    url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -337,34 +299,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
-local module_lazy_loads = {
-  ["^tailwindcss%-colors"] = "tailwindcss-colors.nvim"
-}
-local lazy_load_called = {['packer.load'] = true}
-local function lazy_load_module(module_name)
-  local to_load = {}
-  if lazy_load_called[module_name] then return nil end
-  lazy_load_called[module_name] = true
-  for module_pat, plugin_name in pairs(module_lazy_loads) do
-    if not _G.packer_plugins[plugin_name].loaded and string.match(module_name, module_pat) then
-      to_load[#to_load + 1] = plugin_name
-    end
-  end
-
-  if #to_load > 0 then
-    require('packer.load')(to_load, {module = module_name}, _G.packer_plugins)
-    local loaded_mod = package.loaded[module_name]
-    if loaded_mod then
-      return function(modname) return loaded_mod end
-    end
-  end
-end
-
-if not vim.g.packer_custom_loader_enabled then
-  table.insert(package.loaders, 1, lazy_load_module)
-  vim.g.packer_custom_loader_enabled = true
-end
-
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")

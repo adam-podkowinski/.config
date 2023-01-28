@@ -34,20 +34,15 @@ vim.keymap.set("n", "<TAB>", "<cmd>BufferLineCycleNext<CR>", { noremap = true })
 vim.keymap.set("n", "<S-TAB>", "<cmd>BufferLineCyclePrev<CR>", { noremap = true })
 vim.keymap.set("n", "<c-u>", "viwU<Esc>", { noremap = true })
 vim.keymap.set("n", "<Leader><c-u>", " viwu<Esc>", { noremap = true })
-vim.keymap.set("n", "<C-h>", " <C-w>h", { noremap = true })
-vim.keymap.set("n", "<C-l>", " <C-w>l", { noremap = true })
-vim.keymap.set("n", "<C-j>", " <C-w>j", { noremap = true })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true })
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize -3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
-vim.keymap.set("n", "<C-c>", " :BD!<CR>", { noremap = true })
+vim.keymap.set("n", "<C-c>", ":BD!<CR>", { noremap = true })
 vim.keymap.set("n", "<Leader>;", "<Plug>(easymotion-overwin-f2)", { noremap = true })
-vim.keymap.set("n", "<Leader>r", "<Plug>RestNvim", { noremap = true })
-vim.keymap.set("i", "<M-[>29", "<Esc>")
-vim.keymap.set("v", "<M-[>29", "<Esc>")
-vim.keymap.set("n", "<M-[>29", "<Esc>")
-vim.keymap.set("t", "<M-[>29", "<C-\\><C-n>")
 
 -- Sets
 vim.opt.termguicolors = true
@@ -131,6 +126,4 @@ function! InsertTabWrapper()
     endif
 endfunction
 autocmd FileType javascript,html,javascriptreact,typescriptreact,css,scss,sass,vue inoremap <silent> <expr> <Tab> InsertTabWrapper()
-
-colorscheme tokyonight-moon
 ]])

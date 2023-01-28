@@ -1,11 +1,9 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
   'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'texlab',
-  'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals' }
+  'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'tsserver' }
 
 require('mason').setup {}
-require("mason-lspconfig").setup {
-  ensure_installed = servers
-}
+require("mason-lspconfig").setup {}
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
@@ -29,19 +27,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lspconfig')['volar'].setup {
   capabilities = capabilities,
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
-  init_options = {
-    typescript = {
-      tsdk = "/usr/lib/node_modules/typescript/lib"
-    }
-  },
-  settings = {
-    ["volar"] = {
-      vueserver = {
-        noProjectReferences = true,
-      },
-    },
-  },
+  -- filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
   on_attach = function(client)
     client.server_capabilities.documentFormattingProvider = false
   end,

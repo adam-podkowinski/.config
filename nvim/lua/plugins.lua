@@ -5,6 +5,8 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   -- Colorscheme
   use('folke/tokyonight.nvim')
+  -- use "EdenEast/nightfox.nvim"
+  -- use "rebelot/kanagawa.nvim"
   -- Faster and prettier comments
   use("tpope/vim-commentary")
   -- fuzzy find
@@ -38,25 +40,18 @@ return require("packer").startup(function(use)
   }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/cmp-vsnip'
-  use 'Neevash/awesome-flutter-snippets'
-  use 'RobertBrunhage/flutter-riverpod-snippets'
   use 'mattn/emmet-vim'
   -- Languages
   use("akinsho/flutter-tools.nvim")
-  use("udalov/kotlin-vim")
-  use("StanAngeloff/php.vim")
   use("cespare/vim-toml")
   use("L04DB4L4NC3R/texgroff.vim")
   use("lervag/vimtex")
   -- Git
   use("tpope/vim-fugitive")
   use("lewis6991/gitsigns.nvim")
-  use("tpope/vim-rhubarb")
   -- Close buffers with style
   use("qpkorr/vim-bufkill")
   -- Nice status line
@@ -74,6 +69,4 @@ return require("packer").startup(function(use)
   use 'NvChad/nvim-colorizer.lua'
   -- Better dot (.) command
   use("tpope/vim-repeat")
-  -- Rest
-  use("NTBBloodbath/rest.nvim")
 end)

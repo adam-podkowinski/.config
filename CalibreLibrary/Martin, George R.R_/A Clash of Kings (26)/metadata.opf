@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">26</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">66f548fc-3897-4b49-a214-4167e82c7ed4</dc:identifier>
+        <dc:title>A Clash of Kings</dc:title>
+        <dc:creator opf:file-as="Martin, George R.R." opf:role="aut">Martin, George R.R.</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.11.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2003-01-01T05:00:00+00:00</dc:date>
+        <dc:publisher>Bantam</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9780553897852</dc:identifier>
+        <dc:language>eng</dc:language>
+        <meta name="calibre:author_link_map" content="{&quot;Martin, George R.R.&quot;: &quot;&quot;}"/>
+        <meta name="calibre:timestamp" content="2023-01-21T00:37:14.452978+00:00"/>
+        <meta name="calibre:title_sort" content="Clash of Kings, A"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>

@@ -14,7 +14,6 @@ require("nvim-tree").setup({
     },
   },
 })
-require("rest-nvim").setup()
 require("indent_blankline").setup({
   show_current_context = true,
   space_char_blankline = " ",
@@ -28,3 +27,15 @@ require 'colorizer'.setup {
     tailwind = true,
   }
 }
+
+require('tokyonight').setup {
+  style = "night",
+  styles = {
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = { italic = true },
+  },
+  lualine_bold = true,
+}
+
+vim.cmd [[colorscheme tokyonight-night]]
