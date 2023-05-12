@@ -40,6 +40,7 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	p="sudo pacman" \
+  btc="bluetoothctl" \
   z="zathura" \
   lekcje="cd $HOME/Documents/lekcje" \
   plan="test -f $HOME/Documents/lekcje/plan.png && {sxiv $HOME/Documents/lekcje/plan.png} || {sxiv $HOME/Documents/lekcje/plan.jpg}" \

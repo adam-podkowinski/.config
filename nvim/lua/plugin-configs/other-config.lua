@@ -9,6 +9,7 @@ require("nvim-tree").setup({
   },
   renderer = {
     highlight_git = true,
+    indent_width = 3,
     indent_markers = {
       enable = true,
     },

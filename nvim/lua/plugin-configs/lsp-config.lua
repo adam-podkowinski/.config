@@ -1,5 +1,5 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
-  'html', 'jedi_language_server', 'rust_analyzer', 'sumneko_lua', 'texlab',
+  'html', 'jedi_language_server', 'rust_analyzer', 'lua_ls', 'texlab',
   'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'tsserver' }
 
 require('mason').setup {}
