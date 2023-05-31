@@ -4,7 +4,9 @@ return require("packer").startup(function(use)
   -- Packer
   use("wbthomason/packer.nvim")
   -- Colorscheme
-  use('folke/tokyonight.nvim')
+  use('loctvl842/monokai-pro.nvim')
+  -- use('marko-cerovac/material.nvim')
+  -- use('folke/tokyonight.nvim')
   -- use "EdenEast/nightfox.nvim"
   -- use "rebelot/kanagawa.nvim"
   -- Faster and prettier comments
@@ -58,7 +60,7 @@ return require("packer").startup(function(use)
   use("nvim-lualine/lualine.nvim")
   use("akinsho/nvim-bufferline.lua")
   -- Icons
-  use("kyazdani42/nvim-web-devicons")
+  use("nvim-tree/nvim-web-devicons")
   -- Colorful brackets
   use("p00f/nvim-ts-rainbow")
   -- Close pairs

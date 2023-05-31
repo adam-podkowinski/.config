@@ -27,7 +27,7 @@ window:
   # Blank space added around the window in pixels. This padding is not scaled by
   # DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 1
+    x: 3
     y: 0
 
   # Spread additional padding evenly around the terminal content.
@@ -67,16 +67,16 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: "JetBrainsMono Nerd Font"
-    style: SemiBold
+    family: "Mono Lisa"
+    style: Medium
 
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "Mono Lisa"
     style: Bold
 
   italic:
-    family: "JetBrainsMono Nerd Font"
-    style: "SemiBold Italic"
+    family: "Mono Lisa"
+    style: "Bold Italic"
 
   # Point size of the font
   size: 11
@@ -85,14 +85,14 @@ font:
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0
-    y: 9
+    y: 14
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
   # the right, increase the y offset to move the glyph upward.
   glyph_offset:
     x: 0
-    y: 5
+    y: 7
 
   # Thin stroke font rendering (macOS only)
   #
@@ -112,39 +112,43 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1a1b26'
-    foreground: '0xc0caf5'
+    background: '0x292d3e'
+    foreground: '0x959dcb'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x292d3e'
+    cursor: '0x959dcb'
 
   # Normal colors
   normal:
-    black:   '0x15161e'
-    red:     '0xf7768e'
-    green:   '0x50fa7b'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xa9b1d6'
+    black:   '0x292d3e'
+    red:     '0xf07178'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0x959dcb'
 
   # Bright colors
   bright:
-    black:   '0x414868'
-    red:     '0xf7768e'
-    green:   '0x50fa7b'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xbb9af7'
-    cyan:    '0x7dcfff'
-    white:   '0xc0caf5'
+    black:   '0x676e95'
+    red:     '0xf07178'
+    green:   '0xc3e88d'
+    yellow:  '0xffcb6b'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x89ddff'
+    white:   '0xffffff'
 
   indexed_colors:
-    - { index: 16, color: '0xff9e64' }
-    - { index: 17, color: '0xdb4b4b' }
-
-bell:
-  animation: EaseOutExpo
-  color: "0xffffff"
-  duration: 0
+    - { index: 16, color: '0xf78c6c' }
+    - { index: 17, color: '0xff5370' }
+    - { index: 18, color: '0x444267' }
+    - { index: 19, color: '0x32374d' }
+    - { index: 20, color: '0x8796b0' }
+    - { index: 21, color: '0x959dcb' }
 
 # Background opacity
 window.opacity: 0.9
@@ -292,20 +296,5 @@ debug:
   # Keep the log file after quitting Alacritty.
   persistent_logging: false
 
-  # Log level
-  #
-  # Values for `log_level`:
-  #   - None
-  #   - Error
-  #   - Warn
-  #   - Info
-  #   - Debug
-  #   - Trace
-  log_level: ERROR
-
   # Print all received window events.
   print_events: false
-
-  # Record all characters and escape sequences as test data.
-  ref_test: false
-# vim: nospell

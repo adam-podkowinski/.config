@@ -1,5 +1,10 @@
 require("gitsigns").setup()
-require("telescope").load_extension("fzy_native")
+require("telescope").load_extension('fzy_native')
+require("telescope").setup({
+  defaults = {
+    borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
+  }
+})
 require("nvim-tree").setup({
   sync_root_with_cwd = true,
   respect_buf_cwd = true,
@@ -29,14 +34,10 @@ require 'colorizer'.setup {
   }
 }
 
-require('tokyonight').setup {
-  style = "night",
-  styles = {
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = { italic = true },
-  },
-  lualine_bold = true,
-}
+require("monokai-pro").setup({
+  background_clear = { "float_win" },
+})
 
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme monokai-pro]]
+
+require'nvim-web-devicons'.setup {}

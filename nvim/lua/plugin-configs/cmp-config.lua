@@ -17,8 +17,9 @@ cmp.setup({
     completeopt = 'menu,menuone,noinsert',
   },
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    completion = {
+      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+    },
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -44,8 +45,6 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
-    -- { name = 'buffer' },
-    -- { name = 'path' }
   }),
   sorting = {
     comparators = {
@@ -59,7 +58,14 @@ cmp.setup({
     }
   },
   formatting = {
-    format = require('lspkind').cmp_format({ mode = 'symbol' }),
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      local kind = require("lspkind").cmp_format({ mode = "symbol", maxwidth = 50 })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. (strings[1] or "") .. " "
+      -- kind.menu = "    (" .. (strings[2] or "") .. ")"
+      return kind
+    end,
   },
 })
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')

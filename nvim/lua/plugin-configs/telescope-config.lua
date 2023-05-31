@@ -1,4 +1,10 @@
 -- Telescope
+require("telescope").load_extension('fzy_native')
+require("telescope").setup({
+  defaults = {
+    borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
+  }
+})
 local actions = require("telescope.actions")
 require("telescope").setup({
   defaults = {
