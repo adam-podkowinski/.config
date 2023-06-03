@@ -42,7 +42,7 @@ return require("packer").startup(function(use)
   }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/nvim-cmp'
+  use 'yioneko/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/cmp-vsnip'
   use 'mattn/emmet-vim'

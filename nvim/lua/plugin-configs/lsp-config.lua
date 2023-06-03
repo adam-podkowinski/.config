@@ -40,11 +40,6 @@ for _, lsp in pairs(servers) do
       client.server_capabilities.documentFormattingProvider = false
     end
   end
-  if lsp == 'tailwindcss' then
-    OnAtt = function(client, _)
-      client.server_capabilities.completionProvider = false
-    end
-  end
   require('lspconfig')[lsp].setup {
     capabilities = capabilities,
     on_attach = OnAtt,

@@ -4,10 +4,6 @@ end
 
 local cmp = require 'cmp'
 cmp.setup({
-  performance = {
-    throttle = 50,
-    fetching_timeout = 50,
-  },
   snippet = {
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
@@ -58,7 +54,6 @@ cmp.setup({
       local kind = require("lspkind").cmp_format({ mode = "symbol", maxwidth = 50 })(entry, vim_item)
       local strings = vim.split(kind.kind, "%s", { trimempty = true })
       kind.kind = " " .. (strings[1] or "") .. " "
-      -- kind.menu = "    (" .. (strings[2] or "") .. ")"
       return kind
     end,
   },
