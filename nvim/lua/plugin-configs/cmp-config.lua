@@ -16,11 +16,6 @@ cmp.setup({
   completion = {
     completeopt = 'menu,menuone,noinsert',
   },
-  window = {
-    completion = {
-      winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-    },
-  },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -51,9 +46,9 @@ cmp.setup({
       cmp.config.compare.score,
       cmp.config.compare.sort_text,
       cmp.config.compare.offset,
+      cmp.config.compare.length,
       cmp.config.compare.exact,
       cmp.config.compare.kind,
-      cmp.config.compare.length,
       cmp.config.compare.order,
     }
   },

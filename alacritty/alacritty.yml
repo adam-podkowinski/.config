@@ -1,37 +1,14 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator
-
-# Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty it self.
-#env:
-# TERM env customization.
-#
-# If this property is not set, alacritty will set it to xterm-256color.
-#
-# Note that some xterm terminfo databases don't declare support for italics.
-# You can verify this by checking for the presence of `smso` and `sitm` in
-# `infocmp xterm-256color`.
-#  TERM: xterm-256color-italic
-
 window:
-  # Window dimensions (changes require restart)
-  #
-  # Specified in number of columns/lines, not pixels. If both are zero this
-  # setting is ignored.
   dimensions:
     columns: 80
     lines: 20
 
-  # Window padding (changes require restart)
-  #
-  # Blank space added around the window in pixels. This padding is not scaled by
-  # DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 3
-    y: 0
+    x: 10
+    y: 5
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -94,64 +71,33 @@ font:
     x: 0
     y: 7
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina you
-  # probably want this set to false.
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following Control:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-
 colors:
   # Default colors
   primary:
-    background: '0x292d3e'
-    foreground: '0x959dcb'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0x292d3e'
-    cursor: '0x959dcb'
+    background: '#2D2A2E'
+    foreground: '#FCFCFA'
 
   # Normal colors
   normal:
-    black:   '0x292d3e'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0x959dcb'
+    black:   '#403E41'
+    red:     '#FF6188'
+    green:   '#A9DC76'
+    yellow:  '#FFD866'
+    blue:    '#FC9867'
+    magenta: '#AB9DF2'
+    cyan:    '#78DCE8'
+    white:   '#FCFCFA'
 
   # Bright colors
   bright:
-    black:   '0x676e95'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
-    white:   '0xffffff'
-
-  indexed_colors:
-    - { index: 16, color: '0xf78c6c' }
-    - { index: 17, color: '0xff5370' }
-    - { index: 18, color: '0x444267' }
-    - { index: 19, color: '0x32374d' }
-    - { index: 20, color: '0x8796b0' }
-    - { index: 21, color: '0x959dcb' }
-
-# Background opacity
-window.opacity: 0.9
+    black:   '#727072'
+    red:     '#FF6188'
+    green:   '#A9DC76'
+    yellow:  '#FFD866'
+    blue:    '#FC9867'
+    magenta: '#AB9DF2'
+    cyan:    '#78DCE8'
+    white:   '#FCFCFA'
 
 # Key bindings
 #

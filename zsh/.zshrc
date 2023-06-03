@@ -30,10 +30,10 @@ _comp_options+=(globdots)   # Include hidden files.
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
+# bindkey -M menuselect 'h' vi-backward-char
+# bindkey -M menuselect 'k' vi-up-line-or-history
+# bindkey -M menuselect 'l' vi-forward-char
+# bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -63,9 +63,5 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
-source <(antibody init)
-
-antibody bundle zsh-users/zsh-completions
-antibody bundle zsh-users/zsh-autosuggestions
-antibody bundle zdharma-continuum/fast-syntax-highlighting
-antibody bundle softmoth/zsh-vim-mode
+source '/usr/share/zsh-antidote/antidote.zsh'
+antidote load
