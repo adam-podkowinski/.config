@@ -1,7 +1,19 @@
 -- Bufferline
 require("bufferline").setup({
-	options = {
-		always_show_bufferline = false,
-		diagnostics = "nvim_lsp",
-	},
+  options = {
+    themable = true,
+    indicator = {
+      style = "none",
+    },
+    separator_style = "none",
+    offsets = {
+      {
+        filetype = "NvimTree",
+        text = "File Explorer",
+        text_align = "center",
+        separator = true
+      }
+    },
+    diagnostics = "nvim_lsp",
+  },
 })

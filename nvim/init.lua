@@ -11,7 +11,6 @@ vim.g.EasyMotion_smartcase = 1
 
 -- Plugin configs
 require("plugins")
-require("plugin-configs/treesitter-config")
 require("plugin-configs/bufferline-config")
 require("plugin-configs/lualine-config")
 require("plugin-configs/telescope-config")
@@ -21,6 +20,7 @@ require("plugin-configs/lspsaga-config")
 require("plugin-configs/flutter-tools-config")
 require('plugin-configs/other-config')
 require('plugin-configs/null-ls-config')
+require("plugin-configs/treesitter-config")
 
 -- Keymaps
 vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", { noremap = true })
@@ -128,4 +128,9 @@ function! InsertTabWrapper()
     endif
 endfunction
 autocmd FileType javascript,html,javascriptreact,typescriptreact,css,scss,sass,vue inoremap <silent> <expr> <Tab> InsertTabWrapper()
+hi RainbowYellow guifg=#ffdf01 ctermfg=White
+hi RainbowViolet guifg=#da70d6
+hi RainbowCyan guifg=#87cefa
+hi RainbowGreen guifg=#37bf3e
+hi RainbowBlue guifg=#1489e1
 ]])

@@ -15,8 +15,8 @@ vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, opts)
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
-})
+    virtual_text = false,
+  })
 local signs = { Error = "❌", Warn = "⚠️", Hint = "💡", Info = "💡" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
@@ -44,6 +44,11 @@ for _, lsp in pairs(servers) do
     capabilities = capabilities,
     on_attach = OnAtt,
     settings = {
+      ['rust-analyzer'] = {
+        diagnostics = {
+          enable = true,
+        }
+      },
       css = {
         lint = {
           unknownAtRules = 'ignore',

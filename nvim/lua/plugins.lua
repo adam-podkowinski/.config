@@ -5,10 +5,6 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   -- Colorscheme
   use('loctvl842/monokai-pro.nvim')
-  -- use('marko-cerovac/material.nvim')
-  -- use('folke/tokyonight.nvim')
-  -- use "EdenEast/nightfox.nvim"
-  -- use "rebelot/kanagawa.nvim"
   -- Faster and prettier comments
   use("tpope/vim-commentary")
   -- fuzzy find
@@ -24,6 +20,8 @@ return require("packer").startup(function(use)
   use { "mg979/vim-visual-multi", branch = 'master' }
   -- Faster surround with quotes or brackets
   use("tpope/vim-surround")
+  -- close buffers with style
+  use("qpkorr/vim-bufkill")
   -- File manager
   use("kyazdani42/nvim-tree.lua")
   -- LSP
@@ -36,6 +34,9 @@ return require("packer").startup(function(use)
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
   use("jose-elias-alvarez/null-ls.nvim")
+  use 'simrat39/rust-tools.nvim'
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
@@ -54,15 +55,13 @@ return require("packer").startup(function(use)
   -- Git
   use("tpope/vim-fugitive")
   use("lewis6991/gitsigns.nvim")
-  -- Close buffers with style
-  use("qpkorr/vim-bufkill")
   -- Nice status line
   use("nvim-lualine/lualine.nvim")
-  use("akinsho/nvim-bufferline.lua")
+  use("akinsho/bufferline.nvim")
   -- Icons
   use("nvim-tree/nvim-web-devicons")
   -- Colorful brackets
-  use("p00f/nvim-ts-rainbow")
+  use("HiPhish/nvim-ts-rainbow2")
   -- Close pairs
   use("jiangmiao/auto-pairs")
   -- Indent lines
