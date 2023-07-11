@@ -5,13 +5,12 @@
         <dc:identifier opf:scheme="uuid" id="uuid_id">edaf8ee5-2463-4e60-bca4-f452ea4bdd55</dc:identifier>
         <dc:title>Six of Crows</dc:title>
         <dc:creator opf:file-as="Bardugo, Leigh" opf:role="aut">Leigh Bardugo</dc:creator>
-        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (5.29.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.21.0) [https://calibre-ebook.com]</dc:contributor>
         <dc:date>2015-09-27T22:00:00+00:00</dc:date>
         <dc:publisher>Hachette Children's Group</dc:publisher>
         <dc:identifier opf:scheme="ISBN">9781780622293</dc:identifier>
         <dc:language>eng</dc:language>
-        <meta name="calibre:author_link_map" content="{&quot;Leigh Bardugo&quot;: &quot;&quot;}"/>
-        <meta name="calibre:timestamp" content="2021-10-16T13:56:24.172842+00:00"/>
+        <meta name="calibre:timestamp" content="2021-10-16T13:56:24+00:00"/>
         <meta name="calibre:title_sort" content="Six of Crows"/>
     </metadata>
     <guide>
