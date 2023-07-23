@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">32</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">2cb09c02-a1ab-4114-b4ea-ba2d815b4aa3</dc:identifier>
+        <dc:title>Diuna</dc:title>
+        <dc:creator opf:file-as="Herbert, Frank" opf:role="aut">Frank Herbert</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (6.22.0) [https://calibre-ebook.com]</dc:contributor>
+        <dc:date>2012-03-31T22:00:00+00:00</dc:date>
+        <dc:description>Arrakis, zwana Diuną, to jedyne we wszechświecie źródło melanżu – substancji przedłużającej życie, umożliwiającej odbywanie podróży kosmicznych i przewidywanie przyszłości. Z rozkazu Padyszacha Imperatora Szaddama IV rządzący Diuną Harkonnenowie opuszczają swe największe źródło dochodów. Planetę otrzymują w lenno Atrydzi, ich zaciekli wrogowie. Zwycięstwo księcia Leto Atrydy jest jednak pozorne – przejęcie planety ukartowano… Diuna otrzymała dwie najbardziej prestiżowe nagrody w dziedzinie SF: Nebula (1965) i Hugo (1966). „Diuna jest jedyną w swoim rodzaju powieścią prezentującą złożoność i bogactwo wykreowanego świata. Poza Władcą Pierścieni nie znam niczego, co można by do niej porównać” – Arthur C. Clarke</dc:description>
+        <dc:publisher>Dom Wydawniczy REBIS</dc:publisher>
+        <dc:identifier opf:scheme="ISBN">9788378180234</dc:identifier>
+        <dc:language>pol</dc:language>
+        <dc:subject>Science Fiction</dc:subject>
+        <dc:subject>Fantastyka</dc:subject>
+        <dc:subject>eBooki</dc:subject>
+        <dc:subject>eBookEPUB</dc:subject>
+        <dc:subject>eBook</dc:subject>
+        <dc:subject>EPUB</dc:subject>
+        <dc:subject>Diuna</dc:subject>
+        <dc:subject>Frank Herbert</dc:subject>
+        <dc:subject>Dom Wydawniczy Rebis</dc:subject>
+        <dc:subject>Rebis</dc:subject>
+        <meta name="calibre:timestamp" content="2023-07-18T18:55:36.324615+00:00"/>
+        <meta name="calibre:title_sort" content="Diuna"/>
+    </metadata>
+    <guide>
+        <reference type="cover" title="Cover" href="cover.jpg"/>
+    </guide>
+</package>
