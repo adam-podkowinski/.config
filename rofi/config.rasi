@@ -1,127 +1,81 @@
-/** Basic config file **/
-
 configuration {
-	font:							"Jetbrains Mono SemiBold 12";
-    show-icons:                     true;
-	icon-theme: 					"Papirus";
-    display-drun: 					"Applications";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-	sidebar-mode: 					true;
-  modi: "window,drun,ssh,combi,calc";
-  combi-modi: "window,drun,ssh,calc";
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrains Mono SemiBold 12";
+  modi: "window,run,drun,emoji,calc";
 }
 
+@theme "/dev/null"
+
 * {
-  al:  #00000000;
-  bg:  #000000ff;
-  se:  #101010ff;
-  fg:  #FFFFFFff;
-  ac:  #afb1e1;
+  bg: #1e1e2e66;
+  bg-alt: #585b7066;
+  bg-selected: #31324466;
+
+  fg: #cdd6f4;
+  fg-alt: #7f849c;
+
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
 }
 
 window {
-    transparency:                   "real";
-    background-color:               @bg;
-    text-color:                     @fg;
-  border:							0px;
-  border-color:					@ac;
-    border-radius:                  15px;
-  width:							35%;
-    location:                       center;
-    x-offset:                       0;
-    y-offset:                       0;
-}
-
-prompt {
-    enabled: 						true;
-  padding: 						1% 0.75% 1% 0.75%;
-  background-color: 				@ac;
-  text-color: 					@fg;
-    border-radius:                  10px;
-  font:							"FiraCode Nerd Font 12";
-}
-
-textbox-prompt-colon {
-  padding: 						1% 0% 1% 0%;
-  background-color: 				@se;
-  text-color: 					@fg;
-  expand: true;
-  str: " :: ";
-}
-
-entry {
-    background-color:               @al;
-    text-color:                     @fg;
-    placeholder-color:              @fg;
-    expand:                         true;
-    horizontal-align:               0;
-    placeholder:                    "Search...";
-  padding: 						1.15% 0.5% 1% 0.5%;
-    blink:                          true;
-}
-
-inputbar {
-  children: 						[ prompt, entry ];
-    background-color:               @se;
-    text-color:                     @fg;
-    expand:                         false;
-  border:							0% 0% 0% 0%;
-    border-radius:                  10px;
-  border-color:					@ac;
-}
-
-listview {
-    background-color:               @al;
-    padding:                        0px;
-    columns:                        2;
-    lines:                          7;
-    spacing:                       	1%;
-    cycle:                          false;
-    dynamic:                        true;
-    layout:                         vertical;
-}
-
-mainbox {
-    background-color:               @al;
-  border:							0% 0% 0% 0%;
-    border-radius:                  0% 0% 0% 0%;
-  border-color:					@ac;
-    /*children:                       [ inputbar, listview ];*/
-    spacing:                       	2%;
-    padding:                        4% 2% 4% 2%;
+  width: 30%;
+  background-color: @bg;
 }
 
 element {
-    background-color:               @se;
-    text-color:                     @fg;
-    orientation:                    horizontal;
-    border-radius:                  12px;
-    padding:                        1% 0.5% 1% 0.75%;
-}
-
-element-icon {
-    background-color: 				inherit;
-    text-color:       				inherit;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    size:                           24px;
-    border:                         0px;
-}
-
-element-text {
-    background-color: 				@al;
-    text-color:       				inherit;
-    expand:                         true;
-    horizontal-align:               0;
-    vertical-align:                 0.5;
-    margin:                         0% 0.25% 0% 0.25%;
+  padding: 8 12;
+  background-color: transparent;
+  text-color: @fg-alt;
 }
 
 element selected {
-    background-color:               @se;
-    text-color:                     @ac;
-  border:							0% 0.3% 0% 0.3%;
-    border-radius:                  12px;
-    border-color:                  	@ac;
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 14;
+  padding: 0 10 0 0;
+  background-color: transparent;
+}
+
+entry {
+  padding: 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 10;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: @fg;
 }
