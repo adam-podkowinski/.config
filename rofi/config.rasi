@@ -9,7 +9,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1e1e2e66;
+  bg: #1e1e2e77;
   bg-alt: #585b7066;
   bg-selected: #31324466;
 
@@ -24,7 +24,7 @@ configuration {
 }
 
 window {
-  width: 30%;
+  width: 50%;
   background-color: @bg;
 }
 
