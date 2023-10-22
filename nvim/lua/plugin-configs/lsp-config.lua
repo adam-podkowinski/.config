@@ -1,6 +1,6 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
   'html', 'jedi_language_server', 'rust_analyzer', 'lua_ls', 'texlab',
-  'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'tsserver' }
+  'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'tsserver', 'arduino_language_server' }
 
 require('mason').setup {}
 require("mason-lspconfig").setup {}
@@ -12,12 +12,15 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
 vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, opts)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+vim.keymap.set('n', '<leader>R', vim.lsp.buf.rename, opts)
+vim.keymap.set({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action, opts)
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = false,
   })
-local signs = { Error = "❌", Warn = "⚠️", Hint = "💡", Info = "💡" }
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })

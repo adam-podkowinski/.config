@@ -63,5 +63,7 @@ bindkey '^e' edit-command-line
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
+# source /usr/share/nvm/init-nvm.sh
+
 source '/usr/share/zsh-antidote/antidote.zsh'
 antidote load

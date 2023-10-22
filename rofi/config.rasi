@@ -1,7 +1,7 @@
 /** Basic config file **/
 
 configuration {
-	font:							"Cascadia Code 12";
+	font:							"Jetbrains Mono SemiBold 12";
     show-icons:                     true;
 	icon-theme: 					"Papirus";
     display-drun: 					"Applications";

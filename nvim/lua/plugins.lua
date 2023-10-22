@@ -30,7 +30,7 @@ return require("packer").startup(function(use)
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use("neovim/nvim-lspconfig")
-  use("tami5/lspsaga.nvim")
+  use {'stevearc/dressing.nvim'}
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
   use("jose-elias-alvarez/null-ls.nvim")
@@ -43,7 +43,7 @@ return require("packer").startup(function(use)
   }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
-  use 'yioneko/nvim-cmp'
+  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/vim-vsnip'
   use 'hrsh7th/cmp-vsnip'
   use 'mattn/emmet-vim'

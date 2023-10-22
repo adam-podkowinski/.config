@@ -16,7 +16,6 @@ require("plugin-configs/lualine-config")
 require("plugin-configs/telescope-config")
 require("plugin-configs/cmp-config")
 require("plugin-configs/lsp-config")
-require("plugin-configs/lspsaga-config")
 require("plugin-configs/flutter-tools-config")
 require('plugin-configs/other-config')
 require('plugin-configs/null-ls-config')
@@ -50,8 +49,8 @@ vim.opt.fillchars = 'eob: '
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
-vim.opt.softtabstop = 2
-vim.opt.so = 2
+vim.opt.softtabstop = 4
+vim.opt.so = 4
 vim.opt.autoindent = true
 vim.opt.background = "dark"
 vim.opt.cmdheight = 1
@@ -72,14 +71,14 @@ vim.opt.number = true
 vim.opt.pumheight = 10
 vim.opt.ruler = true
 vim.opt.linebreak = true
-vim.opt.shiftwidth = 2
-vim.opt.showtabline = 2
+vim.opt.shiftwidth = 4
+vim.opt.showtabline = 4
 vim.opt.smartindent = true
 vim.opt.cindent = true
 vim.opt.smarttab = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.timeoutlen = 350
 vim.opt.ttimeoutlen = 0
 vim.opt.updatetime = 300
