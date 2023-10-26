@@ -1,4 +1,5 @@
-require('impatient')
+-- Faster load times
+vim.loader.enable()
 -- Variables
 vim.g.mapleader = " "
 vim.g.nvim_tree_width_allow_resize = 1
@@ -18,12 +19,9 @@ require("plugin-configs/cmp-config")
 require("plugin-configs/lsp-config")
 require("plugin-configs/flutter-tools-config")
 require('plugin-configs/other-config')
-require('plugin-configs/null-ls-config')
 require("plugin-configs/treesitter-config")
 
 -- Keymaps
-vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", { noremap = true })
-vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { noremap = true })
 vim.keymap.set("n", "<leader><leader>", "<cmd>NvimTreeToggle<cr>", { noremap = true })
 vim.keymap.set("n", "<C-\\>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.keymap.set("v", "<Leader>c", '"+y', { noremap = true })

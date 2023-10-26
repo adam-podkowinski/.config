@@ -40,4 +40,8 @@ require("telescope").setup({
   },
 })
 
+vim.keymap.set("n", "<leader>f", "<cmd>Telescope find_files hidden=true<cr>", { noremap = true })
+vim.keymap.set("n", "<leader>g", "<cmd>Telescope live_grep<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "gr", "<cmd>Telescope lsp_references<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>Telescope lsp_type_definitions<CR>", { noremap = true, silent = true })

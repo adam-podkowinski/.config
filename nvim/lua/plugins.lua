@@ -1,6 +1,4 @@
 return require("packer").startup(function(use)
-  -- Speed up neovim startup
-  use 'lewis6991/impatient.nvim'
   -- Packer
   use("wbthomason/packer.nvim")
   -- Colorscheme
@@ -33,8 +31,7 @@ return require("packer").startup(function(use)
   use {'stevearc/dressing.nvim'}
   use("ray-x/lsp_signature.nvim")
   use("onsails/lspkind.nvim")
-  use("jose-elias-alvarez/null-ls.nvim")
-  use 'simrat39/rust-tools.nvim'
+  -- use 'simrat39/rust-tools.nvim'
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
   use {
@@ -61,7 +58,7 @@ return require("packer").startup(function(use)
   -- Icons
   use("nvim-tree/nvim-web-devicons")
   -- Colorful brackets
-  use("HiPhish/nvim-ts-rainbow2")
+  use("HiPhish/rainbow-delimiters.nvim")
   -- Close pairs
   use("jiangmiao/auto-pairs")
   -- Indent lines
