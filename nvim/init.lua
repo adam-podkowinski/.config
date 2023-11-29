@@ -96,9 +96,6 @@ filetype plugin indent on
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e
 au BufNewFile,BufRead *.groff *.ms set filetype=groff
-autocmd filetype * set shiftwidth=2 tabstop=2 softtabstop=2
-autocmd filetype php set shiftwidth=4 tabstop=4 softtabstop=4
-autocmd filetype rust set shiftwidth=4 tabstop=4 softtabstop=4
 
 "Functions
 inoremap <expr> <CR> InsertMapForEnter()
