@@ -1,4 +1,5 @@
 # Enable colors and change prompt:
+source ~/.profile
 autoload -Uz colors && colors
 autoload -Uz vcs_info
 
