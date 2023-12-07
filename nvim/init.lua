@@ -96,6 +96,8 @@ filetype plugin indent on
 "Commands
 autocmd BufWritePre * :%s/\s\+$//e
 au BufNewFile,BufRead *.groff *.ms set filetype=groff
+au BufNewFile,BufRead * set softtabstop=4 tabstop=4 shiftwidth=4 showtabline=4
+au BufNewFile,BufRead *.dart set softtabstop=2 tabstop=2 shiftwidth=2 showtabline=2
 
 "Functions
 inoremap <expr> <CR> InsertMapForEnter()
