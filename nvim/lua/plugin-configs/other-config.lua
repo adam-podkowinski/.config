@@ -17,11 +17,9 @@ require("nvim-tree").setup({
     },
 })
 require("ibl").setup({
+    scope = { show_start = false, show_end = false }
 })
 
-require('lsp_signature').setup {
-    floating_window = false
-}
 require 'colorizer'.setup {
     user_default_options = {
         tailwind = true,
@@ -37,53 +35,9 @@ require("catppuccin").setup {
     transparent_background = false, -- disables setting the background color.
 }
 
--- require("monokai-pro").setup({
---   background_clear = { "float_win", "nvim-tree", "bufferline" },
---   plugins = {
---     bufferline = {
---       underline_selected = true,
---       underline_visible = true,
---     },
---     indent_blankline = {
---       context_highlight = "pro",
---       context_start_underline = false,
---     },
---   }
--- })
-
 vim.cmd.colorscheme "catppuccin"
 
 require 'nvim-web-devicons'.setup {}
-
-local dap = require('dap')
-
-dap.adapters.codelldb = {
-    type = 'server',
-    port = "${port}",
-    executable = {
-        command = '/usr/bin/codelldb',
-        args = { "--port", "${port}" },
-    }
-}
-
-dap.configurations.rust = {
-    {
-        name = "Rust debug",
-        showDisassembly = "never",
-        type = "codelldb",
-        request = "launch",
-        program = function()
-            return vim.fn.jobstart('cargo build')
-        end,
-        cwd = '${workspaceFolder}',
-        stopOnEntry = true,
-    },
-}
-
-require("dapui").setup()
-
-vim.keymap.set("n", "<leader>k", "<cmd>lua require('dapui').eval()<cr>", { noremap = true })
-vim.keymap.set("n", "<F5>", "<cmd>lua require('dapui').toggle()<cr>", { noremap = true })
 
 local rainbow_delimiters = require 'rainbow-delimiters'
 

@@ -1,7 +1,21 @@
 -- Faster load times
 vim.loader.enable()
+-- Lazy nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 -- Variables
 vim.g.mapleader = " "
+
 vim.g.nvim_tree_width_allow_resize = 1
 vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
 vim.g.rg_derive_root = "true"
@@ -17,8 +31,7 @@ require("plugin-configs/lualine-config")
 require("plugin-configs/telescope-config")
 require("plugin-configs/cmp-config")
 require("plugin-configs/lsp-config")
-require("plugin-configs/flutter-tools-config")
-require('plugin-configs/other-config')
+require("plugin-configs/other-config")
 require("plugin-configs/treesitter-config")
 
 -- Keymaps
@@ -52,7 +65,7 @@ vim.opt.so = 4
 vim.opt.autoindent = true
 vim.opt.background = "dark"
 vim.opt.cmdheight = 1
-vim.opt.tw = 88
+vim.opt.tw = 100
 vim.opt.encoding = "UTF-8"
 vim.opt.expandtab = true
 vim.opt.fileencoding = "utf-8"
