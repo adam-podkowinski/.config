@@ -17,7 +17,7 @@ require("nvim-tree").setup({
     },
 })
 require("ibl").setup({
-    scope = { show_start = false, show_end = false }
+    -- scope = { show_start = false, show_end = false }
 })
 
 require 'colorizer'.setup {
@@ -32,7 +32,7 @@ require("catppuccin").setup {
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
+    transparent_background = true, -- disables setting the background color.
 }
 
 vim.cmd.colorscheme "catppuccin"

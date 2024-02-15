@@ -18,8 +18,6 @@ return require("lazy").setup({
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/nvim-cmp",
-    "hrsh7th/vim-vsnip",
-    "hrsh7th/cmp-vsnip",
     "tpope/vim-fugitive",
     "lewis6991/gitsigns.nvim",
     "nvim-lualine/lualine.nvim",
@@ -29,6 +27,14 @@ return require("lazy").setup({
     "lukas-reineke/indent-blankline.nvim",
     "NvChad/nvim-colorizer.lua",
     "tpope/vim-repeat",
+    "saadparwaiz1/cmp_luasnip",
+    {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        -- version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp"
+    },
     { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
     { "windwp/nvim-autopairs",           config = function() require('nvim-autopairs').setup {} end, },
     { "notjedi/nvim-rooter.lua",         config = function() require("nvim-rooter").setup() end },
