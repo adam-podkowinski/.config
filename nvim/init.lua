@@ -26,13 +26,13 @@ vim.g.EasyMotion_smartcase = 1
 
 -- Plugin configs
 require("plugins")
-require("plugin-configs/bufferline-config")
-require("plugin-configs/lualine-config")
-require("plugin-configs/telescope-config")
-require("plugin-configs/cmp-config")
-require("plugin-configs/lsp-config")
-require("plugin-configs/other-config")
-require("plugin-configs/treesitter-config")
+require("plugin-configs.bufferline-config")
+require("plugin-configs.lualine-config")
+require("plugin-configs.telescope-config")
+require("plugin-configs.cmp-config")
+require("plugin-configs.lsp-config")
+require("plugin-configs.other-config")
+require("plugin-configs.treesitter-config")
 
 -- Keymaps
 vim.keymap.set("n", "<leader><leader>", "<cmd>NvimTreeToggle<cr>", { noremap = true })
@@ -64,7 +64,7 @@ vim.opt.softtabstop = 4
 vim.opt.so = 4
 vim.opt.autoindent = true
 vim.opt.background = "dark"
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.opt.tw = 100
 vim.opt.encoding = "UTF-8"
 vim.opt.expandtab = true
@@ -79,7 +79,7 @@ vim.opt.swapfile = false
 vim.opt.writebackup = false
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.pumheight = 10
+vim.opt.pumheight = 5
 vim.opt.ruler = true
 vim.opt.linebreak = true
 vim.opt.shiftwidth = 4

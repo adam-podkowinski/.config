@@ -9,6 +9,15 @@ cmp.setup({
             require('luasnip').lsp_expand(args.body)
         end,
     },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered()
+    },
+    performance = {
+        debounce = 0,
+        throttle = 0,
+        fetching_timeout = 0,
+    },
     completion = {
         completeopt = 'menu,menuone,noinsert',
     },
@@ -32,7 +41,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'luasnip' },       -- For luasnip users.
+        { name = 'luasnip' }, -- For luasnip users.
     }),
     -- sorting = {
     --   priority_weight = 1.0,

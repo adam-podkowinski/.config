@@ -32,7 +32,7 @@ require("catppuccin").setup {
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = true, -- disables setting the background color.
+    transparent_background = false, -- disables setting the background color.
 }
 
 vim.cmd.colorscheme "catppuccin"
