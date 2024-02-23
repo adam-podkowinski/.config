@@ -11,12 +11,13 @@ cmp.setup({
     },
     window = {
         completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered()
+        documentation = cmp.config.window.bordered({ max_width = 4 })
     },
     performance = {
         debounce = 0,
         throttle = 0,
         fetching_timeout = 0,
+        max_view_entries = 99,
     },
     completion = {
         completeopt = 'menu,menuone,noinsert',
@@ -43,27 +44,17 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
     }),
-    -- sorting = {
-    --   priority_weight = 1.0,
-    --   comparators = {
-    --     cmp.config.compare.locality,
-    --     cmp.config.compare.exact,
-    --     cmp.config.compare.recently_used,
-    --     cmp.config.compare.score,
-    --     cmp.config.compare.offset,
-    --     cmp.config.compare.order,
-    --   }
-    -- },
     formatting = {
-        fields = { "kind", "abbr", "menu" },
-        format = function(entry, vim_item)
-            local kind = require("lspkind").cmp_format({ mode = "symbol", maxwidth = 50 })(entry, vim_item)
-            local strings = vim.split(kind.kind, "%s", { trimempty = true })
-            kind.kind = " " .. (strings[1] or "") .. " "
-            return kind
-        end,
+        format = require("lspkind").cmp_format({
+            mode = 'symbol',          -- show only symbol annotations
+            maxwidth = 30,            -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+            ellipsis_char = '...',    -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+            show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+        })
     },
 })
+require("lspkind").init({})
+
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 cmp.event:on(
     'confirm_done',

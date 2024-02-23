@@ -6,7 +6,7 @@
     "margin-right": 5,
     "margin-top": 5,
     "modules-left": ["hyprland/workspaces", "custom/media", "hyprland/window"],
-    //"modules-left": ["custom/dwlbar", "custom/media", "hyprland/window"],
+    //"modules-left": ["custom/dwlbar", "custom/media"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "clock", "tray", "custom/media"],
     "custom/dwlbar": {
         "format": "{}",
