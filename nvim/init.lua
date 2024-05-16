@@ -32,6 +32,7 @@ require("plugin-configs.telescope-config")
 require("plugin-configs.cmp-config")
 require("plugin-configs.lsp-config")
 require("plugin-configs.other-config")
+require("plugin-configs.nvim-tree-config")
 require("plugin-configs.treesitter-config")
 
 -- Keymaps
