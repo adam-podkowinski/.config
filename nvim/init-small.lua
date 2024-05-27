@@ -25,14 +25,28 @@ vim.g.EasyMotion_do_mapping = 0
 vim.g.EasyMotion_smartcase = 1
 
 -- Plugin configs
-require("plugins")
-require("plugin-configs.lualine-config")
-require("plugin-configs.telescope-config")
-require("plugin-configs.cmp-config")
-require("plugin-configs.lsp-config")
-require("plugin-configs.other-config")
-require("plugin-configs.nvim-tree-config")
+require("plugins-small")
+--require("plugin-configs.lualine-config")
+--require("plugin-configs.telescope-config")
+--require("plugin-configs.cmp-config")
+--require("plugin-configs.lsp-config")
+--require("plugin-configs.other-config")
+--require("plugin-configs.nvim-tree-config")
 require("plugin-configs.treesitter-config")
+require("ibl").setup({
+    -- scope = { show_start = false, show_end = false }
+})
+
+require("catppuccin").setup {
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = {     -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false, -- disables setting the background color.
+}
+
+vim.cmd.colorscheme "catppuccin"
 
 -- Keymaps
 vim.keymap.set("n", "<leader><leader>", "<cmd>NvimTreeToggle<cr>", { noremap = true })
@@ -40,8 +54,8 @@ vim.keymap.set("n", "<C-\\>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.keymap.set("v", "<Leader>c", '"+y', { noremap = true })
 vim.keymap.set("n", "<Leader>v", '"+p', { noremap = true })
 vim.keymap.set("n", "<Leader>z", "<cmd>noh<CR>", { noremap = true })
-vim.keymap.set("n", "<TAB>", "<cmd>bnext<CR>", { noremap = true })
-vim.keymap.set("n", "<S-TAB>", "<cmd>bprev<CR>", { noremap = true })
+vim.keymap.set("n", "<TAB>", "<cmd>BufferLineCycleNext<CR>", { noremap = true })
+vim.keymap.set("n", "<S-TAB>", "<cmd>BufferLineCyclePrev<CR>", { noremap = true })
 vim.keymap.set("n", "<c-u>", "viwU<Esc>", { noremap = true })
 vim.keymap.set("n", "<Leader><c-u>", " viwu<Esc>", { noremap = true })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true })
@@ -106,6 +120,12 @@ vim.opt.signcolumn = "yes"
 vim.cmd([[
 filetype plugin indent on
 
+"Commands
+"autocmd BufWritePre * :%s/\s\+$//e
+"au BufNewFile,BufRead *.groff *.ms set filetype=groff
+"au BufNewFile,BufRead * set softtabstop=4 tabstop=4 shiftwidth=4 showtabline=4
+"au BufNewFile,BufRead *.dart set softtabstop=2 tabstop=2 shiftwidth=2 showtabline=2
+
 "Functions
 inoremap <expr> <CR> InsertMapForEnter()
 function! InsertMapForEnter()
@@ -122,6 +142,15 @@ function! InsertMapForEnter()
     endif
 endfunction
 
+"function! InsertTabWrapper()
+"    let col = col('.') - 1
+"    if !col || getline('.')[col - 1] !~ '\k'
+"        return "\<Tab>"
+"    else
+"      return "\<ESC>:call emmet#expandAbbr(0, '')\<CR>i"
+"    endif
+"endfunction
+"autocmd FileType javascript,html,javascriptreact,typescriptreact,css,scss,sass,vue inoremap <silent> <expr> <Tab> InsertTabWrapper()
 hi RainbowYellow guifg=#ffdf01 ctermfg=White
 hi RainbowViolet guifg=#da70d6
 hi RainbowCyan guifg=#87cefa

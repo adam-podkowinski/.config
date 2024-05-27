@@ -54,21 +54,3 @@ vim.g.rainbow_delimiters = {
 }
 
 require('rainbow-delimiters.setup').setup {}
-
--- local rt = require("rust-tools")
-
--- local opts = {
--- server = {
---   on_attach = function(_, bufnr)
---     vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
---   end,
--- },
--- dap = {
---   adapter = require('rust-tools.dap').get_codelldb_adapter(
---     "/usr/lib/codelldb/adapter/codelldb",
---     "/usr/lib/codelldb/lldb/lib/liblldb.so"
---   )
--- }
--- }
-
--- require('rust-tools').setup(opts)
