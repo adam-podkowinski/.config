@@ -14,6 +14,7 @@ return require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "stevearc/dressing.nvim",
+    {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
     "onsails/lspkind.nvim",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
@@ -29,9 +30,7 @@ return require("lazy").setup({
     "saadparwaiz1/cmp_luasnip",
     {
         "L3MON4D3/LuaSnip",
-        -- follow latest release.
-        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!).
+        version = "v2.*",
         build = "make install_jsregexp"
     },
     { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },

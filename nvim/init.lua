@@ -55,11 +55,12 @@ vim.keymap.set("n", "<C-c>", ":BD!<CR>", { noremap = true })
 vim.keymap.set("n", "<Leader>;", "<Plug>(easymotion-overwin-f2)", { noremap = true })
 
 -- Sets
+vim.o.foldcolumn = '1'
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
 vim.opt.termguicolors = true
 vim.opt.fillchars = 'eob: '
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldlevel = 99
 vim.opt.softtabstop = 4
 vim.opt.so = 4
 vim.opt.autoindent = true

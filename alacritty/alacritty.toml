@@ -85,22 +85,22 @@ print_events = false
 render_timer = false
 
 [font]
-size = 10
-
-[font.bold]
-family = "JetBrains Mono NL"
-style = "Bold"
+size = 12
 
 [font.glyph_offset]
 x = 0
-y = 5
+y = 6
+
+[font.bold]
+family = "Comic Code Ligatures"
+style = "Bold"
 
 [font.italic]
-family = "JetBrains Mono NL"
-style = "Bold Italic"
+family = "Comic Code Ligatures"
+style = "Medium Italic"
 
 [font.normal]
-family = "JetBrains Mono NL"
+family = "Comic Code Ligatures"
 style = "Medium"
 
 [font.offset]

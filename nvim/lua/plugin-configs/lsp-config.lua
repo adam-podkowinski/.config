@@ -1,7 +1,7 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
     'html', 'jedi_language_server', 'rust_analyzer', 'lua_ls', 'texlab',
     'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'tsserver', 'arduino_language_server',
-    'eslint', 'intelephense' }
+    'eslint', 'intelephense', 'zls' }
 
 require('mason').setup {}
 require("mason-lspconfig").setup {}
@@ -28,6 +28,10 @@ for type, icon in pairs(signs) do
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+capabilities.textDocument.foldingRange = {
+    dynamicRegistration = false,
+    lineFoldingOnly = true
+}
 
 require('lspconfig')['volar'].setup {
     capabilities = capabilities,
@@ -159,3 +163,5 @@ end
 require('lspconfig').emmet_language_server.setup({
     filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "php" },
 })
+
+require('ufo').setup()
