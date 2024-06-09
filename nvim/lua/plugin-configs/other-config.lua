@@ -9,9 +9,9 @@ require 'colorizer'.setup {
     filetypes = { "*" },
     user_default_options = {
         tailwind = true,
-        RGB = true,       -- #RGB hex codes
-        RRGGBB = true,    -- #RRGGBB hex codes
-        names = true,     -- "Name" codes like Blue or blue
+        RGB = true,      -- #RGB hex codes
+        RRGGBB = true,   -- #RRGGBB hex codes
+        names = true,    -- "Name" codes like Blue or blue
         RRGGBBAA = true, -- #RRGGBBAA hex codes
         AARRGGBB = true, -- 0xAARRGGBB hex codes
         rgb_fn = true,   -- CSS rgb() and rgba() functions
@@ -22,12 +22,12 @@ require 'colorizer'.setup {
 }
 
 require("catppuccin").setup {
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = {     -- :h background
-        light = "latte",
+    flavour = "mocha",
+    background = {
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
+    telescope = { enabled = true },
+    transparent_background = false,
 }
 
 vim.cmd.colorscheme "catppuccin"
