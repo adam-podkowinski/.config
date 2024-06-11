@@ -35,7 +35,6 @@ capabilities.textDocument.foldingRange = {
 
 require('lspconfig')['volar'].setup {
     capabilities = capabilities,
-    -- filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
     on_attach = function(client)
         client.server_capabilities.documentFormattingProvider = false
     end,
@@ -43,11 +42,6 @@ require('lspconfig')['volar'].setup {
 
 for _, lsp in pairs(servers) do
     OnAtt = function() end
-    -- if lsp == 'jsonls' or lsp == 'tsserver' then
-    --   OnAtt = function(client, _)
-    --      client.server_capabilities.documentFormattingProvider = false
-    --   end
-    -- end
     if lsp == 'eslint' then
         OnAtt = function(_, bufnr)
             vim.api.nvim_create_autocmd("BufWritePre", {

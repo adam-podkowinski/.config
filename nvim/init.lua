@@ -15,9 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 -- Variables
 vim.g.mapleader = " "
-
 vim.g.nvim_tree_width_allow_resize = 1
-vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
 vim.g.rg_derive_root = "true"
 vim.g.rooter_change_directory_for_non_project_files = "current"
 vim.g.dart_format_on_save = 0
@@ -108,21 +106,6 @@ vim.cmd([[
 filetype plugin indent on
 
 "Functions
-inoremap <expr> <CR> InsertMapForEnter()
-function! InsertMapForEnter()
-    if pumvisible()
-        return "\<C-y>"
-    elseif strcharpart(getline('.'),getpos('.')[2]-1,1) == '}'
-        return "\<CR>\<Esc>O"
-    elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '</'
-        return "\<CR>\<Esc>O"
-    elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '),'
-        return "\<CR>\<Esc>O"
-    else
-        return "\<CR>"
-    endif
-endfunction
-
 hi RainbowYellow guifg=#ffdf01 ctermfg=White
 hi RainbowViolet guifg=#da70d6
 hi RainbowCyan guifg=#87cefa
