@@ -14,7 +14,6 @@ return require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "stevearc/dressing.nvim",
-    {'kevinhwang91/nvim-ufo', dependencies = 'kevinhwang91/promise-async'},
     "onsails/lspkind.nvim",
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
@@ -28,10 +27,18 @@ return require("lazy").setup({
     "lukas-reineke/indent-blankline.nvim",
     "NvChad/nvim-colorizer.lua",
     "tpope/vim-repeat",
+    { 'echasnovski/mini.map', version = false },
+    { 'kevinhwang91/nvim-ufo',           dependencies = 'kevinhwang91/promise-async' },
     {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
         build = "make install_jsregexp"
+    },
+    {
+        "nvimtools/none-ls.nvim",
+        dependencies = {
+            "nvimtools/none-ls-extras.nvim",
+        }
     },
     { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
     { "windwp/nvim-autopairs",           config = function() require('nvim-autopairs').setup {} end, },

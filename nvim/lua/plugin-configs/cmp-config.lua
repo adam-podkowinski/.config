@@ -16,6 +16,9 @@ cmp.setup({
     completion = {
         completeopt = 'menu,menuone,noinsert',
     },
+    performance = {
+        max_view_entries = 7,
+    },
     mapping = cmp.mapping.preset.insert({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),

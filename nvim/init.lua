@@ -51,8 +51,12 @@ vim.keymap.set("n", "<C-Up>", "<cmd>resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-c>", ":BD!<CR>", { noremap = true })
 vim.keymap.set("n", "<Leader>;", "<Plug>(easymotion-overwin-f2)", { noremap = true })
+vim.keymap.set("n", "mm", ":lua MiniMap.toggle()<CR>", { noremap = true })
 
 -- Sets
+vim.o.guifont = "Comic Code Ligatures:h11"
+vim.g.neovide_cursor_animation_length = 0.02
+vim.o.linespace = 6
 vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99

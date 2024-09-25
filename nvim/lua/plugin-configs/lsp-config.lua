@@ -1,7 +1,7 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
-    'html', 'jedi_language_server', 'rust_analyzer', 'lua_ls', 'texlab',
-    'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'tsserver', 'arduino_language_server',
-    'eslint', 'intelephense', 'zls' }
+    'html', 'rust_analyzer', 'lua_ls', 'texlab',
+    'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'ts_ls', 'arduino_language_server',
+    'intelephense', 'zls', 'pylsp', 'texlab' }
 
 require('mason').setup {}
 require("mason-lspconfig").setup {}
@@ -60,6 +60,16 @@ for _, lsp in pairs(servers) do
                 }
             },
             css = {
+                lint = {
+                    unknownAtRules = 'ignore',
+                }
+            },
+            scss = {
+                lint = {
+                    unknownAtRules = 'ignore',
+                }
+            },
+            less = {
                 lint = {
                     unknownAtRules = 'ignore',
                 }
