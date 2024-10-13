@@ -1,7 +1,7 @@
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
     'html', 'rust_analyzer', 'lua_ls', 'texlab',
     'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'ts_ls', 'arduino_language_server',
-    'intelephense', 'zls', 'pylsp', 'texlab' }
+    'intelephense', 'zls', 'pylsp', 'texlab', 'biome' }
 
 require('mason').setup {}
 require("mason-lspconfig").setup {}
@@ -42,14 +42,14 @@ require('lspconfig')['volar'].setup {
 
 for _, lsp in pairs(servers) do
     OnAtt = function() end
-    if lsp == 'eslint' then
-        OnAtt = function(_, bufnr)
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                buffer = bufnr,
-                command = "EslintFixAll",
-            })
-        end
-    end
+    -- if lsp == 'eslint' then
+    --     OnAtt = function(_, bufnr)
+    --         vim.api.nvim_create_autocmd("BufWritePre", {
+    --             buffer = bufnr,
+    --             command = "EslintFixAll",
+    --         })
+    --     end
+    -- end
     require('lspconfig')[lsp].setup {
         capabilities = capabilities,
         on_attach = OnAtt,

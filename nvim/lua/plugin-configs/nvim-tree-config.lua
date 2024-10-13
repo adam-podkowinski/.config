@@ -5,6 +5,10 @@ require("nvim-tree").setup({
         enable = true,
         update_root = true
     },
+    diagnostics = {
+        enable = true,
+        show_on_dirs = true,
+    },
     renderer = {
         highlight_git = true,
         indent_width = 3,
