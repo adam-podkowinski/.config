@@ -2,7 +2,7 @@ require("gitsigns").setup()
 require("telescope").load_extension('fzy_native')
 require("telescope").setup()
 require("ibl").setup({
-    -- scope = { show_start = false, show_end = false }
+    scope = { enabled = false }
 })
 
 require 'colorizer'.setup {
@@ -22,6 +22,7 @@ require 'colorizer'.setup {
 }
 
 require("catppuccin").setup {
+    compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     flavour = "mocha",
     background = {
         dark = "mocha",
@@ -63,5 +64,3 @@ require('rainbow-delimiters.setup').setup {}
 --         -- require("none-ls.diagnostics.eslint_d"),
 --     },
 -- })
-
--- require("mini.map").setup()
