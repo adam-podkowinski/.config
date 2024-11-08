@@ -83,7 +83,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pamixer --increase 5",
+        "on-click-right": "pamixer --decrease 5"
     },
 }
 
