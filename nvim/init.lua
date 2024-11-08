@@ -20,7 +20,7 @@ vim.g.rg_derive_root = "true"
 vim.g.rooter_change_directory_for_non_project_files = "current"
 vim.g.dart_format_on_save = 0
 vim.g.EasyMotion_do_mapping = 0
-vim.g.EasyMotion_smartcase = 1
+vim.g.EasyMotion_smartcase = 0
 
 -- Plugin configs
 require("plugins")
@@ -103,15 +103,3 @@ vim.opt.ic = true
 vim.opt.conceallevel = 0
 vim.opt.shortmess = vim.opt.shortmess + "c"
 vim.opt.signcolumn = "yes"
-
--- Vim Scripts
-vim.cmd([[
-filetype plugin indent on
-
-"Functions
-hi RainbowYellow guifg=#ffdf01 ctermfg=White
-hi RainbowViolet guifg=#da70d6
-hi RainbowCyan guifg=#87cefa
-hi RainbowGreen guifg=#37bf3e
-hi RainbowBlue guifg=#1489e1
-]])

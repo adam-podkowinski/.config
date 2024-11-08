@@ -28,6 +28,7 @@ vim.diagnostic.config({
             [vim.diagnostic.severity.INFO] = '',
         },
         linehl = {
+            [vim.diagnostic.severity.ERROR] = 'ErrorMsg',
         },
         numhl = {
             [vim.diagnostic.severity.WARN] = 'WarningMsg',

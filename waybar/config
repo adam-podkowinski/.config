@@ -2,27 +2,11 @@
     "layer": "top",
     "height": 37, // Waybar height (to be removed for auto height)
     "spacing": 5, // Gaps between modules (4px)
-    "margin-left": 5,
-    "margin-right": 5,
-    "margin-top": 5,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
     "modules-left": ["hyprland/workspaces", "custom/media", "hyprland/window"],
-    //"modules-left": ["custom/dwlbar", "custom/media"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "clock", "tray", "custom/media"],
-    "custom/dwlbar": {
-        "format": "{}",
-        "max-length": 500,
-        "escape": true,
-        "exec": "$HOME/.config/waybar/dwlbar.sh 1"
-    },
-    "keyboard-state": {
-        "capslock": true,
-        "binding-keys": [1],
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
+    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock", "tray"],
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -87,7 +71,7 @@
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": " {volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "🔇 {format_source}",
         "format-source": " {volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -101,17 +85,5 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
 }
 
