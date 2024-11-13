@@ -4,6 +4,7 @@ return require("lazy").setup({
     "nvim-lua/popup.nvim",
     "nvim-telescope/telescope.nvim",
     "nvim-telescope/telescope-fzy-native.nvim",
+    "tpope/vim-fugitive",
     "easymotion/vim-easymotion",
     "qpkorr/vim-bufkill",
     "kyazdani42/nvim-tree.lua",
