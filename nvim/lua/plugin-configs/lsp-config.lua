@@ -20,7 +20,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 
 vim.diagnostic.config({
     virtual_text = false,
-    underline = false,
+    underline = true,
     severity_sort = true,
     signs = {
         text = {
