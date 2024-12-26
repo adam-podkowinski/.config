@@ -1,3 +1,5 @@
+local lsp = vim.lsp
+local lspconfig = require("lspconfig");
 local servers = { 'bashls', 'clangd', 'cssls', 'cssmodules_ls',
     'html', 'rust_analyzer', 'lua_ls', 'texlab',
     'vimls', 'yamlls', 'jsonls', 'cmake', 'tailwindcss', 'prismals', 'svelte', 'ts_ls', 'arduino_language_server',
@@ -8,12 +10,12 @@ require("mason-lspconfig").setup {}
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, opts)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-vim.keymap.set('n', '<leader>R', vim.lsp.buf.rename, opts)
-vim.keymap.set({ 'n', 'v' }, '<leader>a', vim.lsp.buf.code_action, opts)
+vim.keymap.set("n", "gD", lsp.buf.declaration, opts)
+vim.keymap.set("n", "gi", lsp.buf.implementation, opts)
+vim.keymap.set("n", "<leader>F", lsp.buf.format, opts)
+vim.keymap.set('n', 'K', lsp.buf.hover, opts)
+vim.keymap.set('n', '<leader>R', lsp.buf.rename, opts)
+vim.keymap.set({ 'n', 'v' }, '<leader>a', lsp.buf.code_action, opts)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, opts)
 
 vim.diagnostic.config({
@@ -43,15 +45,18 @@ capabilities.textDocument.foldingRange = {
     lineFoldingOnly = true
 }
 
-require('lspconfig')['volar'].setup {
-    capabilities = capabilities,
-    on_attach = function(client)
-        client.server_capabilities.documentFormattingProvider = false
-    end,
-}
+capabilities.textDocument.completion.completionItem.snippetSupport = false
+
+-- require('lspconfig')['volar'].setup {
+--     capabilities = capabilities,
+--     on_attach = function(client)
+--         client.server_capabilities.documentFormattingProvider = false
+--     end,
+-- }
 
 for _, lsp in pairs(servers) do
-    OnAtt = function() end
+    -- OnAtt = function()
+    -- end
     -- if lsp == 'eslint' then
     --     OnAtt = function(_, bufnr)
     --         vim.api.nvim_create_autocmd("BufWritePre", {
@@ -60,9 +65,9 @@ for _, lsp in pairs(servers) do
     --         })
     --     end
     -- end
-    require('lspconfig')[lsp].setup {
+    lspconfig[lsp].setup {
         capabilities = capabilities,
-        on_attach = OnAtt,
+        -- on_attach = OnAtt,
         settings = {
             ['rust-analyzer'] = {
                 diagnostics = {
@@ -174,6 +179,6 @@ for _, lsp in pairs(servers) do
     }
 end
 
-require('lspconfig').emmet_language_server.setup({
+lspconfig.emmet_language_server.setup({
     filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "php" },
 })

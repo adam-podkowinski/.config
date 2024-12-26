@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, JetBrainsMono, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, JetBrainsMono Nerd Font, Helvetica, Arial, sans-serif;
     font-size: 12px;
     border-radius: 5px;
     padding: 0.2em;
@@ -58,11 +58,17 @@ button:hover {
 #custom-media,
 #tray,
 #mode,
-#idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 12px;
-    padding-right: 13px;
+    padding: 0 9px;
+    padding-right: 10px;
     color: #181825;
     background-color: #CBA6F7;
+}
+
+#idle_inhibitor {
+    color: #181825;
+    background-color: #CBA6F7;
+    padding: 0 9px;
+    padding-right: 15px;
 }

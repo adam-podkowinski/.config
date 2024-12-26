@@ -36,3 +36,4 @@
 !eslint-plugin-provider.js
 !.profile
 !dconf-settings.ini
+!ghostty
