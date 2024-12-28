@@ -21,11 +21,11 @@ alias \
 	yt="youtube-dl --add-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner" \
-  la="ls --color -A"
+  la="ls --hyperlink=always --color -A"
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ls="ls --hyperlink=always -hN --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
