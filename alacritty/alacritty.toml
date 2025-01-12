@@ -88,7 +88,7 @@ size = 11
 
 [font.glyph_offset]
 x = 0
-y = 4
+y = 2
 
 [font.bold]
 family = "JetBrains Mono"
@@ -100,7 +100,7 @@ style = "Medium Italic"
 
 [font.normal]
 family = "JetBrains Mono"
-style = "Medium"
+style = "Regular"
 
 # [font.bold]
 # family = "Comic Code Ligatures"
@@ -116,7 +116,7 @@ style = "Medium"
 
 [font.offset]
 x = 0
-y = 8
+y = 4
 
 [[keyboard.bindings]]
 action = "Paste"
@@ -223,7 +223,7 @@ columns = 140
 lines = 30
 
 [window.padding]
-x = 5
+x = 0
 y = 0
 
 [general]

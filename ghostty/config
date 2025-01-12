@@ -16,3 +16,8 @@ keybind = ctrl+a=reload_config
 keybind = alt+enter=new_window
 keybind = ctrl+shift+j=scroll_page_down
 keybind = ctrl+shift+k=scroll_page_up
+keybind = alt+shift+l=new_split:right
+keybind = alt+shift+h=new_split:left
+keybind = alt+l=goto_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+q=close_surface
