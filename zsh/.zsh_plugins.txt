@@ -1,3 +1,2 @@
 zsh-users/zsh-autosuggestions
-softmoth/zsh-vim-mode
 zdharma-continuum/fast-syntax-highlighting

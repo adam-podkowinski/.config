@@ -1,4 +1,5 @@
 shell-integration = zsh
+gtk-adwaita = false
 clipboard-read = allow
 theme=catppuccin-mocha
 clipboard-write = allow
@@ -7,7 +8,8 @@ confirm-close-surface = false
 gtk-single-instance = true
 font-family = "JetBrains Mono"
 font-size = 12
-adjust-cell-height = 1
+adjust-cell-height = 2
+window-padding-balance = true
 adjust-underline-position = 3
 adjust-underline-thickness = 1
 adjust-cursor-thickness = 1
@@ -18,6 +20,11 @@ keybind = ctrl+shift+j=scroll_page_down
 keybind = ctrl+shift+k=scroll_page_up
 keybind = alt+shift+l=new_split:right
 keybind = alt+shift+h=new_split:left
+keybind = alt+shift+j=new_split:down
+keybind = alt+shift+k=new_split:up
 keybind = alt+l=goto_split:right
 keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
 keybind = alt+q=close_surface
+keybind = alt+shift+enter=toggle_split_zoom
