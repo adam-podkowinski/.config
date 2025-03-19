@@ -19,8 +19,6 @@ vim.g.nvim_tree_width_allow_resize = 1
 vim.g.rg_derive_root = "true"
 vim.g.rooter_change_directory_for_non_project_files = "current"
 vim.g.dart_format_on_save = 0
-vim.g.EasyMotion_do_mapping = 0
-vim.g.EasyMotion_smartcase = 0
 
 -- Plugin configs
 require("plugins")
@@ -29,12 +27,9 @@ require("plugin-configs.telescope-config")
 require("plugin-configs.cmp-config")
 require("plugin-configs.lsp-config")
 require("plugin-configs.other-config")
-require("plugin-configs.nvim-tree-config")
 require("plugin-configs.treesitter-config")
 
 -- Keymaps
-vim.keymap.set("n", "<leader><leader>", "<cmd>NvimTreeToggle<cr>", { noremap = true })
-vim.keymap.set("n", "<C-\\>", "<cmd>NvimTreeFindFile<cr>", { noremap = true })
 vim.keymap.set("v", "<Leader>c", '"+y', { noremap = true })
 vim.keymap.set("n", "<Leader>v", '"+p', { noremap = true })
 vim.keymap.set("n", "<Leader>z", "<cmd>noh<CR>", { noremap = true })
@@ -49,8 +44,6 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize +3<CR>", { noremap = true 
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize -3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
-vim.keymap.set("n", "<C-c>", ":BD!<CR>", { noremap = true })
-vim.keymap.set("n", "<Leader>;", "<Plug>(easymotion-overwin-f2)", { noremap = true })
 
 -- Sets
 vim.o.linespace = 6
@@ -58,13 +51,14 @@ vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+vim.opt.winborder = 'rounded'
 vim.opt.termguicolors = true
 vim.opt.fillchars = 'eob: '
 vim.opt.softtabstop = 4
 vim.opt.so = 4
 vim.opt.autoindent = true
 vim.opt.background = "dark"
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.opt.tw = 100
 vim.opt.encoding = "UTF-8"
 vim.opt.expandtab = true

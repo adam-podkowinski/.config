@@ -1,9 +1,9 @@
 require("gitsigns").setup()
 require("telescope").load_extension('fzy_native')
 require("telescope").setup()
-require("ibl").setup({
-    scope = { enabled = false }
-})
+-- require("ibl").setup({
+--     scope = { enabled = false }
+-- })
 
 require 'colorizer'.setup {
     filetypes = { "*" },
@@ -34,9 +34,6 @@ require("catppuccin").setup {
 vim.cmd.colorscheme "catppuccin"
 
 require 'nvim-web-devicons'.setup {}
-
-local rainbow_delimiters = require 'rainbow-delimiters'
-require('rainbow-delimiters.setup').setup {}
 
 -- local null_ls = require("null-ls")
 
