@@ -38,6 +38,12 @@ return require("lazy").setup({
     "nvim-telescope/telescope.nvim",
     "nvim-telescope/telescope-fzy-native.nvim",
     "tpope/vim-fugitive",
+    {
+        "smoka7/hop.nvim",
+        config = function()
+            require'hop'.setup {}
+        end
+    },
     "nvim-lua/plenary.nvim",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",

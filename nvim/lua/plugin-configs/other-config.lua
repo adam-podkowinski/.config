@@ -35,11 +35,11 @@ vim.cmd.colorscheme "catppuccin"
 
 require 'nvim-web-devicons'.setup {}
 
--- local null_ls = require("null-ls")
-
--- null_ls.setup({
---     sources = {
---         null_ls.builtins.formatting.prettierd,
---         -- require("none-ls.diagnostics.eslint_d"),
---     },
--- })
+local hop = require('hop')
+local directions = require('hop.hint').HintDirection
+vim.keymap.set(
+    'n', "<Leader>;",
+    function()
+        hop.hint_words()
+    end,
+    { noremap = true })
