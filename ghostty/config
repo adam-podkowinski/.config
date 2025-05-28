@@ -1,5 +1,5 @@
+linux-cgroup = never
 shell-integration = none
-gtk-adwaita = false
 command=nu
 clipboard-read = allow
 theme=catppuccin-mocha
@@ -29,3 +29,4 @@ keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+q=close_surface
 keybind = alt+shift+enter=toggle_split_zoom
+keybind = capsLock=esc:
