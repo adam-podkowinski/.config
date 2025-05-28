@@ -71,3 +71,11 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 
 source '/usr/share/zsh-antidote/antidote.zsh'
 antidote load
+
+# pnpm
+export PNPM_HOME="/home/adam/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
