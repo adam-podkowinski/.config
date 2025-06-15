@@ -45,21 +45,21 @@ return require("lazy").setup({
         version = false,
         opts = {
             provider = "gemini",
-            gemini = {
-                endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-                model = "gemini-2.0-flash",
-                timeout = 30000,
-                temperature = 0,
-                max_tokens = 8192,
-            },
-            ollama = {
-                model = "doomgrave/gemma3-tools:latest",
-                temperature = 0,
-                max_tokens = 16384,
-                disable_tools = false,
-                timeout = 30000,
-            },
-            vendors = {
+            providers = {
+                gemini = {
+                    endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+                    model = "gemini-2.0-flash",
+                    timeout = 30000,
+                    temperature = 0,
+                    max_tokens = 8192,
+                },
+                ollama = {
+                    model = "doomgrave/gemma3-tools:latest",
+                    temperature = 0,
+                    max_tokens = 16384,
+                    disable_tools = false,
+                    timeout = 30000,
+                },
                 deepseek = {
                     __inherited_from = "openai",
                     api_key_name = "DEEPSEEK_API_KEY",
