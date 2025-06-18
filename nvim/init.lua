@@ -1,4 +1,3 @@
--- Faster load times
 vim.loader.enable()
 -- Lazy nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -38,8 +37,9 @@ vim.keymap.set("n", "<S-TAB>", "<cmd>bprev<CR>", { noremap = true })
 vim.keymap.set("n", "<c-u>", "viwU<Esc>", { noremap = true })
 vim.keymap.set("n", "<Leader><c-u>", " viwu<Esc>", { noremap = true })
 vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true })
 vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize -3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +3<CR>", { noremap = true })
@@ -47,10 +47,11 @@ vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
 
 -- Sets
 vim.o.linespace = 6
-vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.winborder = 'rounded'
 vim.opt.termguicolors = true
 vim.opt.fillchars = 'eob: '
@@ -84,11 +85,7 @@ vim.opt.smarttab = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.tabstop = 4
-vim.opt.timeoutlen = 350
-vim.opt.ttimeoutlen = 0
-vim.opt.updatetime = 300
 vim.opt.wrap = true
-vim.opt.tl = 500
 vim.opt.textwidth = 0
 vim.opt.showbreak = "··"
 vim.opt.ic = true

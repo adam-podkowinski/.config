@@ -10,7 +10,7 @@ return require("lazy").setup({
             indent = {
                 enabled = true,
                 scope = {
-                    enabled = false,
+                    enabled = true,
                 },
                 animate = {
                     enabled = false,
@@ -85,7 +85,7 @@ return require("lazy").setup({
     "tpope/vim-commentary",
     "nvim-lua/popup.nvim",
     "nvim-telescope/telescope.nvim",
-    "nvim-telescope/telescope-fzy-native.nvim",
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     "tpope/vim-fugitive",
     "smoka7/hop.nvim",
     "nvim-lua/plenary.nvim",

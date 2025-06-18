@@ -1,7 +1,6 @@
 require("gitsigns").setup()
-require("telescope").load_extension('fzy_native')
-require("telescope").setup()
-require("hop").setup();
+local hop = require('hop')
+hop.setup()
 
 require 'colorizer'.setup {
     filetypes = { "*" },
@@ -33,7 +32,6 @@ vim.cmd.colorscheme "catppuccin"
 
 require 'nvim-web-devicons'.setup {}
 
-local hop = require('hop')
 vim.keymap.set(
     'n', "<Leader>;",
     function()
