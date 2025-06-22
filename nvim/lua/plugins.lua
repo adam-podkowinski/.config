@@ -84,13 +84,14 @@ return require("lazy").setup({
     },
     "catppuccin/nvim",
     "tpope/vim-commentary",
-    "nvim-telescope/telescope.nvim",
+    { "nvim-telescope/telescope.nvim",            event = "VeryLazy" },
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-    "tpope/vim-fugitive",
-    "smoka7/hop.nvim",
+    { "tpope/vim-fugitive",                       event = "VeryLazy" },
+    { "smoka7/hop.nvim",                          event = "VeryLazy" },
     {
         'saghen/blink.cmp',
         dependencies = { 'rafamadriz/friendly-snippets' },
+        event = "VeryLazy",
         version = '1.*',
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
@@ -110,15 +111,19 @@ return require("lazy").setup({
     },
     {
         "williamboman/mason-lspconfig.nvim",
+        event = "VeryLazy",
         dependencies = {
             { "mason-org/mason.nvim", opts = {} },
             "neovim/nvim-lspconfig",
         },
         opts = {},
     },
-    "lewis6991/gitsigns.nvim",
+    {
+        "lewis6991/gitsigns.nvim",
+        event = "VeryLazy",
+    },
     "nvim-lualine/lualine.nvim",
-    "nvim-tree/nvim-web-devicons",
+    { "nvim-tree/nvim-web-devicons",     event = "VeryLazy" },
     {
         "3rd/image.nvim",
         event = "VeryLazy",
@@ -131,7 +136,7 @@ return require("lazy").setup({
         },
     },
     "HiPhish/rainbow-delimiters.nvim",
-    "NvChad/nvim-colorizer.lua",
+    { "NvChad/nvim-colorizer.lua",       event = "VeryLazy" },
     "tpope/vim-repeat",
     {
         "nvim-treesitter/nvim-treesitter",
@@ -143,5 +148,5 @@ return require("lazy").setup({
         config = true,
         opts = {},
     },
-    { "notjedi/nvim-rooter.lua",                  config = function() require("nvim-rooter").setup() end },
+    { "notjedi/nvim-rooter.lua", config = function() require("nvim-rooter").setup() end },
 })
