@@ -12,18 +12,12 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
--- Variables
 vim.g.mapleader = " "
-vim.g.nvim_tree_width_allow_resize = 1
-vim.g.rg_derive_root = "true"
-vim.g.rooter_change_directory_for_non_project_files = "current"
-vim.g.dart_format_on_save = 0
 
 -- Plugin configs
 require("plugins")
 require("plugin-configs.lualine-config")
 require("plugin-configs.telescope-config")
-require("plugin-configs.cmp-config")
 require("plugin-configs.lsp-config")
 require("plugin-configs.other-config")
 require("plugin-configs.treesitter-config")

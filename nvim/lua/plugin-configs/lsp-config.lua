@@ -1,9 +1,4 @@
-require('mason').setup {}
-require("mason-lspconfig").setup {}
-
-local lspconfig = require("lspconfig")
 local lsp = vim.lsp
-
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 vim.keymap.set("n", "gD", lsp.buf.declaration, opts)
@@ -35,7 +30,6 @@ vim.diagnostic.config({
     },
 })
 
-lspconfig.emmet_language_server.setup({
+lsp.config("emmet_language_server", {
     filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "php" },
 })
-

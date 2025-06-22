@@ -30,19 +30,10 @@ require("catppuccin").setup {
 
 vim.cmd.colorscheme "catppuccin"
 
-require 'nvim-web-devicons'.setup {}
-
 vim.keymap.set(
     'n', "<Leader>;",
     function()
         hop.hint_words()
     end,
-    { noremap = true })
-
-require("image").setup({
-    integrations = {
-        markdown = {
-            only_render_image_at_cursor = true
-        }
-    }
-})
+    { noremap = true }
+)

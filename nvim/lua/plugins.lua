@@ -1,4 +1,5 @@
 return require("lazy").setup({
+    "nvim-lua/plenary.nvim",
     {
         "folke/snacks.nvim",
         priority = 1000,
@@ -10,7 +11,7 @@ return require("lazy").setup({
             indent = {
                 enabled = true,
                 scope = {
-                    enabled = true,
+                    enabled = false,
                 },
                 animate = {
                     enabled = false,
@@ -27,16 +28,16 @@ return require("lazy").setup({
             },
             notifier = { enabled = true },
             quickfile = { enabled = true },
-            scope = { enabled = true },
+            scope = { enabled = false },
             scroll = { enabled = false },
-            statuscolumn = { enabled = false },
+            statuscolumn = { enabled = false, },
             words = { enabled = false },
         },
         keys = {
             { "<leader>f",        function() Snacks.picker.smart() end, desc = "Smart Find Files" },
             { "<leader>g",        function() Snacks.picker.grep() end,  desc = "Grep" },
             { "<leader><leader>", function() Snacks.explorer() end,     desc = "Explorer" },
-            { "<c-c>",            function() Snacks.bufdelete() end,    desc = "Bufdelete" },
+            { "<C-c>",            function() Snacks.bufdelete() end,    desc = "Bufdelete" },
         },
     },
     {
@@ -83,24 +84,51 @@ return require("lazy").setup({
     },
     "catppuccin/nvim",
     "tpope/vim-commentary",
-    "nvim-lua/popup.nvim",
     "nvim-telescope/telescope.nvim",
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     "tpope/vim-fugitive",
     "smoka7/hop.nvim",
-    "nvim-lua/plenary.nvim",
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-    "onsails/lspkind.nvim",
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-nvim-lsp",
+    {
+        'saghen/blink.cmp',
+        dependencies = { 'rafamadriz/friendly-snippets' },
+        version = '1.*',
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
+        opts = {
+            keymap = { preset = 'enter' },
+            appearance = {
+                nerd_font_variant = 'mono'
+            },
+            completion = { documentation = { auto_show = true } },
+            signature = { enabled = true },
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+            fuzzy = { implementation = "prefer_rust_with_warning" }
+        },
+        opts_extend = { "sources.default" }
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+        opts = {},
+    },
     "lewis6991/gitsigns.nvim",
     "nvim-lualine/lualine.nvim",
     "nvim-tree/nvim-web-devicons",
     {
         "3rd/image.nvim",
         event = "VeryLazy",
+        opts = {
+            integrations = {
+                markdown = {
+                    only_render_image_at_cursor = true
+                }
+            }
+        },
     },
     "HiPhish/rainbow-delimiters.nvim",
     "NvChad/nvim-colorizer.lua",
@@ -109,6 +137,11 @@ return require("lazy").setup({
         "nvim-treesitter/nvim-treesitter",
         cmd = "TSUpdate",
     },
-    { "windwp/nvim-autopairs",   config = true },
-    { "notjedi/nvim-rooter.lua", config = function() require("nvim-rooter").setup() end },
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true,
+        opts = {},
+    },
+    { "notjedi/nvim-rooter.lua",                  config = function() require("nvim-rooter").setup() end },
 })
