@@ -1,4 +1,4 @@
-linux-cgroup = never
+linux-cgroup = single-instance
 shell-integration = none
 command=nu
 clipboard-read = allow
@@ -6,18 +6,18 @@ theme=catppuccin-mocha
 clipboard-write = allow
 quit-after-last-window-closed = false
 confirm-close-surface = false
+background-blur = false
 gtk-single-instance = true
 font-family = "JetBrains Mono Medium"
 font-family-bold = "JetBrains Mono Bold"
 font-family-italic = "JetBrains Mono Medium Italic"
 font-family-bold-italic = "JetBrains Mono Bold Italic"
-font-size = 11.5
+font-size = 11
 adjust-cell-height = 3
 window-padding-balance = true
 adjust-underline-position = 2
 adjust-underline-thickness = 1
 adjust-cursor-thickness = 1
-window-decoration = true
 keybind = ctrl+a=reload_config
 keybind = alt+enter=new_window
 keybind = ctrl+shift+j=scroll_page_down

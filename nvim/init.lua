@@ -1,26 +1,23 @@
 vim.loader.enable()
 -- Lazy nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
 end
 vim.opt.rtp:prepend(lazypath)
-vim.g.mapleader = " "
 
--- Plugin configs
-require("plugins")
-require("plugin-configs.lualine-config")
-require("plugin-configs.telescope-config")
-require("plugin-configs.lsp-config")
-require("plugin-configs.other-config")
-require("plugin-configs.treesitter-config")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Keymaps
 vim.keymap.set("v", "<Leader>c", '"+y', { noremap = true })
@@ -40,10 +37,10 @@ vim.keymap.set("n", "<C-Up>", "<cmd>resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
 
 -- Sets
-vim.o.linespace = 6
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
+vim.opt.linespace = 6
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.winborder = 'rounded'
@@ -86,3 +83,10 @@ vim.opt.ic = true
 vim.opt.conceallevel = 0
 vim.opt.shortmess = vim.opt.shortmess + "c"
 vim.opt.signcolumn = "yes"
+
+-- Plugin configs
+require("plugins")
+require("plugin-configs.lsp-config")
+require("plugin-configs.other-config")
+require("plugin-configs.treesitter-config")
+require("plugin-configs.lualine-config")

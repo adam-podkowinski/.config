@@ -1,5 +1,6 @@
 return require("lazy").setup({
     "nvim-lua/plenary.nvim",
+    { "catppuccin/nvim",      priority = 1200 },
     {
         "folke/snacks.nvim",
         priority = 1000,
@@ -11,7 +12,7 @@ return require("lazy").setup({
             indent = {
                 enabled = true,
                 scope = {
-                    enabled = false,
+                    enabled = true,
                 },
                 animate = {
                     enabled = false,
@@ -40,54 +41,77 @@ return require("lazy").setup({
             { "<C-c>",            function() Snacks.bufdelete() end,    desc = "Bufdelete" },
         },
     },
+    -- {
+    --     "yetone/avante.nvim",
+    --     event = "VeryLazy",
+    --     version = false,
+    --     opts = {
+    --         provider = "gemini",
+    --         hints = { enabled = false },
+    --         providers = {
+    --             gemini = {
+    --                 endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+    --                 model = "gemini-2.0-flash",
+    --                 timeout = 30000,
+    --                 temperature = 0,
+    --                 max_tokens = 8192,
+    --             },
+    --             ollama = {
+    --                 model = "doomgrave/gemma3-tools:latest",
+    --                 temperature = 0,
+    --                 max_tokens = 16384,
+    --                 disable_tools = false,
+    --                 timeout = 30000,
+    --             },
+    --             deepseek = {
+    --                 __inherited_from = "openai",
+    --                 api_key_name = "DEEPSEEK_API_KEY",
+    --                 endpoint = "https://api.deepseek.com",
+    --                 model = "deepseek-coder",
+    --                 max_tokens = 8192,
+    --             },
+    --         },
+    --     },
+    --     dependencies = {
+    --         "MunifTanjim/nui.nvim",
+    --         {
+    --             'MeanderingProgrammer/render-markdown.nvim',
+    --             opts = {
+    --                 file_types = { "markdown", "Avante" },
+    --             },
+    --             ft = { "markdown", "Avante" },
+    --         },
+    --     },
+    --     build = "make",
+    -- },
+    { "tpope/vim-commentary", event = "VeryLazy" },
     {
-        "yetone/avante.nvim",
+        "nvim-telescope/telescope.nvim",
         event = "VeryLazy",
-        version = false,
+        config = function()
+            require('telescope').load_extension('fzf')
+            vim.api.nvim_set_keymap("n", "gr", "<cmd>Telescope lsp_references<CR>", { noremap = true, silent = true })
+            vim.api.nvim_set_keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })
+            vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>Telescope lsp_type_definitions<CR>",
+                { noremap = true, silent = true })
+        end,
         opts = {
-            provider = "gemini",
-            providers = {
-                gemini = {
-                    endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-                    model = "gemini-2.0-flash",
-                    timeout = 30000,
-                    temperature = 0,
-                    max_tokens = 8192,
-                },
-                ollama = {
-                    model = "doomgrave/gemma3-tools:latest",
-                    temperature = 0,
-                    max_tokens = 16384,
-                    disable_tools = false,
-                    timeout = 30000,
-                },
-                deepseek = {
-                    __inherited_from = "openai",
-                    api_key_name = "DEEPSEEK_API_KEY",
-                    endpoint = "https://api.deepseek.com",
-                    model = "deepseek-coder",
-                    max_tokens = 8192,
-                },
-            },
-        },
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            {
-                'MeanderingProgrammer/render-markdown.nvim',
-                opts = {
-                    file_types = { "markdown", "Avante" },
-                },
-                ft = { "markdown", "Avante" },
-            },
-        },
-        build = "make",
+            extensions = {
+                fzf = {
+                    fuzzy = true,
+                    override_generic_sorter = true,
+                    override_file_sorter = true,
+                    case_mode = "smart_case",
+                }
+            }
+        }
     },
-    "catppuccin/nvim",
-    "tpope/vim-commentary",
-    { "nvim-telescope/telescope.nvim",            event = "VeryLazy" },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
     { "tpope/vim-fugitive",                       event = "VeryLazy" },
-    { "smoka7/hop.nvim",                          event = "VeryLazy" },
+    {
+        "smoka7/hop.nvim",
+        event = "VeryLazy",
+    },
     {
         'saghen/blink.cmp',
         dependencies = { 'rafamadriz/friendly-snippets' },
@@ -122,8 +146,8 @@ return require("lazy").setup({
         "lewis6991/gitsigns.nvim",
         event = "VeryLazy",
     },
-    "nvim-lualine/lualine.nvim",
-    { "nvim-tree/nvim-web-devicons",     event = "VeryLazy" },
+    { "nvim-lualine/lualine.nvim",   event = "VeryLazy", },
+    { "nvim-tree/nvim-web-devicons", event = "VeryLazy" },
     {
         "3rd/image.nvim",
         event = "VeryLazy",
@@ -136,11 +160,30 @@ return require("lazy").setup({
         },
     },
     "HiPhish/rainbow-delimiters.nvim",
-    { "NvChad/nvim-colorizer.lua",       event = "VeryLazy" },
-    "tpope/vim-repeat",
+    {
+        "NvChad/nvim-colorizer.lua",
+        event = "VeryLazy",
+        opts = {
+            filetypes = { "*" },
+            user_default_options = {
+                tailwind = true,
+                RGB = true,
+                RRGGBB = true,
+                names = true,
+                RRGGBBAA = true,
+                AARRGGBB = true,
+                rgb_fn = true,
+                hsl_fn = true,
+                css = true,
+                css_fn = true,
+            }
+        }
+    },
+    { "tpope/vim-repeat",        event = "VeryLazy" },
     {
         "nvim-treesitter/nvim-treesitter",
         cmd = "TSUpdate",
+        event = "VeryLazy",
     },
     {
         "windwp/nvim-autopairs",
@@ -148,5 +191,5 @@ return require("lazy").setup({
         config = true,
         opts = {},
     },
-    { "notjedi/nvim-rooter.lua", config = function() require("nvim-rooter").setup() end },
+    { "notjedi/nvim-rooter.lua", opts = {},         event = "VeryLazy" },
 })

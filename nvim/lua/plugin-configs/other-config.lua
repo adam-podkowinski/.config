@@ -1,35 +1,21 @@
-require("gitsigns").setup()
-local hop = require('hop')
-hop.setup()
-
-require 'colorizer'.setup {
-    filetypes = { "*" },
-    user_default_options = {
-        tailwind = true,
-        RGB = true,
-        RRGGBB = true,
-        names = true,
-        RRGGBBAA = true,
-        AARRGGBB = true,
-        rgb_fn = true,
-        hsl_fn = true,
-        css = true,
-        css_fn = true,
-    }
-}
-
 require("catppuccin").setup {
     compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
     flavour = "mocha",
     background = {
         dark = "mocha",
     },
-    telescope = { enabled = true },
-    transparent_background = true,
+    transparent_background = false,
+    integrations = {
+        mason = true,
+        hop = true,
+        snacks = true,
+    }
 }
 
 vim.cmd.colorscheme "catppuccin"
 
+local hop = require("hop")
+hop.setup()
 vim.keymap.set(
     'n', "<Leader>;",
     function()
