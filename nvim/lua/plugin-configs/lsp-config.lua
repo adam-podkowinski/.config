@@ -1,5 +1,7 @@
 local lsp = vim.lsp
 local opts = { noremap = true, silent = true }
+vim.keymap.set("n", "gd", lsp.buf.definition, opts)
+vim.keymap.set("n", "gr", lsp.buf.references, opts)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
 vim.keymap.set("n", "gD", lsp.buf.declaration, opts)
 vim.keymap.set("n", "gi", lsp.buf.implementation, opts)

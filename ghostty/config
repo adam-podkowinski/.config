@@ -6,6 +6,7 @@ theme=catppuccin-mocha
 clipboard-write = allow
 quit-after-last-window-closed = false
 confirm-close-surface = false
+window-decoration = false
 background-blur = false
 gtk-single-instance = true
 font-family = "JetBrains Mono Medium"

@@ -85,29 +85,8 @@ return require("lazy").setup({
     --     build = "make",
     -- },
     { "tpope/vim-commentary", event = "VeryLazy" },
-    {
-        "nvim-telescope/telescope.nvim",
-        event = "VeryLazy",
-        config = function()
-            require('telescope').load_extension('fzf')
-            vim.api.nvim_set_keymap("n", "gr", "<cmd>Telescope lsp_references<CR>", { noremap = true, silent = true })
-            vim.api.nvim_set_keymap("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { noremap = true, silent = true })
-            vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>Telescope lsp_type_definitions<CR>",
-                { noremap = true, silent = true })
-        end,
-        opts = {
-            extensions = {
-                fzf = {
-                    fuzzy = true,
-                    override_generic_sorter = true,
-                    override_file_sorter = true,
-                    case_mode = "smart_case",
-                }
-            }
-        }
-    },
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = "make" },
-    { "tpope/vim-fugitive",                       event = "VeryLazy" },
+    { "tpope/vim-repeat",     event = "VeryLazy" },
+    { "tpope/vim-fugitive",   event = "VeryLazy" },
     {
         "smoka7/hop.nvim",
         event = "VeryLazy",
@@ -148,17 +127,6 @@ return require("lazy").setup({
     },
     { "nvim-lualine/lualine.nvim",   event = "VeryLazy", },
     { "nvim-tree/nvim-web-devicons", event = "VeryLazy" },
-    {
-        "3rd/image.nvim",
-        event = "VeryLazy",
-        opts = {
-            integrations = {
-                markdown = {
-                    only_render_image_at_cursor = true
-                }
-            }
-        },
-    },
     "HiPhish/rainbow-delimiters.nvim",
     {
         "NvChad/nvim-colorizer.lua",
@@ -179,7 +147,6 @@ return require("lazy").setup({
             }
         }
     },
-    { "tpope/vim-repeat",        event = "VeryLazy" },
     {
         "nvim-treesitter/nvim-treesitter",
         cmd = "TSUpdate",
@@ -191,5 +158,5 @@ return require("lazy").setup({
         config = true,
         opts = {},
     },
-    { "notjedi/nvim-rooter.lua", opts = {},         event = "VeryLazy" },
+    { "notjedi/nvim-rooter.lua", opts = {}, event = "VeryLazy" },
 })

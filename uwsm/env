@@ -8,3 +8,4 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export XDG_SESSION_TYPE=wayland
 export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1 
+export XKB_DEFAULT_OPTIONS=caps:escape
