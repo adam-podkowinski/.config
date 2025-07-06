@@ -1,5 +1,4 @@
 return require("lazy").setup({
-    "nvim-lua/plenary.nvim",
     { "catppuccin/nvim",      priority = 1200 },
     {
         "folke/snacks.nvim",
@@ -8,7 +7,7 @@ return require("lazy").setup({
         opts = {
             bigfile = { enabled = true },
             dashboard = { enabled = true },
-            explorer = { enabled = true, replace_netrw = true, },
+            explorer = { enabled = true, replace_netrw = true },
             indent = {
                 enabled = true,
                 scope = {
@@ -31,66 +30,25 @@ return require("lazy").setup({
             quickfile = { enabled = true },
             scope = { enabled = false },
             scroll = { enabled = false },
-            statuscolumn = { enabled = false, },
+            statuscolumn = { enabled = false },
             words = { enabled = false },
         },
         keys = {
-            { "<leader>f",        function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-            { "<leader>g",        function() Snacks.picker.grep() end,  desc = "Grep" },
-            { "<leader><leader>", function() Snacks.explorer() end,     desc = "Explorer" },
-            { "<C-c>",            function() Snacks.bufdelete() end,    desc = "Bufdelete" },
+            { "<leader>f",        function() Snacks.picker.smart() end,               desc = "Smart Find Files" },
+            { "<leader>g",        function() Snacks.picker.grep() end,                desc = "Grep" },
+            { "<leader><leader>", function() Snacks.explorer() end,                   desc = "Explorer" },
+            { "<C-c>",            function() Snacks.bufdelete() end,                  desc = "Bufdelete" },
+            { "gd",               function() Snacks.picker.lsp_definitions() end,     desc = "LSP Definitions" },
+            { "gr",               function() Snacks.picker.lsp_references() end,      desc = "LSP References" },
+            { "gi",               function() Snacks.picker.lsp_implementations() end, desc = "LSP Implementations" },
+            { "gD",               function() Snacks.picker.lsp_declarations() end,    desc = "LSP Declarations" },
+            { "<Leader>q",        function() Snacks.picker.diagnostics() end,         desc = "LSP Declarations" },
         },
     },
-    -- {
-    --     "yetone/avante.nvim",
-    --     event = "VeryLazy",
-    --     version = false,
-    --     opts = {
-    --         provider = "gemini",
-    --         hints = { enabled = false },
-    --         providers = {
-    --             gemini = {
-    --                 endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-    --                 model = "gemini-2.0-flash",
-    --                 timeout = 30000,
-    --                 temperature = 0,
-    --                 max_tokens = 8192,
-    --             },
-    --             ollama = {
-    --                 model = "doomgrave/gemma3-tools:latest",
-    --                 temperature = 0,
-    --                 max_tokens = 16384,
-    --                 disable_tools = false,
-    --                 timeout = 30000,
-    --             },
-    --             deepseek = {
-    --                 __inherited_from = "openai",
-    --                 api_key_name = "DEEPSEEK_API_KEY",
-    --                 endpoint = "https://api.deepseek.com",
-    --                 model = "deepseek-coder",
-    --                 max_tokens = 8192,
-    --             },
-    --         },
-    --     },
-    --     dependencies = {
-    --         "MunifTanjim/nui.nvim",
-    --         {
-    --             'MeanderingProgrammer/render-markdown.nvim',
-    --             opts = {
-    --                 file_types = { "markdown", "Avante" },
-    --             },
-    --             ft = { "markdown", "Avante" },
-    --         },
-    --     },
-    --     build = "make",
-    -- },
     { "tpope/vim-commentary", event = "VeryLazy" },
     { "tpope/vim-repeat",     event = "VeryLazy" },
     { "tpope/vim-fugitive",   event = "VeryLazy" },
-    {
-        "smoka7/hop.nvim",
-        event = "VeryLazy",
-    },
+    { "smoka7/hop.nvim",      event = "VeryLazy" },
     {
         'saghen/blink.cmp',
         dependencies = { 'rafamadriz/friendly-snippets' },
@@ -159,4 +117,47 @@ return require("lazy").setup({
         opts = {},
     },
     { "notjedi/nvim-rooter.lua", opts = {}, event = "VeryLazy" },
+    -- {
+    --     "yetone/avante.nvim",
+    --     event = "VeryLazy",
+    --     version = false,
+    --     opts = {
+    --         provider = "gemini",
+    --         hints = { enabled = false },
+    --         providers = {
+    --             gemini = {
+    --                 endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+    --                 model = "gemini-2.0-flash",
+    --                 timeout = 30000,
+    --                 temperature = 0,
+    --                 max_tokens = 8192,
+    --             },
+    --             ollama = {
+    --                 model = "doomgrave/gemma3-tools:latest",
+    --                 temperature = 0,
+    --                 max_tokens = 16384,
+    --                 disable_tools = false,
+    --                 timeout = 30000,
+    --             },
+    --             deepseek = {
+    --                 __inherited_from = "openai",
+    --                 api_key_name = "DEEPSEEK_API_KEY",
+    --                 endpoint = "https://api.deepseek.com",
+    --                 model = "deepseek-coder",
+    --                 max_tokens = 8192,
+    --             },
+    --         },
+    --     },
+    --     dependencies = {
+    --         "MunifTanjim/nui.nvim",
+    --         {
+    --             'MeanderingProgrammer/render-markdown.nvim',
+    --             opts = {
+    --                 file_types = { "markdown", "Avante" },
+    --             },
+    --             ft = { "markdown", "Avante" },
+    --         },
+    --     },
+    --     build = "make",
+    -- },
 })
