@@ -38,13 +38,12 @@ vim.keymap.set("n", "<C-Up>", "<cmd>resize +3<CR>", { noremap = true })
 vim.keymap.set("n", "<C-Down>", "<cmd>resize -3<CR>", { noremap = true })
 
 -- Sets
-vim.opt.linespace = 6
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.opt.winborder = 'rounded'
+vim.opt.winborder = 'bold'
 vim.opt.termguicolors = true
 vim.opt.fillchars = 'eob: '
 vim.opt.softtabstop = 4
@@ -88,6 +87,4 @@ vim.opt.signcolumn = "yes"
 -- Plugin configs
 require("plugins")
 require("plugin-configs.lsp-config")
-require("plugin-configs.other-config")
 require("plugin-configs.treesitter-config")
-require("plugin-configs.lualine-config")

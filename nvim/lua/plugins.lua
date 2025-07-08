@@ -1,5 +1,24 @@
 return require("lazy").setup({
-    { "catppuccin/nvim",      priority = 1200 },
+    {
+        "catppuccin/nvim",
+        priority = 1200,
+        config = function()
+            require("catppuccin").setup({
+                compile_path = vim.fn.stdpath "cache" .. "/catppuccin",
+                flavour = "mocha",
+                background = {
+                    dark = "mocha",
+                },
+                transparent_background = false,
+                integrations = {
+                    mason = true,
+                    hop = true,
+                    snacks = true,
+                }
+            })
+            vim.cmd.colorscheme "catppuccin"
+        end
+    },
     {
         "folke/snacks.nvim",
         priority = 1000,
@@ -45,10 +64,23 @@ return require("lazy").setup({
             { "<Leader>q",        function() Snacks.picker.diagnostics() end,         desc = "LSP Declarations" },
         },
     },
-    { "tpope/vim-commentary", event = "VeryLazy" },
-    { "tpope/vim-repeat",     event = "VeryLazy" },
-    { "tpope/vim-fugitive",   event = "VeryLazy" },
-    { "smoka7/hop.nvim",      event = "VeryLazy" },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            { "mason-org/mason.nvim",  opts = {},         event = "VeryLazy" },
+            { "neovim/nvim-lspconfig", event = "VeryLazy" },
+        },
+        opts = {},
+    },
+    {
+        "smoka7/hop.nvim",
+        event = "VeryLazy",
+        opts = {},
+        keys = {
+            { "<leader>;", function() require("hop").hint_words() end, desc = "Hop" }
+        }
+    },
     {
         'saghen/blink.cmp',
         dependencies = { 'rafamadriz/friendly-snippets' },
@@ -71,22 +103,6 @@ return require("lazy").setup({
         opts_extend = { "sources.default" }
     },
     {
-        "williamboman/mason-lspconfig.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            { "mason-org/mason.nvim", opts = {} },
-            "neovim/nvim-lspconfig",
-        },
-        opts = {},
-    },
-    {
-        "lewis6991/gitsigns.nvim",
-        event = "VeryLazy",
-    },
-    { "nvim-lualine/lualine.nvim",   event = "VeryLazy", },
-    { "nvim-tree/nvim-web-devicons", event = "VeryLazy" },
-    "HiPhish/rainbow-delimiters.nvim",
-    {
         "NvChad/nvim-colorizer.lua",
         event = "VeryLazy",
         opts = {
@@ -95,7 +111,7 @@ return require("lazy").setup({
                 tailwind = true,
                 RGB = true,
                 RRGGBB = true,
-                names = true,
+                names = false,
                 RRGGBBAA = true,
                 AARRGGBB = true,
                 rgb_fn = true,
@@ -106,58 +122,39 @@ return require("lazy").setup({
         }
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        cmd = "TSUpdate",
-        event = "VeryLazy",
+        "nvim-lualine/lualine.nvim",
+        opts = {
+            options = {
+                component_separators = { left = "┃", right = "" },
+                section_separators = { left = "", right = "" },
+                globalstatus = true,
+            },
+            tabline = {
+                lualine_a = {
+                    {
+                        'buffers',
+                        symbols = {
+                            modified = ' ●',
+                            alternate_file = '',
+                            directory = '',
+                        },
+                    },
+                },
+                lualine_b = {},
+                lualine_c = {},
+                lualine_x = {},
+                lualine_y = {},
+                lualine_z = {}
+            }
+        }
     },
-    {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = true,
-        opts = {},
-    },
-    { "notjedi/nvim-rooter.lua", opts = {}, event = "VeryLazy" },
-    -- {
-    --     "yetone/avante.nvim",
-    --     event = "VeryLazy",
-    --     version = false,
-    --     opts = {
-    --         provider = "gemini",
-    --         hints = { enabled = false },
-    --         providers = {
-    --             gemini = {
-    --                 endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-    --                 model = "gemini-2.0-flash",
-    --                 timeout = 30000,
-    --                 temperature = 0,
-    --                 max_tokens = 8192,
-    --             },
-    --             ollama = {
-    --                 model = "doomgrave/gemma3-tools:latest",
-    --                 temperature = 0,
-    --                 max_tokens = 16384,
-    --                 disable_tools = false,
-    --                 timeout = 30000,
-    --             },
-    --             deepseek = {
-    --                 __inherited_from = "openai",
-    --                 api_key_name = "DEEPSEEK_API_KEY",
-    --                 endpoint = "https://api.deepseek.com",
-    --                 model = "deepseek-coder",
-    --                 max_tokens = 8192,
-    --             },
-    --         },
-    --     },
-    --     dependencies = {
-    --         "MunifTanjim/nui.nvim",
-    --         {
-    --             'MeanderingProgrammer/render-markdown.nvim',
-    --             opts = {
-    --                 file_types = { "markdown", "Avante" },
-    --             },
-    --             ft = { "markdown", "Avante" },
-    --         },
-    --     },
-    --     build = "make",
-    -- },
+    { "HiPhish/rainbow-delimiters.nvim" },
+    { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate",      event = "VeryLazy" },
+    { "lewis6991/gitsigns.nvim",         event = "VeryLazy" },
+    { "tpope/vim-commentary",            event = "VeryLazy" },
+    { "tpope/vim-repeat",                event = "VeryLazy" },
+    { "tpope/vim-fugitive",              event = "VeryLazy" },
+    { "nvim-tree/nvim-web-devicons",     event = "VeryLazy" },
+    { "windwp/nvim-autopairs",           event = "InsertEnter", opts = {} },
+    { "notjedi/nvim-rooter.lua",         event = "VeryLazy",    opts = {} },
 })
