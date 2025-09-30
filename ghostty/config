@@ -1,9 +1,8 @@
 linux-cgroup = single-instance
-shell-integration = zsh
-command=zsh
 clipboard-read = allow
-theme=catppuccin-mocha
+theme=Catppuccin Mocha
 clipboard-write = allow
+shell-integration = none
 quit-after-last-window-closed = false
 confirm-close-surface = false
 window-decoration = false
@@ -18,7 +17,7 @@ adjust-cell-height = 2
 window-padding-balance = true
 adjust-underline-position = 2
 adjust-underline-thickness = 1
-adjust-cursor-thickness = 1
+adjust-cursor-thickness = 3
 keybind = ctrl+a=reload_config
 keybind = alt+enter=new_window
 keybind = ctrl+shift+j=scroll_page_down

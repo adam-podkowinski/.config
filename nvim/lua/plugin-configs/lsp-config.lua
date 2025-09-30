@@ -30,3 +30,16 @@ vim.diagnostic.config({
 lsp.config("emmet_language_server", {
     filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact", "php" },
 })
+
+lsp.config('basedpyright', {
+    settings = {
+        pyright = {
+            disableOrganizeImports = true,
+        },
+        basedpyright = {
+            analysis = {
+                ignore = { "*" },
+            },
+        },
+    },
+})
