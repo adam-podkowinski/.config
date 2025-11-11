@@ -8,16 +8,16 @@ confirm-close-surface = false
 window-decoration = false
 background-blur = false
 gtk-single-instance = true
-font-family = "JetBrains Mono Medium"
+font-family = "JetBrains Mono"
 font-family-bold = "JetBrains Mono Bold"
-font-family-italic = "JetBrains Mono Medium Italic"
+font-family-italic = "JetBrains Mono Italic"
 font-family-bold-italic = "JetBrains Mono Bold Italic"
-font-size = 12
+font-size = 13
 adjust-cell-height = 2
 window-padding-balance = true
 adjust-underline-position = 2
 adjust-underline-thickness = 1
-adjust-cursor-thickness = 3
+adjust-cursor-thickness = 1
 keybind = ctrl+a=reload_config
 keybind = alt+enter=new_window
 keybind = ctrl+shift+j=scroll_page_down

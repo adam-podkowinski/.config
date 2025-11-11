@@ -1,9 +1,18 @@
 export __GL_GSYNC_ALLOWED=1
 export __GL_VRR_ALLOWED=1
-export SDL_VIDEODRIVER=wayland=x11
+export SDL_VIDEODRIVER=wayland;x11
 export ELECTRON_OZONE_PLATFORM_HINT=auto
+export GDK_BACKEND="wayland,x11,*"
 export CLUTTER_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland;xcb
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1 
 export QT_QPA_PLATFORMTHEME=qt6ct
 export XDG_SESSION_TYPE=wayland
-export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_DESKTOP=Hyprland
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0 type1:no-stem-darkening=0 t1cid:no-stem-darkening=0"
+export XCURSOR_THEME=catppuccin-mocha-dark-cursors
+export XCURSOR_SIZE=24
+export HYPRCURSORTHEME=catppuccin-mocha-dark-cursors
+export HYPRCURSORSIZE=24

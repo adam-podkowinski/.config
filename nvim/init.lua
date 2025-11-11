@@ -92,4 +92,4 @@ vim.opt.signcolumn = "yes"
 require("plugins")
 require("plugin-configs.lsp-config")
 require("plugin-configs.treesitter-config")
-require('vim._extui').enable({})
+require("vim._extui").enable({})

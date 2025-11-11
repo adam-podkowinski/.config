@@ -43,7 +43,8 @@ alias \
   btc="bluetoothctl" \
   z="zathura" \
   lekcje="cd $HOME/Documents/lekcje" \
-  plan="test -f $HOME/Documents/plan.png && {imv $HOME/Documents/plan.png} || {imv $HOME/Documents/plan.jpg}" \
+  rok1="cd $HOME/Documents/fizyka/studia/rok1" \
+  plan="helium.sh $HOME/Documents/fizyka/studia/rok1/plan.gif" \
   flutterp="cd $HOME/code/flutter_projects" \
   kys="doas shutdown now" \
   launchemu="flutter emulators --launch Pixel_3a_API_30"
