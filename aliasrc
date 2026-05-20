@@ -42,6 +42,7 @@ alias \
 	p="sudo pacman" \
   btc="bluetoothctl" \
   z="zathura" \
+  hx="helix" \
   lekcje="cd $HOME/Documents/lekcje" \
   rok1="cd $HOME/Documents/fizyka/studia/rok1" \
   plan="helium.sh $HOME/Documents/fizyka/studia/rok1/plan.gif" \

@@ -103,22 +103,32 @@ return require("lazy").setup({
         opts_extend = { "sources.default" }
     },
     {
-        "NvChad/nvim-colorizer.lua",
-        event = "VeryLazy",
+        "catgoose/nvim-colorizer.lua",
+        event = "BufReadPre",
         opts = {
+            lazy_load = true,
             filetypes = { "*" },
-            user_default_options = {
-                tailwind = true,
-                RGB = true,
-                RRGGBB = true,
-                names = false,
-                RRGGBBAA = true,
-                AARRGGBB = true,
-                rgb_fn = true,
-                hsl_fn = true,
-                css = true,
-                css_fn = true,
-            }
+            options = {
+                parsers = {
+                    RGB = true,
+                    RRGGBB = true,
+                    names = false,
+                    RRGGBBAA = true,
+                    AARRGGBB = true,
+                    rgb_fn = true,
+                    hsl_fn = true,
+                    css = true,
+                    css_fn = true,
+                    tailwind = {
+                        enable = true,
+                        lsp = true,
+                    },
+                },
+                display = {
+                    mode = "virtualtext",
+                    virtualtext = { postion = "after" }
+                }
+            },
         }
     },
     {
