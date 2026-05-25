@@ -127,7 +127,13 @@ binds {
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
     Super+Return hotkey-overlay-title="Open Terminal" { spawn "footclient"; }
+    Alt+Tab repeat=false { toggle-overview; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Tab repeat=false { toggle-overview; }
+}
+
+recent-windows {
+    binds {
+        Super+Tab { next-window; }
+    }
 }

@@ -320,7 +320,7 @@
   "dockAutoHide": false,
   "dockSmartAutoHide": false,
   "dockGroupByApp": false,
-  "dockOpenOnOverview": false,
+  "dockOpenOnOverview": true,
   "dockPosition": 1,
   "dockSpacing": 4,
   "dockBottomGap": 0,
