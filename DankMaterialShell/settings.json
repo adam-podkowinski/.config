@@ -13,7 +13,7 @@
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
   "cornerRadius": 6,
-  "niriLayoutGapsOverride": -1,
+  "niriLayoutGapsOverride": 11,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
   "hyprlandLayoutGapsOverride": -1,
@@ -29,7 +29,7 @@
   "windSpeedUnit": "kmh",
   "nightModeEnabled": false,
   "animationSpeed": 0,
-  "customAnimationDuration": 500,
+  "customAnimationDuration": 0,
   "syncComponentAnimationSpeeds": false,
   "popoutAnimationSpeed": 0,
   "popoutCustomAnimationDuration": 150,
@@ -432,7 +432,10 @@
       "showOnLastDisplay": true,
       "leftWidgets": [
         "launcherButton",
-        "workspaceSwitcher",
+        {
+          "id": "workspaceSwitcher",
+          "enabled": true
+        },
         "focusedWindow"
       ],
       "centerWidgets": [
@@ -469,7 +472,10 @@
       "openOnOverview": false,
       "visible": true,
       "popupGapsAuto": true,
-      "popupGapsManual": 4
+      "popupGapsManual": 4,
+      "maximizeWidgetIcons": false,
+      "maximizeWidgetText": false,
+      "iconScale": 1
     }
   ],
   "desktopClockEnabled": false,

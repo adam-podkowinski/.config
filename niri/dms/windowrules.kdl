@@ -1,0 +1,8 @@
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=wr_1779819446662682449 @name=helium
+window-rule {
+    match app-id="^helium$"
+    open-maximized-to-edges true
+}
