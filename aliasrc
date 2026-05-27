@@ -30,9 +30,11 @@ alias \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
 
+
 # These common commands are just too long! Abbreviate them.
 alias \
 	ka="killall" \
+    nirikill="kill -9 \$(niri msg pick-window | grep -oP 'PID: \K\d+')" \
 	g="git" \
 	trem="transmission-remote" \
 	YT="youtube-viewer" \

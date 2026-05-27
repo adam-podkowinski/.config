@@ -178,6 +178,7 @@ animations {
 
 binds {
     Mod+M { maximize-window-to-edges; }
+    Mod+Shift+x { spawn "nirikill.sh"; }
 }
 
 

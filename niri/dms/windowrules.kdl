@@ -6,3 +6,9 @@ window-rule {
     match app-id="^helium$"
     open-maximized-to-edges true
 }
+
+// @id=wr_1779831789957744797 @name=cursor
+window-rule {
+    match app-id="^cursor$"
+    open-maximized-to-edges true
+}
