@@ -439,18 +439,49 @@
         "focusedWindow"
       ],
       "centerWidgets": [
-        "music",
+        {
+          "id": "music",
+          "enabled": true
+        },
         "clock",
-        "weather"
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
-        "systemTray",
-        "clipboard",
-        "cpuUsage",
-        "memUsage",
-        "notificationButton",
-        "battery",
-        "controlCenterButton"
+        {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
+          "id": "clipboard",
+          "enabled": true
+        },
+        {
+          "id": "colorPicker",
+          "enabled": true
+        },
+        {
+          "id": "cpuUsage",
+          "enabled": true
+        },
+        {
+          "id": "memUsage",
+          "enabled": true
+        },
+        {
+          "id": "notificationButton",
+          "enabled": true
+        },
+        {
+          "id": "battery",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true
+        }
       ],
       "spacing": 0,
       "innerPadding": 4,
@@ -475,7 +506,10 @@
       "popupGapsManual": 4,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
-      "iconScale": 1
+      "iconScale": 1,
+      "widgetPadding": 8,
+      "widgetOutlineEnabled": false,
+      "shadowIntensity": 0
     }
   ],
   "desktopClockEnabled": false,
