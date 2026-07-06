@@ -115,6 +115,7 @@ binds {
     Super+Shift+Q repeat=false { close-window; }
     Super+Shift+T { switch-focus-between-floating-and-tiling; }
     Super+Shift+V { toggle-window-floating; }
+    Super+Shift+Period hotkey-overlay-title="Power Off Monitors" { power-off-monitors; }
     Ctrl+Print { screenshot-screen; }
     Ctrl+XF86Launch1 { screenshot-screen; }
     Super+Shift+P { screenshot; }

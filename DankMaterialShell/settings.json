@@ -12,7 +12,7 @@
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
-  "cornerRadius": 6,
+  "cornerRadius": 5,
   "niriLayoutGapsOverride": 11,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
@@ -222,7 +222,7 @@
   "dankLauncherV2UnloadOnClose": false,
   "useAutoLocation": false,
   "weatherEnabled": true,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "System Default",
   "cursorSettings": {
     "theme": "catppuccin-mocha-dark-cursors",
@@ -284,7 +284,12 @@
   "wifiNetworkPins": {},
   "bluetoothDevicePins": {},
   "audioInputDevicePins": {},
-  "audioOutputDevicePins": {},
+  "audioOutputDevicePins": {
+    "preferredOutput": [
+      "bluez_output.3C_31_8A_B0_65_ED.1",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo"
+    ]
+  },
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
   "syncModeWithPortal": true,
@@ -509,7 +514,8 @@
       "iconScale": 1,
       "widgetPadding": 8,
       "widgetOutlineEnabled": false,
-      "shadowIntensity": 0
+      "shadowIntensity": 0,
+      "removeWidgetPadding": false
     }
   ],
   "desktopClockEnabled": false,

@@ -16,7 +16,7 @@ output "eDP-1" {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "2560x1440@144"
+    mode "2560x1600@240.000"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1.6
